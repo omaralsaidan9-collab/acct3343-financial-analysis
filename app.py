@@ -283,30 +283,59 @@ m3.metric("SELL candidates", f"{len(sell):,}", f"{rankable_sell:,} fully rankabl
 m4.metric("Full core statements", f"{int((df.get('data_pull_status', pd.Series(dtype=object)) == 'pulled').sum()):,}/1,000", f"{partial} partial")
 
 
-buy_tab, sell_tab, company_tab, conclusion_tab, method_tab = st.tabs(["BUY screen", "SELL screen", "Company analysis", "Investment conclusions", "Methodology"])
+top_tab, remaining_tab, company_tab, conclusion_tab, method_tab = st.tabs(["Top 5 candidates", "Remaining candidates", "Company analysis", "Investment conclusions", "Methodology"])
 
-with buy_tab:
-    st.markdown('<h2 class="buy-title">BUY candidates</h2>', unsafe_allow_html=True)
-    st.caption("Higher GPA, higher Book-to-Market, and higher F_SCORE contribute to the BUY composite. These are not SELL signals in reverse.")
-    bcols = [c for c in ["ticker", "company_name", "sector", "market_cap_usd", "GPA", "Book_to_Market", "F_SCORE", "BUY_score_live"] if c in buy]
-    st.dataframe(buy[bcols].rename(columns={"BUY_score_live":"BUY composite"}), width="stretch", hide_index=True)
-    if not buy.empty:
-        top = buy.iloc[0]
-        st.markdown(f"<div class='card buy-card'><b>Top BUY screen result: {top['company_name']} ({top['ticker']})</b><br>GPA {top['GPA']:.3f}, Book-to-Market {top['Book_to_Market']:.3f}, F_SCORE {top['F_SCORE']:.0f}/9. This is the strongest result under the selected filters, not a price target or guarantee of undervaluation.</div>", unsafe_allow_html=True)
-    else:
-        st.write("No companies meet the current BUY filters.")
+buy_ranked = buy.copy()
+buy_ranked.insert(0, "Rank", range(1, len(buy_ranked) + 1))
+sell_ranked = sell.copy()
+sell_ranked.insert(0, "Rank", range(1, len(sell_ranked) + 1))
 
-with sell_tab:
-    st.markdown('<h2 class="sell-title">SELL risk candidates</h2>', unsafe_allow_html=True)
-    st.caption("SELL ranks earnings accruals, accumulated operating assets, and Altman distress risk. A high risk rank does not by itself mean a stock is overvalued.")
-    scols = [c for c in ["ticker", "company_name", "sector", "market_cap_usd", "STA", "SNOA", "Altman_Z", "SELL_red_flags", "SELL_score_live"] if c in sell]
-    st.dataframe(sell[scols].rename(columns={"SELL_score_live":"SELL risk score"}), width="stretch", hide_index=True)
-    if not sell.empty:
-        top = sell.iloc[0]
-        flags = ", ".join(name for name, col in [("STA", "STA_flag"), ("SNOA", "SNOA_flag"), ("Altman Z", "Altman_flag")] if bool(top[col]))
-        st.markdown(f"<div class='card sell-card'><b>Top SELL risk result: {top['company_name']} ({top['ticker']})</b><br>Flagged measures: {flags}. STA {top['STA']:.3f}, SNOA {top['SNOA']:.3f}, Altman Z {top['Altman_Z']:.3f}. This indicates accounting or distress risk under the selected screen, not a valuation conclusion.</div>", unsafe_allow_html=True)
-    else:
-        st.write("No companies meet the current SELL filters.")
+def buy_table(frame):
+    view = frame[["Rank", "ticker", "company_name", "sector", "GPA", "Book_to_Market", "F_SCORE", "BUY_score_live"]].copy()
+    view["BUY_score_live"] = view["BUY_score_live"].map(lambda x: f"{x:.1%}")
+    return view.rename(columns={"ticker":"Ticker", "company_name":"Company", "sector":"Sector", "GPA":"GPA", "Book_to_Market":"Book-to-Market", "F_SCORE":"F_SCORE", "BUY_score_live":"BUY rating"})
+
+def sell_table(frame):
+    view = frame[["Rank", "ticker", "company_name", "sector", "STA", "SNOA", "Altman_Z", "SELL_score_live"]].copy()
+    view["SELL_score_live"] = view["SELL_score_live"].map(lambda x: f"{x:.1%}")
+    return view.rename(columns={"ticker":"Ticker", "company_name":"Company", "sector":"Sector", "STA":"STA", "SNOA":"SNOA", "Altman_Z":"Altman Z", "SELL_score_live":"SELL risk rating"})
+
+with top_tab:
+    st.caption("Rankings update with the filters. BUY and SELL use separate course-based methods; a SELL risk result is not an overvaluation finding.")
+    buy_col, sell_col = st.columns(2)
+    with buy_col:
+        st.markdown('<h2 class="buy-title">Top 5 BUY candidates</h2>', unsafe_allow_html=True)
+        if buy.empty:
+            st.write("No companies meet the current BUY filters.")
+        else:
+            buy_view = buy_table(buy_ranked.head(5))
+            st.dataframe(buy_view.style.map(lambda _: "color: #4bd18c; font-weight: 700;", subset=["BUY rating"]), width="stretch", hide_index=True)
+    with sell_col:
+        st.markdown('<h2 class="sell-title">Top 5 SELL risk candidates</h2>', unsafe_allow_html=True)
+        if sell.empty:
+            st.write("No companies meet the current SELL filters.")
+        else:
+            sell_view = sell_table(sell_ranked.head(5))
+            st.dataframe(sell_view.style.map(lambda _: "color: #ff7373; font-weight: 700;", subset=["SELL risk rating"]), width="stretch", hide_index=True)
+
+with remaining_tab:
+    st.subheader("All remaining candidates")
+    st.caption("Ranks 6 onward are listed here. The first five in each ranking appear on the Top 5 candidates tab. Ratings are the live peer-relative composite scores.")
+    buy_col, sell_col = st.columns(2)
+    with buy_col:
+        st.markdown('<h3 class="buy-title">Remaining BUY candidates</h3>', unsafe_allow_html=True)
+        buy_rest = buy_ranked.iloc[5:]
+        if buy_rest.empty:
+            st.write("There are no additional BUY candidates under the current filters.")
+        else:
+            st.dataframe(buy_table(buy_rest).style.map(lambda _: "color: #4bd18c; font-weight: 700;", subset=["BUY rating"]), width="stretch", hide_index=True)
+    with sell_col:
+        st.markdown('<h3 class="sell-title">Remaining SELL risk candidates</h3>', unsafe_allow_html=True)
+        sell_rest = sell_ranked.iloc[5:]
+        if sell_rest.empty:
+            st.write("There are no additional SELL risk candidates under the current filters.")
+        else:
+            st.dataframe(sell_table(sell_rest).style.map(lambda _: "color: #ff7373; font-weight: 700;", subset=["SELL risk rating"]), width="stretch", hide_index=True)
 
 with company_tab:
     st.subheader("Individual company analysis")
@@ -527,4 +556,5 @@ measure_descriptions = [
 for title, description in measure_descriptions:
     with st.expander(title):
         st.markdown(description)
+
 
