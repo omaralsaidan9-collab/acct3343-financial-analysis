@@ -57,11 +57,46 @@ st.title("Financial Analysis Screen")
 st.caption("ACCT 3343 · Course-based BUY and SELL screens")
 st.markdown(f"<div class='small-note'>Universe capture: {as_of} · Yahoo Finance annual statements · WDC excluded from recommendations</div>", unsafe_allow_html=True)
 
+st.subheader("Market snapshot · October 22, 2026")
+news_col, leader_col = st.columns(2)
+with news_col:
+    st.markdown("""
+<div class="card">
+<b>Today’s market news</b><br>
+Asian shares slipped and U.S. futures were down about 0.4% as investors weighed Gulf tensions and technology earnings. The prior U.S. session had closed higher, led by technology, after strong AI-related earnings helped ease concerns about the payoff from heavy AI investment.<br>
+<a href="https://www.reuters.com/world/china/global-markets-global-markets-2026-10-22/" target="_blank">Read Reuters’ October 22 market report</a>
+</div>
+""", unsafe_allow_html=True)
+with leader_col:
+    st.markdown("""
+<div class="card">
+<b>Leading S&amp;P 500 sector recently</b><br>
+Energy led year-to-date through October 12, rising about 42%; technology was next at about 32%. Reuters attributed energy’s gain largely to higher oil prices amid the Iran conflict. These are year-to-date figures, not a live daily ranking.<br>
+<a href="https://www.reuters.com/business/wall-streets-big-narrow-rally-4-in-10-sp-stocks-are-down-this-year-2026-10-12/" target="_blank">Read Reuters’ October 12 sector comparison</a>
+</div>
+""", unsafe_allow_html=True)
+
 # Sidebar controls rerun the app automatically whenever a value changes.
 st.sidebar.header("Screen filters")
 sectors = sorted(recommendation_universe["sector"].dropna().astype(str).unique().tolist())
-selected_sectors = st.sidebar.multiselect("Sectors", sectors, default=sectors)
-size_choice = st.sidebar.selectbox("Company size", ["All sizes", "Large cap (≥ $10B)", "Mid cap ($2B–$10B)", "Small cap (< $2B)"])
+size_options = ["All sizes", "Large cap (≥ $10B)", "Mid cap ($2B–$10B)", "Small cap (< $2B)"]
+
+def reset_filters():
+    st.session_state["selected_sectors"] = sectors
+    st.session_state["size_choice"] = size_options[0]
+    st.session_state["score_buy"] = 0.70
+    st.session_state["min_fscore"] = 6
+    st.session_state["gpa_min"] = 0.0
+    st.session_state["bm_min"] = 0.0
+    st.session_state["score_sell"] = 0.70
+    st.session_state["sta_cut"] = 0.10
+    st.session_state["snoa_cut"] = 0.50
+    st.session_state["z_cut"] = 1.81
+    st.session_state["flags_required"] = 2
+
+st.sidebar.button("Reset filters", on_click=reset_filters, use_container_width=True)
+selected_sectors = st.sidebar.multiselect("Sectors", sectors, default=sectors, key="selected_sectors")
+size_choice = st.sidebar.selectbox("Company size", size_options, key="size_choice")
 
 base = recommendation_universe[recommendation_universe["sector"].astype(str).isin(selected_sectors)].copy()
 cap = base["market_cap_usd"]
@@ -91,17 +126,17 @@ base["BUY_score_live"] = rank_score(base, buy_inputs, [True, True, True])
 base["SELL_score_live"] = rank_score(base, sell_inputs, [True, True, False])
 
 # Adjustable BUY thresholds.
-score_buy = st.sidebar.slider("Minimum BUY composite score", 0.0, 1.0, 0.70, 0.01)
-min_fscore = st.sidebar.slider("Minimum F_SCORE", 0, 9, 6, 1)
-gpa_min = st.sidebar.slider("Minimum GPA", -1.0, 2.0, 0.0, 0.01)
-bm_min = st.sidebar.slider("Minimum Book-to-Market", -1.0, 3.0, 0.0, 0.01)
+score_buy = st.sidebar.slider("Minimum BUY composite score", 0.0, 1.0, 0.70, 0.01, key="score_buy")
+min_fscore = st.sidebar.slider("Minimum F_SCORE", 0, 9, 6, 1, key="min_fscore")
+gpa_min = st.sidebar.slider("Minimum GPA", -1.0, 2.0, 0.0, 0.01, key="gpa_min")
+bm_min = st.sidebar.slider("Minimum Book-to-Market", -1.0, 3.0, 0.0, 0.01, key="bm_min")
 
 # Independent SELL red-flag thresholds.
-score_sell = st.sidebar.slider("Minimum SELL risk score", 0.0, 1.0, 0.70, 0.01)
-sta_cut = st.sidebar.slider("Flag STA above", -0.5, 0.5, 0.10, 0.01)
-snoa_cut = st.sidebar.slider("Flag SNOA above", -1.0, 2.0, 0.50, 0.01)
-z_cut = st.sidebar.slider("Flag Altman Z below", -2.0, 6.0, 1.81, 0.01)
-flags_required = st.sidebar.slider("Required SELL red flags", 1, 3, 2, 1)
+score_sell = st.sidebar.slider("Minimum SELL risk score", 0.0, 1.0, 0.70, 0.01, key="score_sell")
+sta_cut = st.sidebar.slider("Flag STA above", -0.5, 0.5, 0.10, 0.01, key="sta_cut")
+snoa_cut = st.sidebar.slider("Flag SNOA above", -1.0, 2.0, 0.50, 0.01, key="snoa_cut")
+z_cut = st.sidebar.slider("Flag Altman Z below", -2.0, 6.0, 1.81, 0.01, key="z_cut")
+flags_required = st.sidebar.slider("Required SELL red flags", 1, 3, 2, 1, key="flags_required")
 
 buy = base[
     base["BUY_score_live"].ge(score_buy)
@@ -134,7 +169,6 @@ m3.metric("SELL candidates", f"{len(sell):,}", f"{rankable_sell:,} fully rankabl
 m4.metric("Full core statements", f"{int((df.get('data_pull_status', pd.Series(dtype=object)) == 'pulled').sum()):,}/1,000", f"{partial} partial")
 
 st.info("Coverage: GPA 978, Book-to-Market 1,000, STA 990, SNOA 521, Altman Z 956, and complete F_SCORE 846 of 1,000. Missing inputs remain missing and can make a company unrankable.")
-st.warning("The uploaded export does not retain annual statement period-end dates. The universe capture timestamp is shown, but the exact fiscal year behind y0/y1/y2 cannot be verified from these files. Financial currency is also blank for one company, so check that company’s valuation ratios before relying on them.")
 
 buy_tab, sell_tab, company_tab, method_tab = st.tabs(["BUY screen", "SELL screen", "Company analysis", "Methodology"])
 
@@ -201,7 +235,34 @@ with method_tab:
 **Limitations:** The source is a Yahoo Finance screen of US-listed securities, which can include foreign issuers. Some companies have incomplete statements, and exact annual fiscal period-end dates were not retained in the uploaded export. Altman Z was developed for specific firm populations, so interpret it cautiously across industries. This educational screen is not investment advice.
     """)
 
-# Charts respond to sector and size filters.
+# Full-sample sector mix is independent of the interactive recommendation filters.
+st.subheader("Sector mix of the 1,000-company sample")
+st.caption("Share of the original sample by sector; includes all 1,000 companies, including WDC, and does not change with the filters.")
+sector_mix = (
+    df.assign(sector_label=df["sector"].fillna("Not classified").astype(str).replace("", "Not classified"))
+      .groupby("sector_label", as_index=False)
+      .size()
+      .rename(columns={"sector_label": "Sector", "size": "Companies"})
+)
+sector_mix["Share of sample (%)"] = sector_mix["Companies"] / len(df) * 100
+sector_mix = sector_mix.sort_values("Share of sample (%)", ascending=True)
+sector_fig = px.bar(
+    sector_mix,
+    x="Share of sample (%)",
+    y="Sector",
+    orientation="h",
+    text="Share of sample (%)",
+    hover_data={"Companies": True, "Share of sample (%)": ":.1f", "Sector": False},
+    color_discrete_sequence=["#48b5a2"],
+    title="Company count by sector as a percentage of the full sample",
+)
+sector_fig.update_traces(texttemplate="%{x:.1f}%", textposition="outside", cliponaxis=False)
+sector_fig.update_layout(paper_bgcolor="#0d1117", plot_bgcolor="#111821", font_color="#e6edf3", height=480, showlegend=False)
+sector_fig.update_xaxes(gridcolor="#273444", ticksuffix="%", range=[0, sector_mix["Share of sample (%)"].max() * 1.18 if not sector_mix.empty else 1])
+sector_fig.update_yaxes(gridcolor="#273444")
+st.plotly_chart(sector_fig, width="stretch")
+
+# This chart responds to sector and size filters.
 st.subheader("Filtered universe overview")
 plot_df = base.dropna(subset=["GPA", "Book_to_Market", "F_SCORE"]).copy()
 if not plot_df.empty:
