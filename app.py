@@ -292,13 +292,17 @@ sell_ranked.insert(0, "Rank", range(1, len(sell_ranked) + 1))
 
 def buy_table(frame):
     view = frame[["Rank", "ticker", "company_name", "sector", "GPA", "Book_to_Market", "F_SCORE", "BUY_score_live"]].copy()
-    view["BUY_score_live"] = view["BUY_score_live"].map(lambda x: f"{x:.1%}")
-    return view.rename(columns={"ticker":"Ticker", "company_name":"Company", "sector":"Sector", "GPA":"GPA", "Book_to_Market":"Book-to-Market", "F_SCORE":"F_SCORE", "BUY_score_live":"BUY rating"})
+    view["Rating"] = "BUY"
+    view["Rating (%)"] = view["BUY_score_live"].map(lambda x: f"{x:.1%}")
+    view = view[["Rating", "Rank", "Rating (%)", "company_name", "ticker", "sector", "GPA", "Book_to_Market", "F_SCORE"]]
+    return view.rename(columns={"company_name":"Company", "ticker":"Ticker", "sector":"Sector", "Book_to_Market":"Book-to-Market"})
 
 def sell_table(frame):
     view = frame[["Rank", "ticker", "company_name", "sector", "STA", "SNOA", "Altman_Z", "SELL_score_live"]].copy()
-    view["SELL_score_live"] = view["SELL_score_live"].map(lambda x: f"{x:.1%}")
-    return view.rename(columns={"ticker":"Ticker", "company_name":"Company", "sector":"Sector", "STA":"STA", "SNOA":"SNOA", "Altman_Z":"Altman Z", "SELL_score_live":"SELL risk rating"})
+    view["Rating"] = "SELL risk"
+    view["Rating (%)"] = view["SELL_score_live"].map(lambda x: f"{x:.1%}")
+    view = view[["Rating", "Rank", "Rating (%)", "company_name", "ticker", "sector", "STA", "SNOA", "Altman_Z"]]
+    return view.rename(columns={"company_name":"Company", "ticker":"Ticker", "sector":"Sector", "Altman_Z":"Altman Z"})
 
 with top_tab:
     st.caption("Rankings update with the filters. BUY and SELL use separate course-based methods; a SELL risk result is not an overvaluation finding.")
@@ -309,14 +313,14 @@ with top_tab:
             st.write("No companies meet the current BUY filters.")
         else:
             buy_view = buy_table(buy_ranked.head(5))
-            st.dataframe(buy_view.style.map(lambda _: "color: #4bd18c; font-weight: 700;", subset=["BUY rating"]), width="stretch", hide_index=True)
+            st.dataframe(buy_view.style.map(lambda _: "color: #4bd18c; font-weight: 700;", subset=["Rating", "Rating (%)"]), width="stretch", hide_index=True)
     with sell_col:
         st.markdown('<h2 class="sell-title">Top 5 SELL risk candidates</h2>', unsafe_allow_html=True)
         if sell.empty:
             st.write("No companies meet the current SELL filters.")
         else:
             sell_view = sell_table(sell_ranked.head(5))
-            st.dataframe(sell_view.style.map(lambda _: "color: #ff7373; font-weight: 700;", subset=["SELL risk rating"]), width="stretch", hide_index=True)
+            st.dataframe(sell_view.style.map(lambda _: "color: #ff7373; font-weight: 700;", subset=["Rating", "Rating (%)"]), width="stretch", hide_index=True)
 
 with remaining_tab:
     st.subheader("All remaining candidates")
@@ -328,14 +332,14 @@ with remaining_tab:
         if buy_rest.empty:
             st.write("There are no additional BUY candidates under the current filters.")
         else:
-            st.dataframe(buy_table(buy_rest).style.map(lambda _: "color: #4bd18c; font-weight: 700;", subset=["BUY rating"]), width="stretch", hide_index=True)
+            st.dataframe(buy_table(buy_rest).style.map(lambda _: "color: #4bd18c; font-weight: 700;", subset=["Rating", "Rating (%)"]), width="stretch", hide_index=True)
     with sell_col:
         st.markdown('<h3 class="sell-title">Remaining SELL risk candidates</h3>', unsafe_allow_html=True)
         sell_rest = sell_ranked.iloc[5:]
         if sell_rest.empty:
             st.write("There are no additional SELL risk candidates under the current filters.")
         else:
-            st.dataframe(sell_table(sell_rest).style.map(lambda _: "color: #ff7373; font-weight: 700;", subset=["SELL risk rating"]), width="stretch", hide_index=True)
+            st.dataframe(sell_table(sell_rest).style.map(lambda _: "color: #ff7373; font-weight: 700;", subset=["Rating", "Rating (%)"]), width="stretch", hide_index=True)
 
 with company_tab:
     st.subheader("Individual company analysis")
