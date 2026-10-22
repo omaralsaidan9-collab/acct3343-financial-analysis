@@ -46,10 +46,30 @@ def load_data(path, period_dates_file_stamp=None):
         dates = pd.read_csv(dates_path, usecols=["ticker", "y0_period_end", "y1_period_end", "y2_period_end"])
         dates["ticker"] = dates["ticker"].astype(str).str.upper().str.strip()
         d = d.merge(dates, on="ticker", how="left", validate="one_to_one")
-    numeric = ["market_cap_usd", "GPA", "Book_to_Market", "STA", "SNOA", "Altman_Z", "F_SCORE", "BUY_score", "SELL_score"]
+    numeric = ["market_cap_usd", "GPA", "Book_to_Market", "STA", "SNOA", "Altman_Z", "F_SCORE", "BUY_score", "SELL_score",
+               "revenue_y0", "cogs_y0", "total_assets_y0"]
     for c in numeric:
         if c in d:
             d[c] = pd.to_numeric(d[c], errors="coerce")
+    # Apply the course GPA formula directly so it stays consistent with the slides.
+    required_gpa = ["revenue_y0", "cogs_y0", "total_assets_y0"]
+    if all(c in d for c in required_gpa):
+        valid = d[required_gpa].notna().all(axis=1) & d["total_assets_y0"].ne(0)
+        d["GPA"] = np.nan
+        d.loc[valid, "GPA"] = (d.loc[valid, "revenue_y0"] - d.loc[valid, "cogs_y0"]) / d.loc[valid, "total_assets_y0"]
+    # Keep the saved full-sample composites in sync with the course inputs.
+    buy_cols, sell_cols = ["GPA", "Book_to_Market", "F_SCORE"], ["STA", "SNOA", "Altman_Z"]
+    if all(c in d for c in buy_cols):
+        valid = d[buy_cols].notna().all(axis=1)
+        d["BUY_score"] = np.nan
+        if valid.any():
+            d.loc[valid, "BUY_score"] = pd.concat([d.loc[valid, c].rank(pct=True, method="average") for c in buy_cols], axis=1).mean(axis=1)
+    if all(c in d for c in sell_cols):
+        valid = d[sell_cols].notna().all(axis=1)
+        d["SELL_score"] = np.nan
+        if valid.any():
+            risk = pd.concat([d.loc[valid, "STA"].rank(pct=True, method="average"), d.loc[valid, "SNOA"].rank(pct=True, method="average"), 1.0-d.loc[valid, "Altman_Z"].rank(pct=True, method="average")], axis=1)
+            d.loc[valid, "SELL_score"] = risk.mean(axis=1)
     return d
 
 if not DATA_PATH.exists():
@@ -132,6 +152,89 @@ def rank_score(frame, cols, directions):
             pieces.append(ranks if high_is_good else 1.0 - ranks)
         out.loc[available] = pd.concat(pieces, axis=1).mean(axis=1)
     return out
+
+def value(row, name):
+    try:
+        x = float(row.get(name))
+        return x if np.isfinite(x) else None
+    except (TypeError, ValueError):
+        return None
+
+def fmt_input(x):
+    if x is None:
+        return "missing"
+    return f"{x:,.3f}" if abs(x) < 1_000 else f"{x:,.0f}"
+
+def safe_div(a, b):
+    return a / b if a is not None and b not in (None, 0) else None
+
+def company_calculation_rows(row):
+    rev0, cogs0 = value(row, "revenue_y0"), value(row, "cogs_y0")
+    gp0 = rev0 - cogs0 if rev0 is not None and cogs0 is not None else None
+    assets0 = value(row, "total_assets_y0")
+    ni0, cfo0 = value(row, "net_income_y0"), value(row, "operating_cash_flow_y0")
+    gpa = safe_div(gp0, assets0)
+    sta = safe_div(ni0 - cfo0, assets0) if ni0 is not None and cfo0 is not None else None
+    cash = value(row, "cash_y0")
+    st_debt, lt_debt = value(row, "short_term_debt_y0"), value(row, "long_term_debt_y0")
+    minority, preferred = value(row, "minority_interest_y0"), value(row, "preferred_stock_y0")
+    common_equity = value(row, "common_equity_y0")
+    if preferred is None:
+        preferred = 0.0  # Course slide: preferred stock is zero if absent.
+    op_assets = assets0 - cash if assets0 is not None and cash is not None else None
+    op_liabs = (assets0 - st_debt - lt_debt - minority - preferred - common_equity
+                if all(x is not None for x in [assets0, st_debt, lt_debt, minority, common_equity]) else None)
+    snoa = safe_div(op_assets - op_liabs, assets0) if op_assets is not None and op_liabs is not None else None
+    x1, x2, x3, x4, x5 = [value(row, f"Altman_X{i}") for i in range(1, 6)]
+    z = (0.012*x1 + 0.014*x2 + 0.033*x3 + 0.006*x4 + 0.999*x5
+         if all(x is not None for x in [x1, x2, x3, x4, x5]) else None)
+    equity, market_cap = value(row, "common_equity_y0"), value(row, "market_cap_usd")
+    currency = row.get("financial_currency")
+    currency = str(currency) if currency is not None and pd.notna(currency) and str(currency).strip() else "unknown"
+    saved = lambda col: value(row, col)
+    return [
+        {"Measure":"GPA", "Course formula":"(Revenue − COGS) ÷ Total Assets", "Substitution / inputs":f"({fmt_input(rev0)} − {fmt_input(cogs0)}) ÷ {fmt_input(assets0)}", "Recalculated":"—" if gpa is None else f"{gpa:.6f}", "Exported value":"—" if saved("GPA") is None else f"{saved('GPA'):.6f}"},
+        {"Measure":"Book-to-Market", "Course formula":"Book Value of Common Equity ÷ Market Capitalization", "Substitution / inputs":f"Book equity {fmt_input(equity)} ({currency}) ÷ market cap ${fmt_input(market_cap)} USD, translated to {currency} in source calculation", "Recalculated":"FX rate not retained", "Exported value":"—" if saved("Book_to_Market") is None else f"{saved('Book_to_Market'):.6f}"},
+        {"Measure":"STA", "Course formula":"(Net Income − Operating Cash Flow) ÷ Total Assets", "Substitution / inputs":f"({fmt_input(ni0)} − {fmt_input(cfo0)}) ÷ {fmt_input(assets0)}", "Recalculated":"—" if sta is None else f"{sta:.6f}", "Exported value":"—" if saved("STA") is None else f"{saved('STA'):.6f}"},
+        {"Measure":"SNOA", "Course formula":"(Operating Assets − Operating Liabilities) ÷ Total Assets", "Substitution / inputs":f"Operating assets {fmt_input(op_assets)}; operating liabilities {fmt_input(op_liabs)}; assets {fmt_input(assets0)}; preferred stock absent is treated as 0", "Recalculated":"—" if snoa is None else f"{snoa:.6f}", "Exported value":"—" if saved("SNOA") is None else f"{saved('SNOA'):.6f}"},
+        {"Measure":"Altman Z", "Course formula":"0.012X1 + 0.014X2 + 0.033X3 + 0.006X4 + 0.999X5", "Substitution / inputs":f"X1={fmt_input(x1)}, X2={fmt_input(x2)}, X3={fmt_input(x3)}, X4={fmt_input(x4)} (market equity uses {currency} conversion), X5={fmt_input(x5)}", "Recalculated":"—" if z is None else f"{z:.6f}", "Exported value":"—" if saved("Altman_Z") is None else f"{saved('Altman_Z'):.6f}"},
+    ]
+
+def f_score_breakdown(row):
+    def v(k, y=0): return value(row, f"{k}_y{y}")
+    import operator
+    rows = []
+    def add(name, label, formula, left, right, op):
+        calc = None if left is None or right is None else int(bool(op(left, right)))
+        saved = value(row, name)
+        check = "Unavailable" if calc is None or saved is None else ("Matches" if calc == saved else "Mismatch")
+        rows.append({"Signal":label, "Course check":formula,
+                     "Compared values":"Missing required input" if left is None or right is None else f"{left:.6f} vs {right:.6f}",
+                     "Recalculated":"Unavailable" if calc is None else str(calc),
+                     "Exported flag":"Unavailable" if saved is None else str(int(saved)), "Check":check})
+    ta1, ta2 = v("total_assets", 1), v("total_assets", 2)
+    ni0, ni1, cfo0 = v("net_income"), v("net_income", 1), v("operating_cash_flow")
+    roa0, roa1 = safe_div(ni0, ta1), safe_div(ni1, ta2)
+    cfoa0 = safe_div(cfo0, ta1)
+    add("F_ROA_positive", "ROA Positive", "NI y0 ÷ total assets y1 > 0", roa0, 0.0, operator.gt)
+    add("F_CFO_positive", "CFO Positive", "Operating cash flow y0 ÷ total assets y1 > 0", cfoa0, 0.0, operator.gt)
+    add("F_delta_ROA_positive", "ROA Improved", "ROA y0 > ROA y1", roa0, roa1, operator.gt)
+    add("F_CFO_exceeds_ROA", "CFO Exceeds ROA", "CFO / assets y1 > ROA y0", cfoa0, roa0, operator.gt)
+    lev0, lev1 = safe_div(v("long_term_debt"), v("total_assets")), safe_div(v("long_term_debt",1), v("total_assets",1))
+    add("F_leverage_decreased", "Leverage Decreased", "LT debt y0 / assets y0 < LT debt y1 / assets y1", lev0, lev1, operator.lt)
+    cr0, cr1 = safe_div(v("current_assets"), v("current_liabilities")), safe_div(v("current_assets",1), v("current_liabilities",1))
+    add("F_current_ratio_increased", "Current Ratio Increased", "Current ratio y0 > current ratio y1", cr0, cr1, operator.gt)
+    issue = v("net_common_stock_issuance")
+    issue_calc, issue_saved = (None if issue is None else int(issue <= 0)), value(row,"F_no_net_equity_issue")
+    issue_check = "Unavailable" if issue_calc is None or issue_saved is None else ("Matches" if issue_calc == issue_saved else "Mismatch")
+    rows.append({"Signal":"No Net Equity Issue", "Course check":"Net common stock issuance y0 ≤ 0", "Compared values":"Missing required input" if issue is None else fmt_input(issue), "Recalculated":"Unavailable" if issue_calc is None else str(issue_calc), "Exported flag":"Unavailable" if issue_saved is None else str(int(issue_saved)), "Check":issue_check})
+    def gross_margin(y):
+        rev, cogs = v("revenue",y), v("cogs",y)
+        gp = rev-cogs if rev is not None and cogs is not None else None
+        return safe_div(gp,rev)
+    add("F_gross_margin_increased", "Gross Margin Increased", "Gross margin y0 > gross margin y1", gross_margin(0), gross_margin(1), operator.gt)
+    add("F_asset_turnover_increased", "Asset Turnover Increased", "Revenue y0 / assets y1 > revenue y1 / assets y2", safe_div(v("revenue"),ta1), safe_div(v("revenue",1),ta2), operator.gt)
+    return rows
 
 base["BUY_score_live"] = rank_score(base, buy_inputs, [True, True, True])
 base["SELL_score_live"] = rank_score(base, sell_inputs, [True, True, False])
@@ -230,8 +333,55 @@ with company_tab:
         })
         period_dates["Fiscal period end"] = period_dates["Fiscal period end"].fillna("Not reported by Yahoo")
         st.dataframe(period_dates, width="stretch", hide_index=True)
+        with st.expander("Calculation breakdown for this company", expanded=True):
+            st.caption("These tables show the course formulas, this company's inputs, recalculated results where the exported data permits an independent check, and the saved dataset values. Missing inputs remain unavailable.")
+            st.markdown("**Six course measures**")
+            measure_rows = pd.DataFrame(company_calculation_rows(row))
+            def measure_check(item):
+                a, b = item["Recalculated"], item["Exported value"]
+                if a == "—": return "Missing input"
+                if a == "FX rate not retained": return "FX rate not retained"
+                if b == "—": return "No saved value"
+                return "Matches" if abs(float(a)-float(b)) <= 0.000001 else "Mismatch"
+            measure_rows["Check"] = measure_rows.apply(measure_check, axis=1)
+            st.dataframe(measure_rows, width="stretch", hide_index=True)
+            if (measure_rows["Check"] == "Mismatch").any():
+                st.warning("At least one independently recalculated measure differs from its saved value. Review the exported inputs before relying on the result.")
+            st.caption("Book-to-Market and Altman X4 use market capitalization converted from USD into the statement currency in the source calculation. The export does not retain the exact FX rate, so those conversions cannot be independently reconstructed from this file.")
+
+            st.markdown("**F_SCORE: nine signal checks**")
+            st.caption("Each signal is 1 when its rule is met and 0 otherwise. ROA and cash flow use beginning-of-year total assets. The check compares a fresh calculation from the exported inputs with the saved signal.")
+            f_rows = pd.DataFrame(f_score_breakdown(row))
+            st.dataframe(f_rows, width="stretch", hide_index=True)
+            f_total = value(row, "F_SCORE")
+            if f_total is not None:
+                st.write(f"**F_SCORE total:** {int(f_total)}/9, the sum of all nine saved binary signals.")
+            if (f_rows["Check"] == "Mismatch").any():
+                st.warning("At least one F_SCORE signal differs when recalculated from the exported inputs. Review the source fields before relying on the total.")
+
+            st.markdown("**BUY and SELL composite contributions under the current filters**")
+            buy_peers = base.loc[base[buy_inputs].notna().all(axis=1)]
+            sell_peers = base.loc[base[sell_inputs].notna().all(axis=1)]
+            comp_rows = []
+            if row[buy_inputs].notna().all():
+                for col, label in [("GPA", "GPA"), ("Book_to_Market", "Book-to-Market"), ("F_SCORE", "F_SCORE")]:
+                    pct = buy_peers[col].rank(pct=True, method="average").get(row.name, np.nan)
+                    comp_rows.append({"Composite":"BUY", "Measure":label, "Raw value":f"{row[col]:.6f}", "Percentile contribution":f"{pct:.1%}"})
+                comp_rows.append({"Composite":"BUY", "Measure":"Average BUY composite", "Raw value":"—", "Percentile contribution":f"{row['BUY_score_live']:.1%}"})
+            if row[sell_inputs].notna().all():
+                for col, label, high_good in [("STA","STA",True),("SNOA","SNOA",True),("Altman_Z","Altman Z risk (low Z is higher risk)",False)]:
+                    rank = sell_peers[col].rank(pct=True, method="average").get(row.name, np.nan)
+                    pct = rank if high_good else 1.0-rank
+                    comp_rows.append({"Composite":"SELL risk", "Measure":label, "Raw value":f"{row[col]:.6f}", "Percentile contribution":f"{pct:.1%}"})
+                comp_rows.append({"Composite":"SELL risk", "Measure":"Average SELL risk score", "Raw value":"—", "Percentile contribution":f"{row['SELL_score_live']:.1%}"})
+            if comp_rows:
+                st.dataframe(pd.DataFrame(comp_rows), width="stretch", hide_index=True)
+                st.caption("Each composite averages three within-peer-set percentile contributions. The peer set follows the current sector and size filters and includes only companies with all three required inputs.")
+            else:
+                st.write("This company is missing at least one input needed to calculate a BUY or SELL composite.")
         raw = [c for c in row.index if c.endswith("_y0") or c.startswith("F_")]
-        st.dataframe(row[raw].rename("Value").to_frame(), width="stretch")
+        with st.expander("Raw exported y0 inputs and saved F_SCORE flags"):
+            st.dataframe(row[raw].rename("Value").to_frame(), width="stretch")
 
 with conclusion_tab:
     st.subheader("Written investment conclusions")
@@ -377,3 +527,4 @@ measure_descriptions = [
 for title, description in measure_descriptions:
     with st.expander(title):
         st.markdown(description)
+
