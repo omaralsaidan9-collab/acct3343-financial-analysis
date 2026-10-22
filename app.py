@@ -168,7 +168,6 @@ m2.metric("BUY candidates", f"{len(buy):,}", f"{rankable_buy:,} fully rankable b
 m3.metric("SELL candidates", f"{len(sell):,}", f"{rankable_sell:,} fully rankable before filters")
 m4.metric("Full core statements", f"{int((df.get('data_pull_status', pd.Series(dtype=object)) == 'pulled').sum()):,}/1,000", f"{partial} partial")
 
-st.info("Coverage: GPA 978, Book-to-Market 1,000, STA 990, SNOA 521, Altman Z 956, and complete F_SCORE 846 of 1,000. Missing inputs remain missing and can make a company unrankable.")
 
 buy_tab, sell_tab, company_tab, method_tab = st.tabs(["BUY screen", "SELL screen", "Company analysis", "Methodology"])
 
@@ -275,6 +274,7 @@ else:
     st.write("No rows have all three BUY inputs under the current sector and size filters.")
 
 st.subheader("Data coverage and source notes")
+st.caption("Counts show how many companies have the reported inputs needed to calculate each measure. Availability varies by measure because company statements do not always include every required item; missing values are left blank.")
 coverage = pd.DataFrame({"Measure":["GPA","Book-to-Market","STA","SNOA","Altman Z","Complete F_SCORE","BUY composite","SELL composite"],"Available companies":[int(recommendation_universe[c].notna().sum()) for c in ["GPA","Book_to_Market","STA","SNOA","Altman_Z","F_SCORE","BUY_score","SELL_score"]]})
 st.dataframe(coverage, hide_index=True, width="stretch")
 
