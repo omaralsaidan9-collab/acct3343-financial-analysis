@@ -169,7 +169,7 @@ m3.metric("SELL candidates", f"{len(sell):,}", f"{rankable_sell:,} fully rankabl
 m4.metric("Full core statements", f"{int((df.get('data_pull_status', pd.Series(dtype=object)) == 'pulled').sum()):,}/1,000", f"{partial} partial")
 
 
-buy_tab, sell_tab, company_tab, method_tab = st.tabs(["BUY screen", "SELL screen", "Company analysis", "Methodology"])
+buy_tab, sell_tab, company_tab, conclusion_tab, method_tab = st.tabs(["BUY screen", "SELL screen", "Company analysis", "Investment conclusions", "Methodology"])
 
 with buy_tab:
     st.markdown('<h2 class="buy-title">BUY candidates</h2>', unsafe_allow_html=True)
@@ -213,6 +213,60 @@ with company_tab:
         k8.metric("Statement currency", str(row.get("financial_currency", "Unknown")) if pd.notna(row.get("financial_currency")) else "Unknown")
         raw = [c for c in row.index if c.endswith("_y0") or c.startswith("F_")]
         st.dataframe(row[raw].rename("Value").to_frame(), width="stretch")
+
+with conclusion_tab:
+    st.subheader("Written investment conclusions")
+    st.caption("These screen-based conclusions update with the sector, size, and threshold filters. They explain why the highest-ranked candidates merit further review; they are not personalized investment advice.")
+    conclusion_buy, conclusion_sell = st.columns(2)
+
+    with conclusion_buy:
+        st.markdown('<h3 class="buy-title">BUY case</h3>', unsafe_allow_html=True)
+        if buy.empty:
+            st.write("No BUY candidate meets the current filters, so there is no qualifying BUY case to summarize.")
+        else:
+            top_buy = buy.iloc[0]
+            peer_buy = base.loc[base[buy_inputs].notna().all(axis=1)]
+            buy_percentiles = {
+                "GPA": peer_buy["GPA"].rank(pct=True, method="average").get(top_buy.name, np.nan),
+                "Book-to-Market": peer_buy["Book_to_Market"].rank(pct=True, method="average").get(top_buy.name, np.nan),
+                "F_SCORE": peer_buy["F_SCORE"].rank(pct=True, method="average").get(top_buy.name, np.nan),
+            }
+            st.markdown(f"**{top_buy['company_name']} ({top_buy['ticker']}) — highest BUY composite under the current filters ({top_buy['BUY_score_live']:.0%}).**")
+            st.write(
+                f"GPA is {top_buy['GPA']:.3f} ({buy_percentiles['GPA']:.0%} percentile), "
+                f"Book-to-Market is {top_buy['Book_to_Market']:.3f} ({buy_percentiles['Book-to-Market']:.0%} percentile), "
+                f"and F_SCORE is {top_buy['F_SCORE']:.0f}/9 ({buy_percentiles['F_SCORE']:.0%} percentile) among companies with complete BUY inputs in the filtered peer set."
+            )
+            st.write(
+                "**Conclusion:** Together, these results show strong gross profitability, relatively high book value versus market value, and positive financial signals. "
+                "That combination supports further research under this course screen. Book-to-Market alone does not establish that the shares are undervalued, and the score does not capture every company-specific risk or current event."
+            )
+
+    with conclusion_sell:
+        st.markdown('<h3 class="sell-title">SELL risk case</h3>', unsafe_allow_html=True)
+        if sell.empty:
+            st.write("No SELL risk candidate meets the current filters, so there is no qualifying SELL case to summarize.")
+        else:
+            top_sell = sell.iloc[0]
+            peer_sell = base.loc[base[sell_inputs].notna().all(axis=1)]
+            sell_percentiles = {
+                "STA": peer_sell["STA"].rank(pct=True, method="average").get(top_sell.name, np.nan),
+                "SNOA": peer_sell["SNOA"].rank(pct=True, method="average").get(top_sell.name, np.nan),
+                "Altman Z risk": 1 - peer_sell["Altman_Z"].rank(pct=True, method="average").get(top_sell.name, np.nan),
+            }
+            flagged_measures = [name for name, flag in [("STA", "STA_flag"), ("SNOA", "SNOA_flag"), ("Altman Z", "Altman_flag")] if bool(top_sell[flag])]
+            unflagged_measures = [name for name, flag in [("STA", "STA_flag"), ("SNOA", "SNOA_flag"), ("Altman Z", "Altman_flag")] if not bool(top_sell[flag])]
+            st.markdown(f"**{top_sell['company_name']} ({top_sell['ticker']}) — highest SELL risk composite under the current filters ({top_sell['SELL_score_live']:.0%}).**")
+            st.write(
+                f"STA is {top_sell['STA']:.3f} ({sell_percentiles['STA']:.0%} high-accrual risk percentile), "
+                f"SNOA is {top_sell['SNOA']:.3f} ({sell_percentiles['SNOA']:.0%} high-SNOA risk percentile), "
+                f"and Altman Z is {top_sell['Altman_Z']:.3f} ({sell_percentiles['Altman Z risk']:.0%} low-Z risk percentile)."
+            )
+            st.write(
+                f"**Conclusion:** {', '.join(flagged_measures)} trigger the selected risk thresholds"
+                + (f", while {', '.join(unflagged_measures)} do not." if unflagged_measures else ".")
+                + " The combined result warrants closer review of earnings quality and financial distress risk; it does not show that the shares are overvalued or automatically mean they should be sold. Altman Z should be interpreted cautiously for companies whose industry differs from the model’s original population."
+            )
 
 with method_tab:
     st.subheader("Course methodology")
