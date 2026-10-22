@@ -21,9 +21,13 @@ st.markdown("""
 .sell-card { border-left: 5px solid #f06464; }
 .buy-title { color: #4bd18c !important; }
 .sell-title { color: #ff7373 !important; }
-.small-note { color: #a6b2bf; font-size: .9rem; }
+.small-note { color: #c0ccd8; font-size: .9rem; }
+label, [data-testid="stWidgetLabel"] p { color: #d1dbe5 !important; }
+[data-testid="stCaptionContainer"] p { color: #bac7d4 !important; }
+[data-testid="stMetricLabel"] { color: #c2cfdb !important; }
+[data-testid="stMetricValue"] { color: #f0f4f8 !important; }
 h1, h2, h3 { color: #e8eef5; }
-[data-testid="stTabs"] button[role="tab"] { color: #c3ced9; }
+[data-testid="stTabs"] button[role="tab"] { color: #d0dbe5; }
 [data-testid="stTabs"] button[role="tab"]:nth-of-type(1) { color: #4bd18c; }
 [data-testid="stTabs"] button[role="tab"]:nth-of-type(2) { color: #ff7373; }
 [data-testid="stTabs"] button[role="tab"][aria-selected="true"] { border-bottom-color: #6ea6d9; }
