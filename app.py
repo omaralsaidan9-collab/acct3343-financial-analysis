@@ -223,7 +223,7 @@ with company_tab:
             "Period": ["Latest annual period (y0)", "Prior annual period (y1)", "Two years prior (y2)"],
             "Fiscal period end": [row.get("y0_period_end"), row.get("y1_period_end"), row.get("y2_period_end")],
         })
-        period_dates["Fiscal period end"] = period_dates["Fiscal period end"].fillna("Not verified")
+        period_dates["Fiscal period end"] = period_dates["Fiscal period end"].fillna("Not reported by Yahoo")
         st.dataframe(period_dates, width="stretch", hide_index=True)
         raw = [c for c in row.index if c.endswith("_y0") or c.startswith("F_")]
         st.dataframe(row[raw].rename("Value").to_frame(), width="stretch")
@@ -300,7 +300,7 @@ with method_tab:
 - **Altman Z:** 0.012X1 + 0.014X2 + 0.033X3 + 0.006X4 + 0.999X5. X1 = Working Capital/Assets; X2 = Retained Earnings/Assets; X3 = EBIT/Assets; X4 = Market Equity/Book Total Liabilities; X5 = Sales/Assets. The course materials give 1.81 as the distress cutoff.
 - **SELL red flags:** STA above its threshold, SNOA above its threshold, and Altman Z below its cutoff. The SELL composite separately ranks high STA, high SNOA, and low Altman Z risk percentiles. Companies need all three indicators to receive a composite rank.
 
-**Data dates and limitations:** The source is a Yahoo Finance screen of US-listed securities, which can include foreign issuers. Annual period-end dates were checked by matching each exported annual total-assets value to Yahoo Finance annual balance sheets. y0 is the latest annual period in the export; y1 and y2 are the two preceding annual periods. All three dates were verified for 990 of 1,000 companies. For the other 10, at least one required total-assets value was absent from the export, so the affected date is left unverified rather than inferred. Fiscal year-end dates differ by company. Some companies also have incomplete statements. Altman Z was developed for specific firm populations, so interpret it cautiously across industries. This educational screen is not investment advice.
+**Data dates and limitations:** The source is a Yahoo Finance screen of US-listed securities, which can include foreign issuers. y0 is the latest annual period in the export; y1 and y2 are the two preceding annual periods. Fiscal year-end dates differ by company. Dates come from Yahoo Finance annual balance-sheet periods; for date fields that could not be matched to the exported total-assets values, the corresponding date from Yahoo’s returned annual-period list was used. All three annual dates are available for 994 companies. Six companies have only two annual periods in Yahoo’s available list, so no y2 date is shown for them. Some companies also have incomplete financial statements. Altman Z was developed for specific firm populations, so interpret it cautiously across industries. This educational screen is not investment advice.
     """)
 
 # Full-sample sector mix is independent of the interactive recommendation filters.
@@ -348,7 +348,7 @@ coverage = pd.DataFrame({"Measure":["GPA","Book-to-Market","STA","SNOA","Altman 
 st.dataframe(coverage, hide_index=True, width="stretch")
 
 st.markdown("**Verified annual statement period-end dates**")
-st.caption("y0 is the latest annual period in the export; y1 and y2 are the two preceding annual periods. Each date was verified by matching the company’s exported total assets to Yahoo Finance’s annual balance sheet. Fiscal year ends vary by company.")
+st.caption("y0 is the latest annual period in the export; y1 and y2 are the two preceding annual periods. Dates come from Yahoo Finance annual balance-sheet periods; where an exported total-assets match was unavailable, the date was taken from Yahoo’s returned annual-period list. Fiscal year ends vary by company.")
 period_coverage = pd.DataFrame({
     "Annual period": ["Latest (y0)", "Prior (y1)", "Two years prior (y2)"],
     "Companies with a verified date": [
@@ -359,7 +359,7 @@ period_coverage = pd.DataFrame({
 })
 period_coverage["Coverage"] = period_coverage["Companies with a verified date"].map(lambda n: f"{n:,}/1,000")
 st.dataframe(period_coverage, hide_index=True, width="stretch")
-st.caption("All three dates were verified for 990 companies. For the remaining 10, one or more dates could not be verified because the corresponding total-assets value was missing from the uploaded export; those dates remain blank.")
+st.caption("Yahoo Finance annual-period dates are available for all three periods for 994 companies. Six companies have only two annual periods listed, so y2 is shown as “Not reported by Yahoo.” No adjacent company dates were copied or estimated.")
 
 measure_descriptions = [
     ("Gross Profitability (GPA)", "**Formula:** (Revenue − Cost of Goods Sold) ÷ Total Assets. It measures gross profit generated per dollar of assets; higher values score better in the BUY screen."),
