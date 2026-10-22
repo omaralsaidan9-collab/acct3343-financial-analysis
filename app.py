@@ -164,7 +164,7 @@ def fetch_market_update():
     articles = []
     sector_articles = []
     try:
-        articles = [_yahoo_article(x) for x in (yf.Search("U.S. stock market today", max_results=1, news_count=8, include_cb=False, timeout=12).news or [])]
+        articles = [_yahoo_article(x) for x in (yf.Search("stock market today", max_results=1, news_count=8, include_cb=False, timeout=12).news or [])]
         articles = [x for x in articles if x]
     except Exception:
         articles = []
