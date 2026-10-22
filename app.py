@@ -164,7 +164,7 @@ def fetch_market_update():
     articles = []
     sector_articles = []
     try:
-        articles = [_yahoo_article(x) for x in (yf.Search("stock market today", max_results=1, news_count=8, include_cb=False, timeout=12).news or [])]
+        articles = [_yahoo_article(x) for x in (yf.Search("stock market today", max_results=1, news_count=2, include_cb=False, timeout=12).news or [])]
         articles = [x for x in articles if x]
     except Exception:
         articles = []
@@ -209,7 +209,7 @@ def fetch_market_update():
 
     if leader:
         try:
-            sector_articles = [_yahoo_article(x) for x in (yf.Search(f"{leader['sector']} stocks", max_results=1, news_count=5, include_cb=False, timeout=12).news or [])]
+            sector_articles = [_yahoo_article(x) for x in (yf.Search(f"{leader['sector']} stocks", max_results=1, news_count=2, include_cb=False, timeout=12).news or [])]
             sector_articles = [x for x in sector_articles if x]
         except Exception:
             sector_articles = []
@@ -217,7 +217,7 @@ def fetch_market_update():
         raise RuntimeError("Yahoo Finance did not return market headlines or sector prices")
     return {
         "fetched_at": datetime.now(ZoneInfo("America/New_York")).strftime("%b %d, %Y %I:%M %p ET"),
-        "news": articles[:3], "leader": leader, "sector_news": sector_articles[:2],
+        "news": articles[:2], "leader": leader, "sector_news": sector_articles[:2],
     }
 
 st.subheader("Market snapshot · Live Yahoo Finance update")
@@ -240,7 +240,7 @@ else:
                 st.markdown(f"**{article['title']}**")
                 st.caption(" · ".join(x for x in [article["publisher"], article["published"]] if x))
                 if article["url"].startswith("https://"):
-                    st.link_button("Read market coverage", article["url"])
+                    st.caption(f"[Read market coverage]({article['url']})")
         else:
             st.write("Yahoo Finance returned no current market headlines.")
     with leader_col:
@@ -253,7 +253,7 @@ else:
                 for article in market_update["sector_news"]:
                     st.markdown(f"**Related coverage:** {article['title']}")
                     if article["url"].startswith("https://"):
-                        st.link_button("Read sector coverage", article["url"])
+                        st.caption(f"[Read sector coverage]({article['url']})")
             else:
                 st.write("No matching Yahoo Finance sector headline was returned, so no cause is inferred.")
         else:
