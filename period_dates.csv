@@ -5,7 +5,7 @@ GOOGL,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 MSFT,2026-06-30,2025-06-30,2024-06-30,matched,matched,matched
 AMZN,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 TSM,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
-SPCX,2025-12-31,2024-12-31,,matched,matched,export_asset_missing
+SPCX,2025-12-31,2024-12-31,,matched,matched,not_reported_by_yahoo
 META,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 AVGO,2025-10-31,2024-10-31,2023-10-31,matched,matched,matched
 TSLA,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
@@ -248,7 +248,7 @@ VEEV,2026-01-31,2025-01-31,2024-01-31,matched,matched,matched
 NOK,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 INFY,2026-03-31,2025-03-31,2024-03-31,matched,matched,matched
 DEO,2026-06-30,2025-06-30,2024-06-30,matched,matched,matched
-HONA,2025-12-31,2024-12-31,,matched,matched,export_asset_missing
+HONA,2025-12-31,2024-12-31,,matched,matched,not_reported_by_yahoo
 CIEN,2025-10-31,2024-10-31,2023-10-31,matched,matched,matched
 ADSK,2026-01-31,2025-01-31,2024-01-31,matched,matched,matched
 DAL,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
@@ -270,7 +270,7 @@ VMRK,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 XEL,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 SE,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 MT,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
-MDLN,2025-12-31,,,matched,export_asset_missing,export_asset_missing
+MDLN,2025-12-31,2024-12-31,2023-12-31,matched,date_from_yahoo_annual_period_list,date_from_yahoo_annual_period_list
 F,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 TEVA,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 XYZ,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
@@ -338,7 +338,7 @@ KMB,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 PEG,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 WEC,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 JD,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
-ESLT,,,,export_asset_missing,export_asset_missing,export_asset_missing
+ESLT,2025-12-31,2024-12-31,2023-12-31,date_from_yahoo_annual_period_list,date_from_yahoo_annual_period_list,date_from_yahoo_annual_period_list
 CNC,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 RMD,2026-06-30,2025-06-30,2024-06-30,matched,matched,matched
 RKLB,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
@@ -455,7 +455,7 @@ ENTG,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 GH,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 STZ,2026-02-28,2025-02-28,2024-02-29,matched,matched,matched
 DINO,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
-ARXS,2025-12-31,2024-12-31,,matched,matched,export_asset_missing
+ARXS,2025-12-31,2024-12-31,,matched,matched,not_reported_by_yahoo
 SBS,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 EXE,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 GPN,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
@@ -654,7 +654,7 @@ MKC-V,2025-11-30,2024-11-30,2023-11-30,matched,matched,matched
 DTM,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 AMH,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 LII,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
-INIO,2025-12-31,2024-12-31,,matched,matched,export_asset_missing
+INIO,2025-12-31,2024-12-31,,matched,matched,not_reported_by_yahoo
 CCK,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 STRL,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 PNW,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
@@ -717,7 +717,7 @@ RDY,2026-03-31,2025-03-31,2024-03-31,matched,matched,matched
 EGP,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 PSO,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 ONTO,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
-AMKR,,,,export_asset_missing,export_asset_missing,export_asset_missing
+AMKR,2025-12-31,2024-12-31,2023-12-31,date_from_yahoo_annual_period_list,date_from_yahoo_annual_period_list,date_from_yahoo_annual_period_list
 UHAL,2026-03-31,2025-03-31,2024-03-31,matched,matched,matched
 GSAT,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 HII,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
@@ -819,7 +819,7 @@ YMM,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 OC,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 ESI,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 CUBE,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
-JAN,2025-12-31,2024-12-31,,matched,matched,export_asset_missing
+JAN,2025-12-31,2024-12-31,,matched,matched,not_reported_by_yahoo
 FORM,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 CYTK,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 TAP-A,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
@@ -889,7 +889,7 @@ URBN,2026-01-31,2025-01-31,2024-01-31,matched,matched,matched
 MSM,2025-08-31,2024-08-31,2023-08-31,matched,matched,matched
 BROS,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 PACS,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
-SLAB,,,,export_asset_missing,export_asset_missing,export_asset_missing
+SLAB,2025-12-31,2024-12-31,2023-12-31,date_from_yahoo_annual_period_list,date_from_yahoo_annual_period_list,date_from_yahoo_annual_period_list
 SSD,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 AGCO,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 IONS,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
@@ -930,7 +930,7 @@ NE,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 VFS,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 MGY,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 SEI,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
-NAVN,2026-01-31,,,matched,export_asset_missing,export_asset_missing
+NAVN,2026-01-31,2025-01-31,,matched,date_from_yahoo_annual_period_list,not_reported_by_yahoo
 QLYS,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 EPAM,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
 GLBE,2025-12-31,2024-12-31,2023-12-31,matched,matched,matched
