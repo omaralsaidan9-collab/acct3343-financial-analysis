@@ -1,4 +1,6 @@
 from pathlib import Path
+from datetime import datetime, timedelta, timezone
+from zoneinfo import ZoneInfo
 import numpy as np
 import pandas as pd
 import plotly.express as px
@@ -78,34 +80,188 @@ if not DATA_PATH.exists():
 
 date_file_stamp = PERIOD_DATES_PATH.stat().st_mtime_ns if PERIOD_DATES_PATH.exists() else None
 df = load_data(str(DATA_PATH), date_file_stamp)
-# WDC is retained in the raw source for auditability but never appears in recommendations.
-recommendation_universe = df[df["ticker"] != "WDC"].copy()
+# Exclude WDC from the complete sample, plus financial-services businesses that
+# Yahoo classified outside its Financial Services sector label.
+SOURCE_UNIVERSE_COUNT = len(df)
+EXCLUSION_REASONS = {
+    "WDC": "60 Second Pitch company",
+    "FISV": "payments and financial-services technology",
+    "FIS": "banking, payments, and financial-services technology",
+    "GPN": "payment processing and financial technology",
+    "BR": "financial-market infrastructure and investor services",
+    "CHYM": "digital banking and consumer financial services",
+    "XYZ": "payments and consumer financial services",
+    "FICO": "credit scoring and financial decision services",
+    "NLY": "mortgage REIT and lending business",
+    "AGNC": "mortgage REIT and lending business",
+}
+EXCLUDED_PRESENT = sorted(set(df["ticker"]) & set(EXCLUSION_REASONS))
+FINANCIAL_EXCLUDED_PRESENT = [t for t in EXCLUDED_PRESENT if t != "WDC"]
+df = df[~df["ticker"].isin(EXCLUSION_REASONS)].copy()
+recommendation_universe = df
 
 captured = pd.to_datetime(recommendation_universe.get("captured_at_utc"), errors="coerce", utc=True).dropna()
 as_of = captured.max().strftime("%b %d, %Y %H:%M UTC") if not captured.empty else "Not recorded"
 
 st.title("Financial Analysis Screen")
 st.caption("ACCT 3343 · Course-based BUY and SELL screens")
-st.markdown(f"<div class='small-note'>Universe capture: {as_of} · Yahoo Finance annual statements · WDC excluded from recommendations</div>", unsafe_allow_html=True)
+st.markdown(
+    f"<div class='small-note'>Universe capture: {as_of} · Yahoo Finance annual statements · "
+    f"{SOURCE_UNIVERSE_COUNT:,} source listings; {len(df):,} retained after exclusions</div>",
+    unsafe_allow_html=True,
+)
 
-st.subheader("Market snapshot · October 22, 2026")
-news_col, leader_col = st.columns(2)
-with news_col:
-    st.markdown("""
-<div class="card">
-<b>Today’s market news</b><br>
-U.S. stock futures moved lower as investors assessed Tesla and Meta earnings, with technology leading the declines.<br>
-<a href="https://ca.finance.yahoo.com/news/live/stock-market-today-thursday-october-21-dow-sp-500-nasdaq-tesla-meta-094500493.html" target="_blank">Read Yahoo Finance’s market coverage</a>
-</div>
-""", unsafe_allow_html=True)
-with leader_col:
-    st.markdown("""
-<div class="card">
-<b>Leading S&amp;P 500 sector recently</b><br>
-Yahoo Finance’s sector tracker currently ranks Energy first year to date (+43.52%), followed by Industrials (+40.83%). Higher oil prices amid the Iran conflict have supported energy shares. Returns are year to date, not today’s single-session performance.<br>
-<a href="https://finance.yahoo.com/sectors/energy/" target="_blank">View Yahoo Finance’s Energy sector performance</a> · <a href="https://finance.yahoo.com/energy/articles/oil-prices-back-above-100-102500097.html" target="_blank">Read why oil prices matter for energy stocks</a>
-</div>
-""", unsafe_allow_html=True)
+SECTOR_ETFS = {
+    "Materials": "XLB", "Communication Services": "XLC", "Energy": "XLE",
+    "Financials": "XLF", "Industrials": "XLI", "Information Technology": "XLK",
+    "Consumer Staples": "XLP", "Real Estate": "XLRE", "Utilities": "XLU",
+    "Health Care": "XLV", "Consumer Discretionary": "XLY",
+}
+
+def _yahoo_article(raw):
+    """Normalize the Yahoo Search article formats returned by yfinance."""
+    if not isinstance(raw, dict):
+        return None
+    item = raw.get("content") if isinstance(raw.get("content"), dict) else raw
+    title = item.get("title") or raw.get("title")
+    url = item.get("link") or raw.get("link")
+    if not url:
+        for key in ("canonicalUrl", "clickThroughUrl"):
+            value = item.get(key) or raw.get(key)
+            if isinstance(value, dict):
+                url = value.get("url")
+            elif isinstance(value, str):
+                url = value
+            if url:
+                break
+    publisher = item.get("publisher") or raw.get("publisher")
+    if isinstance(publisher, dict):
+        publisher = publisher.get("displayName")
+    published = item.get("providerPublishTime") or raw.get("providerPublishTime")
+    if not published:
+        published = item.get("pubDate") or raw.get("pubDate")
+    try:
+        if isinstance(published, (int, float)):
+            published = datetime.fromtimestamp(published, tz=timezone.utc)
+        elif published:
+            published = datetime.fromisoformat(str(published).replace("Z", "+00:00"))
+        else:
+            published = None
+        if published and published.tzinfo is None:
+            published = published.replace(tzinfo=timezone.utc)
+        published_text = published.astimezone(ZoneInfo("America/New_York")).strftime("%b %d, %Y %I:%M %p ET") if published else ""
+    except (TypeError, ValueError, OSError):
+        published_text = ""
+    if not title:
+        return None
+    return {"title": str(title), "url": str(url) if url else "", "publisher": str(publisher or "Yahoo Finance"), "published": published_text}
+
+@st.cache_data(ttl=900, show_spinner=False)
+def fetch_market_update():
+    """Fetch Yahoo market headlines and YTD S&P sector ETF returns; cache for 15 minutes."""
+    import yfinance as yf
+
+    articles = []
+    sector_articles = []
+    try:
+        articles = [_yahoo_article(x) for x in (yf.Search("U.S. stock market today", max_results=1, news_count=8, include_cb=False, timeout=12).news or [])]
+        articles = [x for x in articles if x]
+    except Exception:
+        articles = []
+
+    today_ny = datetime.now(ZoneInfo("America/New_York")).date()
+    year_start = datetime(today_ny.year, 1, 1).date()
+    start = (year_start - timedelta(days=18)).isoformat()
+    end = (today_ny + timedelta(days=1)).isoformat()
+    leader = None
+    try:
+        tickers = list(SECTOR_ETFS.values())
+        prices = yf.download(
+            tickers=tickers, start=start, end=end, interval="1d", auto_adjust=True,
+            group_by="ticker", threads=False, progress=False, timeout=15,
+        )
+        if prices is not None and not prices.empty:
+            returns = []
+            for sector_name, ticker in SECTOR_ETFS.items():
+                try:
+                    if isinstance(prices.columns, pd.MultiIndex):
+                        if ticker in prices.columns.get_level_values(0):
+                            close = prices[(ticker, "Close")]
+                        else:
+                            close = prices[("Close", ticker)]
+                    else:
+                        close = prices["Close"] if len(tickers) == 1 else None
+                    close = pd.to_numeric(close, errors="coerce").dropna()
+                    dates = pd.to_datetime(close.index).date
+                    valid = close.loc[[d <= today_ny - timedelta(days=1) for d in dates]]
+                    valid_dates = pd.to_datetime(valid.index).date
+                    before_year = valid.loc[[d < year_start for d in valid_dates]]
+                    current_year = valid.loc[[d >= year_start for d in valid_dates]]
+                    if not before_year.empty and not current_year.empty:
+                        pct = float((current_year.iloc[-1] / before_year.iloc[-1] - 1.0) * 100.0)
+                        returns.append({"sector": sector_name, "ticker": ticker, "return_pct": pct, "last_close": str(pd.Timestamp(current_year.index[-1]).date())})
+                except Exception:
+                    continue
+            if returns:
+                leader = max(returns, key=lambda x: x["return_pct"])
+    except Exception:
+        leader = None
+
+    if leader:
+        try:
+            sector_articles = [_yahoo_article(x) for x in (yf.Search(f"{leader['sector']} stocks", max_results=1, news_count=5, include_cb=False, timeout=12).news or [])]
+            sector_articles = [x for x in sector_articles if x]
+        except Exception:
+            sector_articles = []
+    if not articles and not leader:
+        raise RuntimeError("Yahoo Finance did not return market headlines or sector prices")
+    return {
+        "fetched_at": datetime.now(ZoneInfo("America/New_York")).strftime("%b %d, %Y %I:%M %p ET"),
+        "news": articles[:3], "leader": leader, "sector_news": sector_articles[:2],
+    }
+
+st.subheader("Market snapshot · Live Yahoo Finance update")
+try:
+    market_update = fetch_market_update()
+    st.session_state["last_market_update"] = market_update
+    update_is_fresh = True
+except Exception:
+    market_update = st.session_state.get("last_market_update")
+    update_is_fresh = False
+
+if not market_update:
+    st.info("Live market data from Yahoo Finance is temporarily unavailable. Refresh the page to try again.")
+else:
+    news_col, leader_col = st.columns(2)
+    with news_col:
+        st.markdown("#### Latest Yahoo Finance market coverage")
+        if market_update["news"]:
+            for article in market_update["news"]:
+                st.markdown(f"**{article['title']}**")
+                st.caption(" · ".join(x for x in [article["publisher"], article["published"]] if x))
+                if article["url"].startswith("https://"):
+                    st.link_button("Read market coverage", article["url"])
+        else:
+            st.write("Yahoo Finance returned no current market headlines.")
+    with leader_col:
+        st.markdown("#### Leading S&P 500 sector · year to date")
+        leader = market_update["leader"]
+        if leader:
+            st.markdown(f"**{leader['sector']}** · {leader['return_pct']:+.2f}% through {leader['last_close']} (ETF: {leader['ticker']})")
+            st.caption("Sector leadership is measured by the year-to-date adjusted-price return of S&P 500 sector ETFs. Related headlines provide context; they do not prove what caused the return.")
+            if market_update["sector_news"]:
+                for article in market_update["sector_news"]:
+                    st.markdown(f"**Related coverage:** {article['title']}")
+                    if article["url"].startswith("https://"):
+                        st.link_button("Read sector coverage", article["url"])
+            else:
+                st.write("No matching Yahoo Finance sector headline was returned, so no cause is inferred.")
+        else:
+            st.write("Sector performance is temporarily unavailable from Yahoo Finance.")
+    if update_is_fresh:
+        st.caption(f"Market data fetched {market_update['fetched_at']} · cached for up to 15 minutes")
+    else:
+        st.warning(f"Yahoo Finance could not refresh. Showing this session’s last successful update from {market_update['fetched_at']}.")
 
 # Sidebar controls rerun the app automatically whenever a value changes.
 st.sidebar.header("Screen filters")
@@ -280,7 +436,7 @@ m1, m2, m3, m4 = st.columns(4)
 m1.metric("Companies screened", f"{len(df):,}")
 m2.metric("BUY candidates", f"{len(buy):,}", f"{rankable_buy:,} fully rankable before filters")
 m3.metric("SELL candidates", f"{len(sell):,}", f"{rankable_sell:,} fully rankable before filters")
-m4.metric("Full core statements", f"{int((df.get('data_pull_status', pd.Series(dtype=object)) == 'pulled').sum()):,}/1,000", f"{partial} partial")
+m4.metric("Full core statements", f"{int((df.get('data_pull_status', pd.Series(dtype=object)) == 'pulled').sum()):,}/{len(df):,}", f"{partial} partial")
 
 
 top_tab, remaining_tab, company_tab, conclusion_tab, method_tab = st.tabs(["Top 5 candidates", "Remaining candidates", "Company analysis", "Investment conclusions", "Methodology"])
@@ -293,19 +449,19 @@ sell_ranked.insert(0, "Rank", range(1, len(sell_ranked) + 1))
 def buy_table(frame):
     view = frame[["Rank", "ticker", "company_name", "sector", "GPA", "Book_to_Market", "F_SCORE", "BUY_score_live"]].copy()
     view["Rating"] = "BUY"
-    view["Rating (%)"] = view["BUY_score_live"].map(lambda x: f"{x:.1%}")
-    view = view[["Rating", "Rank", "Rating (%)", "company_name", "ticker", "sector", "GPA", "Book_to_Market", "F_SCORE"]]
+    view["Composite (%)"] = view["BUY_score_live"].map(lambda x: f"{x:.1%}")
+    view = view[["Rating", "Rank", "Composite (%)", "company_name", "ticker", "sector", "GPA", "Book_to_Market", "F_SCORE"]]
     return view.rename(columns={"company_name":"Company", "ticker":"Ticker", "sector":"Sector", "Book_to_Market":"Book-to-Market"})
 
 def sell_table(frame):
     view = frame[["Rank", "ticker", "company_name", "sector", "STA", "SNOA", "Altman_Z", "SELL_score_live"]].copy()
     view["Rating"] = "SELL risk"
-    view["Rating (%)"] = view["SELL_score_live"].map(lambda x: f"{x:.1%}")
-    view = view[["Rating", "Rank", "Rating (%)", "company_name", "ticker", "sector", "STA", "SNOA", "Altman_Z"]]
+    view["Composite (%)"] = view["SELL_score_live"].map(lambda x: f"{x:.1%}")
+    view = view[["Rating", "Rank", "Composite (%)", "company_name", "ticker", "sector", "STA", "SNOA", "Altman_Z"]]
     return view.rename(columns={"company_name":"Company", "ticker":"Ticker", "sector":"Sector", "Altman_Z":"Altman Z"})
 
 with top_tab:
-    st.caption("Rankings update with the filters. BUY and SELL use separate course-based methods; a SELL risk result is not an overvaluation finding.")
+    st.caption("Rankings update with the filters. Composite (%) is the average of three peer-relative percentile ranks, not a probability of return or a forecast. BUY and SELL use separate methods; SELL risk does not mean overvaluation.")
     buy_col, sell_col = st.columns(2)
     with buy_col:
         st.markdown('<h2 class="buy-title">Top 5 BUY candidates</h2>', unsafe_allow_html=True)
@@ -313,18 +469,18 @@ with top_tab:
             st.write("No companies meet the current BUY filters.")
         else:
             buy_view = buy_table(buy_ranked.head(5))
-            st.dataframe(buy_view.style.map(lambda _: "color: #4bd18c; font-weight: 700;", subset=["Rating", "Rating (%)"]), width="stretch", hide_index=True)
+            st.dataframe(buy_view.style.map(lambda _: "color: #4bd18c; font-weight: 700;", subset=["Rating", "Composite (%)"]), width="stretch", hide_index=True)
     with sell_col:
         st.markdown('<h2 class="sell-title">Top 5 SELL risk candidates</h2>', unsafe_allow_html=True)
         if sell.empty:
             st.write("No companies meet the current SELL filters.")
         else:
             sell_view = sell_table(sell_ranked.head(5))
-            st.dataframe(sell_view.style.map(lambda _: "color: #ff7373; font-weight: 700;", subset=["Rating", "Rating (%)"]), width="stretch", hide_index=True)
+            st.dataframe(sell_view.style.map(lambda _: "color: #ff7373; font-weight: 700;", subset=["Rating", "Composite (%)"]), width="stretch", hide_index=True)
 
 with remaining_tab:
     st.subheader("All remaining candidates")
-    st.caption("Ranks 6 onward are listed here. The first five in each ranking appear on the Top 5 candidates tab. Ratings are the live peer-relative composite scores.")
+    st.caption("Ranks 6 onward are listed here. The first five in each ranking appear on the Top 5 candidates tab. Composite (%) is the average of three peer-relative percentile ranks, not a probability of return or a forecast.")
     buy_col, sell_col = st.columns(2)
     with buy_col:
         st.markdown('<h3 class="buy-title">Remaining BUY candidates</h3>', unsafe_allow_html=True)
@@ -332,14 +488,14 @@ with remaining_tab:
         if buy_rest.empty:
             st.write("There are no additional BUY candidates under the current filters.")
         else:
-            st.dataframe(buy_table(buy_rest).style.map(lambda _: "color: #4bd18c; font-weight: 700;", subset=["Rating", "Rating (%)"]), width="stretch", hide_index=True)
+            st.dataframe(buy_table(buy_rest).style.map(lambda _: "color: #4bd18c; font-weight: 700;", subset=["Rating", "Composite (%)"]), width="stretch", hide_index=True)
     with sell_col:
         st.markdown('<h3 class="sell-title">Remaining SELL risk candidates</h3>', unsafe_allow_html=True)
         sell_rest = sell_ranked.iloc[5:]
         if sell_rest.empty:
             st.write("There are no additional SELL risk candidates under the current filters.")
         else:
-            st.dataframe(sell_table(sell_rest).style.map(lambda _: "color: #ff7373; font-weight: 700;", subset=["Rating", "Rating (%)"]), width="stretch", hide_index=True)
+            st.dataframe(sell_table(sell_rest).style.map(lambda _: "color: #ff7373; font-weight: 700;", subset=["Rating", "Composite (%)"]), width="stretch", hide_index=True)
 
 with company_tab:
     st.subheader("Individual company analysis")
@@ -380,7 +536,7 @@ with company_tab:
             st.dataframe(measure_rows, width="stretch", hide_index=True)
             if (measure_rows["Check"] == "Mismatch").any():
                 st.warning("At least one independently recalculated measure differs from its saved value. Review the exported inputs before relying on the result.")
-            st.caption("Book-to-Market and Altman X4 use market capitalization converted from USD into the statement currency in the source calculation. The export does not retain the exact FX rate, so those conversions cannot be independently reconstructed from this file.")
+            st.caption("Book-to-Market and Altman X4 convert USD market capitalization to the statement currency. The original export did not save the exchange rate, so those two currency conversions cannot be independently reconstructed from this file. No rate has been estimated or substituted here.")
 
             st.markdown("**F_SCORE: nine signal checks**")
             st.caption("Each signal is 1 when its rule is met and 0 otherwise. ROA and cash flow use beginning-of-year total assets. The check compares a fresh calculation from the exported inputs with the saved signal.")
@@ -487,13 +643,15 @@ with method_tab:
 - **Scaled Net Operating Assets (SNOA):** (Operating Assets − Operating Liabilities) ÷ Total Assets. Operating assets = Total Assets − Cash. Operating liabilities = Total Assets − short-term debt − long-term debt − minority interest − preferred stock − common equity. Preferred stock is treated as zero only when the course slide allows it to be absent; other missing inputs remain missing.
 - **Altman Z:** 0.012X1 + 0.014X2 + 0.033X3 + 0.006X4 + 0.999X5. X1 = Working Capital/Assets; X2 = Retained Earnings/Assets; X3 = EBIT/Assets; X4 = Market Equity/Book Total Liabilities; X5 = Sales/Assets. The course materials give 1.81 as the distress cutoff.
 - **SELL red flags:** STA above its threshold, SNOA above its threshold, and Altman Z below its cutoff. The SELL composite separately ranks high STA, high SNOA, and low Altman Z risk percentiles. Companies need all three indicators to receive a composite rank.
+- **Universe exclusions:** WDC is excluded because it is the 60 Second Pitch company. FIS, FISV, GPN, BR, CHYM, XYZ, FICO, NLY, and AGNC are also excluded because their business activities are in payments/financial services, digital banking, credit scoring, or mortgage lending even though Yahoo's sector labels place them outside “Financial Services.”
 
 
     """)
 
-# Full-sample sector mix is independent of the interactive recommendation filters.
-st.subheader("Sector mix of the 1,000-company sample")
-st.caption("Share of the original sample by sector; includes all 1,000 companies, including WDC, and does not change with the filters.")
+# Sample sector mix is independent of the interactive recommendation filters.
+st.subheader(f"Sector mix of the eligible sample ({len(df):,} companies)")
+excluded_summary = ", ".join(FINANCIAL_EXCLUDED_PRESENT) if FINANCIAL_EXCLUDED_PRESENT else "none identified in this source file"
+st.caption(f"Share of the retained sample by sector; WDC and confirmed financial-services businesses are excluded. Manual financial-business exclusions in this file: {excluded_summary}. The source screen had {SOURCE_UNIVERSE_COUNT:,} listings; this chart uses {len(df):,} retained companies.")
 sector_mix = (
     df.assign(sector_label=df["sector"].fillna("Not classified").astype(str).replace("", "Not classified"))
       .groupby("sector_label", as_index=False)
@@ -510,7 +668,7 @@ sector_fig = px.bar(
     text="Share of sample (%)",
     hover_data={"Companies": True, "Share of sample (%)": ":.1f", "Sector": False},
     color_discrete_sequence=["#48b5a2"],
-    title="Company count by sector as a percentage of the full sample",
+    title="Company count by sector as a percentage of the eligible sample",
 )
 sector_fig.update_traces(texttemplate="%{x:.1f}%", textposition="outside", cliponaxis=False)
 sector_fig.update_layout(paper_bgcolor="#0d1117", plot_bgcolor="#111821", font_color="#e6edf3", height=480, showlegend=False)
@@ -545,17 +703,23 @@ period_coverage = pd.DataFrame({
         int(recommendation_universe.get("y2_period_end", pd.Series(index=recommendation_universe.index, dtype=object)).notna().sum()),
     ],
 })
-period_coverage["Coverage"] = period_coverage["Companies with a verified date"].map(lambda n: f"{n:,}/1,000")
+period_coverage["Coverage"] = period_coverage["Companies with a verified date"].map(lambda n: f"{n:,}/{len(recommendation_universe):,}")
 st.dataframe(period_coverage, hide_index=True, width="stretch")
-st.caption("Yahoo Finance annual-period dates are available for all three periods for 994 companies. Six companies have only two annual periods listed, so y2 is shown as “Not reported by Yahoo.” No adjacent company dates were copied or estimated.")
+date_cols = ["y0_period_end", "y1_period_end", "y2_period_end"]
+if all(c in recommendation_universe for c in date_cols):
+    all_three_dates = int(recommendation_universe[date_cols].notna().all(axis=1).sum())
+    no_y2_date = int(recommendation_universe["y2_period_end"].isna().sum())
+    st.caption(f"Yahoo Finance lists all three annual dates for {all_three_dates:,} of {len(recommendation_universe):,} retained companies. {no_y2_date:,} have no y2 date in Yahoo’s returned period list. No adjacent company dates were copied or estimated.")
+else:
+    st.caption("Annual period dates are shown where the Yahoo Finance period-date file contains them.")
 
 measure_descriptions = [
     ("Gross Profitability (GPA)", "**Formula:** (Revenue − Cost of Goods Sold) ÷ Total Assets. It measures gross profit generated per dollar of assets; higher values score better in the BUY screen."),
-    ("Book-to-Market (B/M)", "**Formula:** Book Value of Common Equity ÷ Market Capitalization. It compares accounting equity with the market value of the company; higher values can indicate a value stock, but do not prove undervaluation."),
+    ("Book-to-Market (B/M)", "**Formula:** Book Value of Common Equity ÷ Market Capitalization. It compares accounting equity with the market value of the company; higher values can indicate a value stock, but do not prove undervaluation. For non-USD statement currencies, the source calculation converted USD market capitalization to local currency; the original exchange rate was not retained, so that conversion cannot be independently reproduced from this export."),
     ("F_SCORE", "**Formula:** A sum of nine binary signals covering profitability, cash flow, improving returns, leverage, liquidity, equity issuance, gross margin, and asset turnover. Scores range from 0 to 9; higher scores indicate stronger financial performance."),
     ("Scaled Total Accruals (STA)", "**Formula:** (Net Income − Operating Cash Flow) ÷ Total Assets. Higher values mean a larger share of reported earnings is not supported by operating cash flow, which can flag earnings-quality risk."),
     ("Scaled Net Operating Assets (SNOA)", "**Formula:** (Operating Assets − Operating Liabilities) ÷ Total Assets. Higher values indicate more net operating assets accumulated relative to the asset base; this is used as an accounting-quality warning signal."),
-    ("Altman Z-Score", "**Formula:** 0.012X1 + 0.014X2 + 0.033X3 + 0.006X4 + 0.999X5. It combines working capital, retained earnings, EBIT, market equity, liabilities, sales, and assets to screen for distress risk. The course materials use 1.81 as the distress cutoff; interpret it cautiously across industries."),
+    ("Altman Z-Score", "**Formula:** 0.012X1 + 0.014X2 + 0.033X3 + 0.006X4 + 0.999X5. It combines working capital, retained earnings, EBIT, market equity, liabilities, sales, and assets to screen for distress risk. The course materials use 1.81 as the distress cutoff; interpret it cautiously across industries. X4 uses the same local-currency conversion as Book-to-Market; the original FX rate was not retained in the export."),
 ]
 for title, description in measure_descriptions:
     with st.expander(title):
