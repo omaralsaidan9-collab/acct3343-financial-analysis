@@ -455,7 +455,7 @@ with method_tab:
 - **Altman Z:** 0.012X1 + 0.014X2 + 0.033X3 + 0.006X4 + 0.999X5. X1 = Working Capital/Assets; X2 = Retained Earnings/Assets; X3 = EBIT/Assets; X4 = Market Equity/Book Total Liabilities; X5 = Sales/Assets. The course materials give 1.81 as the distress cutoff.
 - **SELL red flags:** STA above its threshold, SNOA above its threshold, and Altman Z below its cutoff. The SELL composite separately ranks high STA, high SNOA, and low Altman Z risk percentiles. Companies need all three indicators to receive a composite rank.
 
-**Data and limitations:** The sample uses Yahoo Finance data for US-listed securities, including some foreign issuers. Fiscal year ends vary, and some companies have incomplete statements; missing inputs are left blank. Altman Z was developed for specific firm populations, so interpret it cautiously across industries. This educational screen is not investment advice.
+
     """)
 
 # Full-sample sector mix is independent of the interactive recommendation filters.
