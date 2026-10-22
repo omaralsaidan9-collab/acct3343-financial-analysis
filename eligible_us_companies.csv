@@ -1,0 +1,1001 @@
+rank_by_market_cap,ticker,company_name,sector,exchange_code,exchange_name,market_cap_usd,currency,quote_region,captured_at_utc,screen_source
+1,NVDA,NVIDIA Corporation,Technology,NMS,NasdaqGS,5359909470208,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+2,AAPL,Apple Inc.,Technology,NMS,NasdaqGS,5020252110848,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+3,GOOGL,Alphabet Inc.,Communication Services,NMS,NasdaqGS,4094093164544,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+4,MSFT,Microsoft Corporation,Technology,NMS,NasdaqGS,3957444575232,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+5,AMZN,"Amazon.com, Inc.",Consumer Cyclical,NMS,NasdaqGS,2830004912128,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+6,TSM,Taiwan Semiconductor Manufacturing Company Limited,Technology,NYQ,NYSE,2239986401280,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+7,SPCX,Space Exploration Technologies Corp.,Industrials,NMS,NasdaqGS,2098779652096,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+8,META,"Meta Platforms, Inc.",Communication Services,NMS,NasdaqGS,1776936550400,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+9,AVGO,Broadcom Inc.,Technology,NMS,NasdaqGS,1612532154368,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+10,TSLA,"Tesla, Inc.",Consumer Cyclical,NMS,NasdaqGS,1526381674496,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+11,LLY,Eli Lilly and Company,Healthcare,NYQ,NYSE,1132691980288,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+12,SKHY,SK hynix Inc.,Technology,NMS,NasdaqGS,1044101398528,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+13,MU,"Micron Technology, Inc.",Technology,NMS,NasdaqGS,1033747431424,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+14,WMT,Walmart Inc.,Consumer Defensive,NMS,NasdaqGS,934595330048,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+15,AMD,"Advanced Micro Devices, Inc.",Technology,NMS,NasdaqGS,902301548544,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+16,XOM,ExxonMobil Holdings Corporation,Energy,NYQ,NYSE,732290351104,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+17,ASML,ASML Holding N.V.,Technology,NMS,NasdaqGS,646226051072,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+18,JNJ,Johnson & Johnson,Healthcare,NYQ,NYSE,621223608320,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+19,ABBV,AbbVie Inc.,Healthcare,NYQ,NYSE,503274995712,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+20,INTC,Intel Corporation,Technology,NMS,NasdaqGS,491396333568,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+21,PLTR,Palantir Technologies Inc.,Technology,NMS,NasdaqGS,484744953856,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+22,CVX,Chevron Corporation,Energy,NYQ,NYSE,444852404224,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+23,COST,Costco Wholesale Corporation,Consumer Defensive,NMS,NasdaqGS,442380451840,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+24,CSCO,"Cisco Systems, Inc.",Technology,NMS,NasdaqGS,422881886208,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+25,KO,The Coca-Cola Company,Consumer Defensive,NYQ,NYSE,398760247296,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+26,ORCL,Oracle Corporation,Technology,NYQ,NYSE,391457734656,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+27,UNH,UnitedHealth Group Incorporated,Healthcare,NYQ,NYSE,374297034752,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+28,MRK,"Merck & Co., Inc.",Healthcare,NYQ,NYSE,369779703808,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+29,PG,The Procter & Gamble Company,Consumer Defensive,NYQ,NYSE,364564086784,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+30,CAT,Caterpillar Inc.,Industrials,NYQ,NYSE,340255965184,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+31,LRCX,Lam Research Corporation,Technology,NMS,NasdaqGS,326383992832,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+32,AMAT,"Applied Materials, Inc.",Technology,NMS,NasdaqGS,324533747712,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+33,HD,"The Home Depot, Inc.",Consumer Cyclical,NYQ,NYSE,313414221824,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+34,DELL,Dell Technologies Inc.,Technology,NYQ,NYSE,308928708608,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+35,PM,Philip Morris International Inc.,Consumer Defensive,NYQ,NYSE,307763806208,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+36,GE,GE Aerospace,Industrials,NYQ,NYSE,306993987584,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+37,SHEL,Shell plc,Energy,NYQ,NYSE,299689377792,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+38,NVS,Novartis AG,Healthcare,NYQ,NYSE,292577017856,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+39,PANW,"Palo Alto Networks, Inc.",Technology,NMS,NasdaqGS,284050489344,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+40,NFLX,"Netflix, Inc.",Communication Services,NMS,NasdaqGS,270822637568,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+41,SAP,SAP SE,Technology,NYQ,NYSE,268617957376,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+42,AZN,AstraZeneca PLC,Healthcare,NYQ,NYSE,261250072576,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+43,TXN,Texas Instruments Incorporated,Technology,NMS,NasdaqGS,259955949568,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+44,BABA,Alibaba Group Holding Limited,Consumer Cyclical,NYQ,NYSE,259745464320,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+45,RTX,RTX Corporation,Industrials,NYQ,NYSE,258230452224,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+46,TMO,Thermo Fisher Scientific Inc.,Healthcare,NYQ,NYSE,256612024320,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+47,GEV,GE Vernova Inc.,Industrials,NYQ,NYSE,246603579392,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+48,CRWD,"CrowdStrike Holdings, Inc.",Technology,NMS,NasdaqGS,245068562432,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+49,ARM,Arm Holdings plc,Technology,NMS,NasdaqGS,241997791232,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+50,AMGN,Amgen Inc.,Healthcare,NMS,NasdaqGS,236980633600,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+51,IBM,International Business Machines Corporation,Technology,NYQ,NYSE,236909117440,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+52,ANET,"Arista Networks, Inc.",Technology,NYQ,NYSE,232481554432,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+53,LIN,Linde plc,Basic Materials,NMS,NasdaqGS,230752845824,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+54,TM,Toyota Motor Corporation,Consumer Cyclical,NYQ,NYSE,229507399680,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+55,SHOP,Shopify Inc.,Technology,NMS,NasdaqGS,224249167872,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+56,MRVL,"Marvell Technology, Inc.",Technology,NMS,NasdaqGS,219966947328,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+57,KLAC,KLA Corporation,Technology,NMS,NasdaqGS,213277196288,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+58,BHP,BHP Group Limited,Basic Materials,NYQ,NYSE,205402161152,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+59,SNDK,Sandisk Corporation,Technology,NMS,NasdaqGS,199190773760,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+60,TTE,TotalEnergies SE,Energy,NYQ,NYSE,199184236544,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+61,CRM,"Salesforce, Inc.",Technology,NYQ,NYSE,198984941568,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+62,ADI,"Analog Devices, Inc.",Technology,NMS,NasdaqGS,196714201088,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+63,APH,Amphenol Corporation,Technology,NYQ,NYSE,195304570880,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+64,DIS,The Walt Disney Company,Communication Services,NYQ,NYSE,193095401472,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+65,GILD,"Gilead Sciences, Inc.",Healthcare,NMS,NasdaqGS,190419927040,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+66,QCOM,QUALCOMM Incorporated,Technology,NMS,NasdaqGS,190032723968,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+67,PEP,"PepsiCo, Inc.",Consumer Defensive,NMS,NasdaqGS,183561224192,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+68,VZ,Verizon Communications Inc.,Communication Services,NYQ,NYSE,180982022144,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+69,ABT,Abbott Laboratories,Healthcare,NYQ,NYSE,175069642752,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+70,COP,ConocoPhillips,Energy,NYQ,NYSE,174998831104,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+71,MCD,McDonald's Corporation,Consumer Cyclical,NYQ,NYSE,174256734208,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+72,NVO,Novo Nordisk A/S,Healthcare,NYQ,NYSE,172376096768,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+73,DE,Deere & Company,Industrials,NYQ,NYSE,171627347968,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+74,UNP,Union Pacific Corporation,Industrials,NYQ,NYSE,171016519680,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+75,PFE,Pfizer Inc.,Healthcare,NYQ,NYSE,170135257088,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+76,WELL,Welltower Inc.,Real Estate,NYQ,NYSE,168750759936,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+77,SCCO,Southern Copper Corporation,Basic Materials,NYQ,NYSE,167239155712,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+78,PBR,Petróleo Brasileiro S.A. - Petrobras,Energy,NYQ,NYSE,165362434048,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+79,TMUS,"T-Mobile US, Inc.",Communication Services,NMS,NasdaqGS,164923260928,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+80,DHR,Danaher Corporation,Healthcare,NYQ,NYSE,164400316416,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+81,NEE,"NextEra Energy, Inc.",Utilities,NYQ,NYSE,163261186048,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+82,BUD,Anheuser-Busch InBev SA/NV,Consumer Defensive,NYQ,NYSE,162039611392,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+83,TJX,"The TJX Companies, Inc.",Consumer Cyclical,NYQ,NYSE,160756580352,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+84,STX,Seagate Technology Holdings plc,Technology,NMS,NasdaqGS,158467915776,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+85,NOW,"ServiceNow, Inc.",Technology,NYQ,NYSE,158304944128,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+86,ETN,Eaton Corporation plc,Industrials,NYQ,NYSE,152966905856,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+87,BA,The Boeing Company,Industrials,NYQ,NYSE,151861297152,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+88,ISRG,"Intuitive Surgical, Inc.",Healthcare,NMS,NasdaqGS,151245389824,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+89,T,AT&T Inc.,Communication Services,NYQ,NYSE,150135767040,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+90,ACN,Accenture plc,Technology,NYQ,NYSE,147025199104,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+91,SONY,Sony Group Corporation,Technology,NYQ,NYSE,146544869376,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+92,RIO,Rio Tinto Group,Basic Materials,NYQ,NYSE,141365788672,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+93,UL,Unilever PLC,Consumer Defensive,NYQ,NYSE,138687922176,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+94,UBER,"Uber Technologies, Inc.",Technology,NYQ,NYSE,138117922816,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+95,MPC,Marathon Petroleum Corporation,Energy,NYQ,NYSE,136620515328,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+96,VRTX,Vertex Pharmaceuticals Incorporated,Healthcare,NMS,NasdaqGS,132860919808,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+97,BP,BP p.l.c.,Energy,NYQ,NYSE,128393232384,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+98,FTNT,"Fortinet, Inc.",Technology,NMS,NasdaqGS,127702867968,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+99,LMT,Lockheed Martin Corporation,Industrials,NYQ,NYSE,127283412992,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+100,BTI,British American Tobacco p.l.c.,Consumer Defensive,NYQ,NYSE,126660059136,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+101,VLO,Valero Energy Corporation,Energy,NYQ,NYSE,125752320000,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+102,BMY,Bristol-Myers Squibb Company,Healthcare,NYQ,NYSE,124850716672,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+103,PLD,"Prologis, Inc.",Real Estate,NYQ,NYSE,124038856704,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+104,NEM,Newmont Corporation,Basic Materials,NYQ,NYSE,123471659008,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+105,MO,"Altria Group, Inc.",Consumer Defensive,NYQ,NYSE,123277189120,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+106,BKNG,Booking Holdings Inc.,Consumer Cyclical,NMS,NasdaqGS,122725253120,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+107,PH,Parker-Hannifin Corporation,Industrials,NYQ,NYSE,120843436032,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+108,CVS,CVS Health Corporation,Healthcare,NYQ,NYSE,119519780864,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+109,MDT,Medtronic plc,Healthcare,NYQ,NYSE,118998196224,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+110,MCK,McKesson Corporation,Healthcare,NYQ,NYSE,118397509632,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+111,ADP,"Automatic Data Processing, Inc.",Technology,NMS,NasdaqGS,116696080384,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+112,GLW,Corning Incorporated,Technology,NYQ,NYSE,115982336000,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+113,PSX,Phillips 66,Energy,NYQ,NYSE,115744006144,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+114,SYK,Stryker Corporation,Healthcare,NYQ,NYSE,114151342080,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+115,SNOW,Snowflake Inc.,Technology,NYQ,NYSE,113859149824,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+116,SBUX,Starbucks Corporation,Consumer Cyclical,NMS,NasdaqGS,112951205888,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+117,PDD,PDD Holdings Inc.,Consumer Cyclical,NMS,NasdaqGS,112049774592,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+118,CNQ,Canadian Natural Resources Limited,Energy,NYQ,NYSE,111815761920,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+119,LOW,"Lowe's Companies, Inc.",Consumer Cyclical,NYQ,NYSE,110280777728,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+120,NET,"Cloudflare, Inc.",Technology,NYQ,NYSE,109394812928,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+121,EQNR,Equinor ASA,Energy,NYQ,NYSE,109231366144,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+122,SPOT,Spotify Technology S.A.,Communication Services,NYQ,NYSE,108020449280,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+123,ENB,Enbridge Inc.,Energy,NYQ,NYSE,107006771200,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+124,MAR,"Marriott International, Inc.",Consumer Cyclical,NMS,NasdaqGS,105349578752,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+125,ABNB,"Airbnb, Inc.",Consumer Cyclical,NMS,NasdaqGS,104003084288,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+126,SO,The Southern Company,Utilities,NYQ,NYSE,103981309952,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+127,TT,Trane Technologies plc,Industrials,NYQ,NYSE,103723335680,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+128,HCA,"HCA Healthcare, Inc.",Healthcare,NYQ,NYSE,101913206784,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+129,GSK,GSK plc,Healthcare,NYQ,NYSE,100215832576,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+130,ADBE,Adobe Inc.,Technology,NMS,NasdaqGS,99269353472,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+131,FCX,Freeport-McMoRan Inc.,Basic Materials,NYQ,NYSE,98941607936,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+132,EQIX,"Equinix, Inc.",Real Estate,NMS,NasdaqGS,98178326528,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+133,SNY,Sanofi,Healthcare,NMS,NasdaqGS,98169757696,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+134,MRNA,"Moderna, Inc.",Healthcare,NMS,NasdaqGS,98136178688,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+135,DDOG,"Datadog, Inc.",Technology,NMS,NasdaqGS,98059796480,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+136,CEG,Constellation Energy Corporation,Utilities,NMS,NasdaqGS,95925182464,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+137,AEM,Agnico Eagle Mines Limited,Basic Materials,NYQ,NYSE,94872518656,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+138,ELV,"Elevance Health, Inc.",Healthcare,NYQ,NYSE,94149468160,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+139,DUK,Duke Energy Corporation,Utilities,NYQ,NYSE,94086660096,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+140,MELI,"MercadoLibre, Inc.",Consumer Cyclical,NMS,NasdaqGS,94036484096,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+141,GD,General Dynamics Corporation,Industrials,NYQ,NYSE,93263765504,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+142,ASX,"ASE Technology Holding Co., Ltd.",Technology,NYQ,NYSE,93251772416,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+143,SU,Suncor Energy Inc.,Energy,NYQ,NYSE,92424126464,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+144,WM,"Waste Management, Inc.",Industrials,NYQ,NYSE,91766620160,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+145,JCI,Johnson Controls International plc,Industrials,NYQ,NYSE,91479072768,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+146,EMR,Emerson Electric Co.,Industrials,NYQ,NYSE,91357904896,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+147,MNST,Monster Beverage Corporation,Consumer Defensive,NMS,NasdaqGS,91350589440,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+148,PWR,"Quanta Services, Inc.",Industrials,NYQ,NYSE,90377428992,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+149,MMM,3M Company,Industrials,NYQ,NYSE,90117341184,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+150,CDNS,"Cadence Design Systems, Inc.",Technology,NMS,NasdaqGS,89935323136,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+151,INTU,Intuit Inc.,Technology,NMS,NasdaqGS,89687072768,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+152,CSX,CSX Corporation,Industrials,NMS,NasdaqGS,89659785216,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+153,APP,AppLovin Corporation,Communication Services,NMS,NasdaqGS,89652871168,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+154,WMB,"The Williams Companies, Inc.",Energy,NYQ,NYSE,89046597632,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+155,CTAS,Cintas Corporation,Industrials,NMS,NasdaqGS,87416078336,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+156,SNPS,"Synopsys, Inc.",Technology,NMS,NasdaqGS,86464536576,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+157,E,Eni S.p.A.,Energy,NYQ,NYSE,84770758656,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+158,UPS,"United Parcel Service, Inc.",Industrials,NYQ,NYSE,84712316928,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+159,EOG,"EOG Resources, Inc.",Energy,NYQ,NYSE,84091396096,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+160,HWM,Howmet Aerospace Inc.,Industrials,NYQ,NYSE,83010510848,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+161,REGN,"Regeneron Pharmaceuticals, Inc.",Healthcare,NMS,NasdaqGS,82947743744,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+162,AMT,American Tower Corporation,Real Estate,NYQ,NYSE,82773147648,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+163,SHW,The Sherwin-Williams Company,Basic Materials,NYQ,NYSE,81875034112,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+164,VRT,Vertiv Holdings Co,Industrials,NYQ,NYSE,81675239424,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+165,HLT,Hilton Worldwide Holdings Inc.,Consumer Cyclical,NYQ,NYSE,81529765888,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+166,NGG,National Grid plc,Utilities,NYQ,NYSE,81214742528,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+167,ECL,Ecolab Inc.,Basic Materials,NYQ,NYSE,80759865344,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+168,MDLZ,"Mondelez International, Inc.",Consumer Defensive,NMS,NasdaqGS,80536190976,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+169,CI,The Cigna Group,Healthcare,NYQ,NYSE,80426876928,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+170,DASH,"DoorDash, Inc.",Consumer Cyclical,NMS,NasdaqGS,79921807360,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+171,EPD,Enterprise Products Partners L.P.,Energy,NYQ,NYSE,79015272448,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+172,ITW,Illinois Tool Works Inc.,Industrials,NYQ,NYSE,78832640000,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+173,NTES,"NetEase, Inc.",Communication Services,NMS,NasdaqGS,78747836416,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+174,CMCSA,Comcast Corporation,Communication Services,NMS,NasdaqGS,78353899520,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+175,SPG,"Simon Property Group, Inc.",Real Estate,NYQ,NYSE,78031609856,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+176,CP,Canadian Pacific Kansas City Limited,Industrials,NYQ,NYSE,77446881280,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+177,MSI,"Motorola Solutions, Inc.",Technology,NYQ,NYSE,77368344576,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+178,HPE,Hewlett Packard Enterprise Company,Technology,NYQ,NYSE,77218627584,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+179,RCL,Royal Caribbean Cruises Ltd.,Consumer Cyclical,NYQ,NYSE,77146554368,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+180,LITE,Lumentum Holdings Inc.,Technology,NMS,NasdaqGS,77058834432,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+181,NOC,Northrop Grumman Corporation,Industrials,NYQ,NYSE,76616007680,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+182,SLB,SLB N.V.,Energy,NYQ,NYSE,75839717376,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+183,KMI,"Kinder Morgan, Inc.",Energy,NYQ,NYSE,75577335808,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+184,CMI,Cummins Inc.,Industrials,NYQ,NYSE,74819059712,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+185,ROST,"Ross Stores, Inc.",Consumer Cyclical,NMS,NasdaqGS,74809532416,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+186,CL,Colgate-Palmolive Company,Consumer Defensive,NYQ,NYSE,74455941120,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+187,CNI,Canadian National Railway Company,Industrials,NYQ,NYSE,73730400256,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+188,NSC,Norfolk Southern Corporation,Industrials,NYQ,NYSE,73691758592,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+189,AMX,"América Móvil, S.A.B. de C.V.",Communication Services,NYQ,NYSE,72531156992,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+190,ORLY,"O'Reilly Automotive, Inc.",Consumer Cyclical,NMS,NasdaqGS,72159297536,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+191,FDX,FedEx Corporation,Industrials,NYQ,NYSE,70582222848,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+192,RSG,"Republic Services, Inc.",Industrials,NYQ,NYSE,70526976000,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+193,BE,Bloom Energy Corporation,Industrials,NYQ,NYSE,70253608960,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+194,RACE,Ferrari N.V.,Consumer Cyclical,NYQ,NYSE,69675884544,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+195,AEP,"American Electric Power Company, Inc.",Utilities,NMS,NasdaqGS,69350785024,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+196,TGT,Target Corporation,Consumer Defensive,NYQ,NYSE,69224931328,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+197,HON,Honeywell International Inc.,Industrials,NMS,NasdaqGS,68056526848,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+198,RELX,RELX PLC,Industrials,NYQ,NYSE,67965550592,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+199,APD,"Air Products and Chemicals, Inc.",Basic Materials,NYQ,NYSE,67398004736,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+200,B,Barrick Mining Corporation,Basic Materials,NYQ,NYSE,67086245888,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+201,GM,General Motors Company,Consumer Cyclical,NYQ,NYSE,66782834688,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+202,DLR,"Digital Realty Trust, Inc.",Real Estate,NYQ,NYSE,66585886720,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+203,URI,"United Rentals, Inc.",Industrials,NYQ,NYSE,66535972864,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+204,CVNA,Carvana Co.,Consumer Cyclical,NYQ,NYSE,65609965568,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+205,MSTR,Strategy Inc,Technology,NMS,NasdaqGS,64990654464,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+206,COR,"Cencora, Inc.",Healthcare,NYQ,NYSE,64963293184,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+207,TRP,TC Energy Corporation,Energy,NYQ,NYSE,64912498688,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+208,BSX,Boston Scientific Corporation,Healthcare,NYQ,NYSE,64505204736,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+209,GWW,"W.W. Grainger, Inc.",Industrials,NYQ,NYSE,63826001920,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+210,TAK,Takeda Pharmaceutical Company Limited,Healthcare,NYQ,NYSE,63667826688,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+211,TRGP,Targa Resources Corp.,Energy,NYQ,NYSE,63385812992,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+212,TDG,TransDigm Group Incorporated,Industrials,NYQ,NYSE,63170273280,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+213,MPWR,"Monolithic Power Systems, Inc.",Technology,NMS,NasdaqGS,63066193920,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+214,OXY,Occidental Petroleum Corporation,Energy,NYQ,NYSE,62677262336,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+215,TEL,TE Connectivity plc,Technology,NYQ,NYSE,62073397248,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+216,NXPI,NXP Semiconductors N.V.,Technology,NMS,NasdaqGS,61114511360,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+217,CVE,Cenovus Energy Inc.,Energy,NYQ,NYSE,61099839488,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+218,FAST,Fastenal Company,Industrials,NMS,NasdaqGS,60232151040,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+219,WPM,Wheaton Precious Metals Corp.,Basic Materials,NYQ,NYSE,60026322944,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+220,NUE,Nucor Corporation,Basic Materials,NYQ,NYSE,60017692672,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+221,CAH,"Cardinal Health, Inc.",Healthcare,NYQ,NYSE,59617267712,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+222,NTRA,"Natera, Inc.",Healthcare,NMS,NasdaqGS,59586318336,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+223,MPLX,MPLX LP,Energy,NYQ,NYSE,59301036032,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+224,OKE,"ONEOK, Inc.",Energy,NYQ,NYSE,58703708160,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+225,LNG,"Cheniere Energy, Inc.",Energy,NYQ,NYSE,58701139968,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+226,KEYS,"Keysight Technologies, Inc.",Technology,NYQ,NYSE,58113048576,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+227,PCAR,PACCAR Inc,Industrials,NMS,NasdaqGS,58015944704,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+228,AME,"AMETEK, Inc.",Industrials,NYQ,NYSE,57364930560,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+229,CRH,CRH plc,Basic Materials,NYQ,NYSE,57234423808,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+230,TEAM,Atlassian Corporation,Technology,NMS,NasdaqGS,57084071936,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+231,FANG,"Diamondback Energy, Inc.",Energy,NMS,NasdaqGS,56524279808,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+232,GRMN,Garmin Ltd.,Technology,NYQ,NYSE,56146227200,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+233,ARGX,argenx SE,Healthcare,NMS,NasdaqGS,55971745792,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+234,NKE,"NIKE, Inc.",Consumer Cyclical,NYQ,NYSE,55743635456,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+235,PSA,Public Storage,Real Estate,NYQ,NYSE,55739904000,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+236,BKR,Baker Hughes Company,Energy,NMS,NasdaqGS,55589748736,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+237,DVN,Devon Energy Corporation,Energy,NYQ,NYSE,54856998912,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+238,D,"Dominion Energy, Inc.",Utilities,NYQ,NYSE,54820855808,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+239,EBAY,eBay Inc.,Consumer Cyclical,NMS,NasdaqGS,54690500608,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+240,SRE,Sempra,Utilities,NYQ,NYSE,54600679424,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+241,VALE,Vale S.A.,Basic Materials,NYQ,NYSE,54048186368,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+242,TER,"Teradyne, Inc.",Technology,NMS,NasdaqGS,54014164992,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+243,BDX,"Becton, Dickinson and Company",Healthcare,NYQ,NYSE,52935651328,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+244,VST,Vistra Corp.,Utilities,NYQ,NYSE,52406079488,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+245,O,Realty Income Corporation,Real Estate,NYQ,NYSE,52373168128,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+246,VEEV,Veeva Systems Inc.,Healthcare,NYQ,NYSE,51899879424,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+247,NOK,Nokia Oyj,Technology,NYQ,NYSE,51787464704,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+248,INFY,Infosys Limited,Technology,NYQ,NYSE,51642105856,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+249,DEO,Diageo plc,Consumer Defensive,NYQ,NYSE,51638071296,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+250,HONA,Honeywell Aerospace Inc.,Industrials,NMS,NasdaqGS,51492143104,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+251,CIEN,Ciena Corporation,Technology,NYQ,NYSE,51241091072,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+252,ADSK,"Autodesk, Inc.",Technology,NMS,NasdaqGS,51171557376,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+253,DAL,"Delta Air Lines, Inc.",Industrials,NYQ,NYSE,51100053504,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+254,HUM,Humana Inc.,Healthcare,NYQ,NYSE,51084566528,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+255,AZO,"AutoZone, Inc.",Consumer Cyclical,NYQ,NYSE,51053957120,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+256,EW,Edwards Lifesciences Corporation,Healthcare,NYQ,NYSE,50900721664,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+257,ETR,Entergy Corporation,Utilities,NYQ,NYSE,50682634240,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+258,ABEV,Ambev S.A.,Consumer Defensive,NYQ,NYSE,50411913216,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+259,ALAB,"Astera Labs, Inc.",Technology,NMS,NasdaqGS,50321088512,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+260,A,"Agilent Technologies, Inc.",Healthcare,NYQ,NYSE,50112856064,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+261,TRI,Thomson Reuters Corporation,Industrials,NMS,NasdaqGS,49936556032,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+262,UMC,United Microelectronics Corporation,Technology,NYQ,NYSE,49706745856,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+263,FIX,"Comfort Systems USA, Inc.",Industrials,NYQ,NYSE,49316757504,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+264,WDAY,"Workday, Inc.",Technology,NMS,NasdaqGS,48913362944,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+265,WAB,Westinghouse Air Brake Technologies Corporation,Industrials,NYQ,NYSE,48808476672,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+266,ROK,"Rockwell Automation, Inc.",Industrials,NYQ,NYSE,48695955456,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+267,CCEP,Coca-Cola Europacific Partners PLC,Consumer Defensive,NMS,NasdaqGS,48467197952,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+268,VMRK,Vivmark Residential,Real Estate,NYQ,NYSE,47966568448,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+269,XEL,Xcel Energy Inc.,Utilities,NMS,NasdaqGS,47959420928,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+270,SE,Sea Limited,Consumer Cyclical,NYQ,NYSE,47737044992,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+271,MT,ArcelorMittal S.A.,Basic Materials,NYQ,NYSE,47725314048,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+272,MDLN,Medline Inc.,Healthcare,NMS,NasdaqGS,47507247104,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+273,F,Ford Motor Company,Consumer Cyclical,NYQ,NYSE,47452389376,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+274,TEVA,Teva Pharmaceutical Industries Limited,Healthcare,NYQ,NYSE,47374802944,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+275,XYZ,"Block, Inc.",Technology,NYQ,NYSE,46988177408,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+276,FNV,Franco-Nevada Corporation,Basic Materials,NYQ,NYSE,46958395392,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+277,KDP,Keurig Dr Pepper Inc.,Consumer Defensive,NMS,NasdaqGS,46907674624,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+278,CARR,Carrier Global Corporation,Industrials,NYQ,NYSE,46902878208,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+279,COHR,Coherent Corp.,Technology,NYQ,NYSE,46777061376,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+280,AU,AngloGold Ashanti plc,Basic Materials,NYQ,NYSE,46272827392,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+281,LHX,"L3Harris Technologies, Inc.",Industrials,NYQ,NYSE,46097432576,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+282,IQV,IQVIA Holdings Inc.,Healthcare,NYQ,NYSE,45533298688,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+283,WAT,Waters Corporation,Healthcare,NYQ,NYSE,44917084160,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+284,EXC,Exelon Corporation,Utilities,NMS,NasdaqGS,44352430080,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+285,FERG,Ferguson Enterprises Inc.,Industrials,NYQ,NYSE,44099481600,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+286,HMC,"Honda Motor Co., Ltd.",Consumer Cyclical,NYQ,NYSE,44076986368,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+287,HLN,Haleon plc,Healthcare,NYQ,NYSE,44064346112,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+288,ONC,BeOne Medicines AG,Healthcare,NMS,NasdaqGS,43966971904,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+289,VTR,"Ventas, Inc.",Real Estate,NYQ,NYSE,43795357696,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+290,IDXX,"IDEXX Laboratories, Inc.",Healthcare,NMS,NasdaqGS,43660161024,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+291,P,"Everpure, Inc.",Technology,NYQ,NYSE,43629445120,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+292,FMX,"Fomento Económico Mexicano, S.A.B. de C.V.",Consumer Defensive,NYQ,NYSE,43600416768,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+293,NBIS,Nebius Group N.V.,Communication Services,NMS,NasdaqGS,43561316352,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+294,ILMN,"Illumina, Inc.",Healthcare,NMS,NasdaqGS,42711859200,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+295,NTAP,"NetApp, Inc.",Technology,NMS,NasdaqGS,42664173568,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+296,STM,STMicroelectronics N.V.,Technology,NYQ,NYSE,42466537472,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+297,WCN,"Waste Connections, Inc.",Industrials,NYQ,NYSE,42334072832,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+298,MCHP,Microchip Technology Incorporated,Technology,NMS,NasdaqGS,41893122048,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+299,HEI,HEICO Corporation,Industrials,NYQ,NYSE,41691033600,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+300,RVMD,"Revolution Medicines, Inc.",Healthcare,NMS,NasdaqGS,41641279488,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+301,ED,"Consolidated Edison, Inc.",Utilities,NYQ,NYSE,41354240000,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+302,YUM,"Yum! Brands, Inc.",Consumer Cyclical,NYQ,NYSE,41273561088,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+303,JBS,JBS N.V.,Consumer Defensive,NYQ,NYSE,41018368000,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+304,TWLO,Twilio Inc.,Technology,NYQ,NYSE,40955437056,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+305,LYV,"Live Nation Entertainment, Inc.",Communication Services,NYQ,NYSE,40614158336,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+306,SYY,Sysco Corporation,Consumer Defensive,NYQ,NYSE,40366456832,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+307,PAYX,"Paychex, Inc.",Technology,NMS,NasdaqGS,40047804416,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+308,SKYD,Skydance Corporation,Communication Services,NYQ,NYSE,39681941504,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+309,PCG,PG&E Corporation,Utilities,NYQ,NYSE,39481122816,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+310,ROP,"Roper Technologies, Inc.",Technology,NMS,NasdaqGS,39319031808,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+311,ODFL,"Old Dominion Freight Line, Inc.",Industrials,NMS,NasdaqGS,39169662976,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+312,CBRE,"CBRE Group, Inc.",Real Estate,NYQ,NYSE,38991310848,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+313,DHI,"D.R. Horton, Inc.",Consumer Cyclical,NYQ,NYSE,38872883200,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+314,VIK,Viking Holdings Ltd,Consumer Cyclical,NYQ,NYSE,38723522560,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+315,TTWO,"Take-Two Interactive Software, Inc.",Communication Services,NMS,NasdaqGS,38547890176,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+316,CLS,Celestica Inc.,Technology,NYQ,NYSE,38414704640,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+317,ADM,Archer-Daniels-Midland Company,Consumer Defensive,NYQ,NYSE,38248067072,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+318,KR,The Kroger Co.,Consumer Defensive,NYQ,NYSE,37874450432,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+319,ZS,"Zscaler, Inc.",Technology,NMS,NasdaqGS,37719445504,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+320,EL,The Estée Lauder Companies Inc.,Consumer Defensive,NYQ,NYSE,37558382592,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+321,RBLX,Roblox Corporation,Communication Services,NYQ,NYSE,37540454400,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+322,UI,Ubiquiti Inc.,Technology,NYQ,NYSE,36882968576,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+323,CHT,"Chunghwa Telecom Co., Ltd.",Communication Services,NYQ,NYSE,36847869952,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+324,VOD,Vodafone Group Public Limited Company,Communication Services,NMS,NasdaqGS,36720103424,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+325,CCL,Carnival Corporation Ltd.,Consumer Cyclical,NYQ,NYSE,36707856384,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+326,KVUE,Kenvue Inc.,Consumer Defensive,NYQ,NYSE,36571529216,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+327,OKTA,"Okta, Inc.",Technology,NMS,NasdaqGS,36474638336,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+328,MLM,"Martin Marietta Materials, Inc.",Basic Materials,NYQ,NYSE,36150284288,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+329,FER,Ferrovial N.V.,Industrials,NMS,NasdaqGS,36004003840,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+330,RPRX,Royalty Pharma plc,Healthcare,NMS,NasdaqGS,35912474624,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+331,CCJ,Cameco Corporation,Energy,NYQ,NYSE,35722416128,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+332,BIIB,Biogen Inc.,Healthcare,NMS,NasdaqGS,35605757952,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+333,CMG,"Chipotle Mexican Grill, Inc.",Consumer Cyclical,NYQ,NYSE,35583553536,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+334,STLD,"Steel Dynamics, Inc.",Basic Materials,NMS,NasdaqGS,35541069824,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+335,EC,Ecopetrol S.A.,Energy,NYQ,NYSE,35442589696,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+336,KMB,Kimberly-Clark Corporation,Consumer Defensive,NMS,NasdaqGS,35398119424,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+337,PEG,Public Service Enterprise Group Incorporated,Utilities,NYQ,NYSE,35380822016,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+338,WEC,"WEC Energy Group, Inc.",Utilities,NYQ,NYSE,35354656768,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+339,JD,"JD.com, Inc.",Consumer Cyclical,NMS,NasdaqGS,34829393920,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+340,ESLT,Elbit Systems Ltd.,Industrials,NMS,NasdaqGS,34808602624,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+341,CNC,Centene Corporation,Healthcare,NYQ,NYSE,34698207232,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+342,RMD,ResMed Inc.,Healthcare,NYQ,NYSE,34625384448,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+343,RKLB,Rocket Lab Corporation,Industrials,NMS,NasdaqGS,34317187072,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+344,VMC,Vulcan Materials Company,Basic Materials,NYQ,NYSE,34291718144,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+345,EXPE,"Expedia Group, Inc.",Consumer Cyclical,NMS,NasdaqGS,34282328064,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+346,CRDO,Credo Technology Group Holding Ltd,Technology,NMS,NasdaqGS,34259875840,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+347,IRM,Iron Mountain Incorporated,Real Estate,NYQ,NYSE,34152466432,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+348,CRWV,"CoreWeave, Inc.",Technology,NMS,NasdaqGS,34095990784,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+349,QSR,Restaurant Brands International Inc.,Consumer Cyclical,NYQ,NYSE,33968928768,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+350,ERIC,Telefonaktiebolaget LM Ericsson (publ),Technology,NMS,NasdaqGS,33851043840,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+351,EQT,EQT Corporation,Energy,NYQ,NYSE,33821650944,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+352,HSY,The Hershey Company,Consumer Defensive,NYQ,NYSE,33717336064,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+353,TKO,"TKO Group Holdings, Inc.",Communication Services,NYQ,NYSE,33678653440,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+354,MTD,Mettler-Toledo International Inc.,Healthcare,NYQ,NYSE,33620144128,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+355,CCI,Crown Castle Inc.,Real Estate,NYQ,NYSE,33462069248,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+356,UAL,"United Airlines Holdings, Inc.",Industrials,NMS,NasdaqGS,33000431616,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+357,ZTS,Zoetis Inc.,Healthcare,NYQ,NYSE,32900866048,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+358,CTSH,Cognizant Technology Solutions Corporation,Technology,NMS,NasdaqGS,32897150976,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+359,GFI,Gold Fields Limited,Basic Materials,NYQ,NYSE,32784990208,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+360,AXON,"Axon Enterprise, Inc.",Industrials,NMS,NasdaqGS,32706183168,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+361,ALC,Alcon Inc.,Healthcare,NYQ,NYSE,32595662848,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+362,NTR,Nutrien Ltd.,Basic Materials,NYQ,NYSE,32507551744,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+363,SUNB,"Sunbelt Rentals Holdings, Inc.",Industrials,NYQ,NYSE,32166543360,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+364,VG,"Venture Global, Inc.",Energy,NYQ,NYSE,32126195712,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+365,FLEX,Flex Ltd.,Technology,NMS,NasdaqGS,31865964544,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+366,GEHC,GE HealthCare Technologies Inc.,Healthcare,NMS,NasdaqGS,31392081920,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+367,EXR,Extra Space Storage Inc.,Real Estate,NYQ,NYSE,30869663744,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+368,CQP,"Cheniere Energy Partners, L.P.",Energy,NYQ,NYSE,30863517696,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+369,EME,"EMCOR Group, Inc.",Industrials,NYQ,NYSE,30840317952,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+370,TECK,Teck Resources Limited,Basic Materials,NYQ,NYSE,30799867904,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+371,IR,Ingersoll Rand Inc.,Industrials,NYQ,NYSE,30675232768,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+372,DXCM,"DexCom, Inc.",Healthcare,NMS,NasdaqGS,30286977024,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+373,ALNY,"Alnylam Pharmaceuticals, Inc.",Healthcare,NMS,NasdaqGS,30120433664,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+374,ON,ON Semiconductor Corporation,Technology,NMS,NasdaqGS,29954174976,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+375,WSM,"Williams-Sonoma, Inc.",Consumer Cyclical,NYQ,NYSE,29832990720,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+376,TS,Tenaris S.A.,Energy,NYQ,NYSE,29617780736,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+377,RDDT,"Reddit, Inc.",Communication Services,NYQ,NYSE,29490536448,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+378,AEE,Ameren Corporation,Utilities,NYQ,NYSE,29478270976,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+379,PBA,Pembina Pipeline Corporation,Energy,NYQ,NYSE,29461575680,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+380,JBL,Jabil Inc.,Technology,NYQ,NYSE,29444122624,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+381,TDY,Teledyne Technologies Incorporated,Technology,NYQ,NYSE,29191987200,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+382,DG,Dollar General Corporation,Consumer Defensive,NYQ,NYSE,29147887616,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+383,ZM,"Zoom Communications, Inc.",Technology,NMS,NasdaqGS,29014972416,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+384,BIP,Brookfield Infrastructure Partners L.P.,Utilities,NYQ,NYSE,28798672896,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+385,FTS,Fortis Inc.,Utilities,NYQ,NYSE,28595073024,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+386,HAL,Halliburton Company,Energy,NYQ,NYSE,28395171840,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+387,KGC,Kinross Gold Corporation,Basic Materials,NYQ,NYSE,28256253952,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+388,HPQ,HP Inc.,Technology,NYQ,NYSE,28244092928,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+389,ATO,Atmos Energy Corporation,Utilities,NYQ,NYSE,28212639744,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+390,BSP,Bending Spoons S.p.A.,Technology,NMS,NasdaqGS,28032229376,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+391,CBRS,Cerebras Systems Inc.,Technology,NMS,NasdaqGS,28027807744,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+392,RYAAY,Ryanair Holdings plc,Industrials,NMS,NasdaqGS,28019683328,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+393,KHC,The Kraft Heinz Company,Consumer Defensive,NYQ,NYSE,27866857472,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+394,SN,"SharkNinja, Inc.",Consumer Cyclical,NYQ,NYSE,27833401344,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+395,VRSN,"VeriSign, Inc.",Technology,NMS,NasdaqGS,27775399936,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+396,FOXA,Fox Corporation,Communication Services,NMS,NasdaqGS,27762991104,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+397,WST,"West Pharmaceutical Services, Inc.",Healthcare,NYQ,NYSE,27691454464,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+398,OTIS,Otis Worldwide Corporation,Industrials,NYQ,NYSE,27541426176,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+399,FTI,TechnipFMC plc,Energy,NYQ,NYSE,27451506688,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+400,DTE,DTE Energy Company,Utilities,NYQ,NYSE,26978615296,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+401,ECHO,EchoStar Corporation,Communication Services,NMS,NasdaqGS,26941179904,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+402,DOV,Dover Corporation,Industrials,NYQ,NYSE,26914494464,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+403,BIDU,"Baidu, Inc.",Communication Services,NMS,NasdaqGS,26832187392,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+404,AWK,"American Water Works Company, Inc.",Utilities,NYQ,NYSE,26780717056,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+405,CPAY,"Corpay, Inc.",Technology,NYQ,NYSE,26760226816,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+406,GFS,GLOBALFOUNDRIES Inc.,Technology,NMS,NasdaqGS,26588868608,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+407,ROIV,Roivant Sciences Ltd.,Healthcare,NMS,NasdaqGS,26581485568,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+408,CNP,"CenterPoint Energy, Inc.",Utilities,NYQ,NYSE,26559600640,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+409,DGX,Quest Diagnostics Incorporated,Healthcare,NYQ,NYSE,26371506176,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+410,FE,FirstEnergy Corp.,Utilities,NYQ,NYSE,26324402176,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+411,LH,Labcorp Holdings Inc.,Healthcare,NYQ,NYSE,26256125952,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+412,PPL,PPL Corporation,Utilities,NYQ,NYSE,26023002112,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+413,FFIV,"F5, Inc.",Technology,NMS,NasdaqGS,25968660480,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+414,ULTA,"Ulta Beauty, Inc.",Consumer Cyclical,NMS,NasdaqGS,25953357824,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+415,CASY,"Casey's General Stores, Inc.",Consumer Cyclical,NMS,NasdaqGS,25694339072,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+416,PHG,Koninklijke Philips N.V.,Healthcare,NYQ,NYSE,25637920768,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+417,FISV,"Fiserv, Inc.",Technology,NMS,NasdaqGS,25636472832,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+418,EXPD,"Expeditors International of Washington, Inc.",Industrials,NYQ,NYSE,25609451520,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+419,CPRT,"Copart, Inc.",Industrials,NMS,NasdaqGS,25552824320,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+420,VICI,VICI Properties Inc.,Real Estate,NYQ,NYSE,25489944576,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+421,IOT,Samsara Inc.,Technology,NYQ,NYSE,25321568256,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+422,VRSK,"Verisk Analytics, Inc.",Industrials,NMS,NasdaqGS,25200740352,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+423,Q,"Qnity Electronics, Inc.",Technology,NYQ,NYSE,25156290560,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+424,IHG,InterContinental Hotels Group PLC,Consumer Cyclical,NYQ,NYSE,24958154752,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+425,CHD,"Church & Dwight Co., Inc.",Consumer Defensive,NYQ,NYSE,24906409984,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+426,CPNG,"Coupang, Inc.",Consumer Cyclical,NYQ,NYSE,24897540096,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+427,XYL,Xylem Inc.,Industrials,NYQ,NYSE,24831322112,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+428,RBRK,"Rubrik, Inc.",Technology,NYQ,NYSE,24777641984,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+429,TCOM,Trip.com Group Limited,Consumer Cyclical,NMS,NasdaqGS,24753713152,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+430,KOF,"Coca-Cola FEMSA, S.A.B. de C.V.",Consumer Defensive,NYQ,NYSE,24749905920,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+431,ES,Eversource Energy,Utilities,NYQ,NYSE,24709863424,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+432,VLTO,Veralto Corporation,Industrials,NYQ,NYSE,24698703872,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+433,ATI,ATI Inc.,Industrials,NYQ,NYSE,24604626944,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+434,PPG,"PPG Industries, Inc.",Basic Materials,NYQ,NYSE,24490790912,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+435,HUBB,Hubbell Incorporated,Industrials,NYQ,NYSE,24347377664,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+436,GMAB,Genmab A/S,Healthcare,NMS,NasdaqGS,24331692032,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+437,LVS,Las Vegas Sands Corp.,Consumer Cyclical,NYQ,NYSE,24295270400,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+438,DRI,"Darden Restaurants, Inc.",Consumer Cyclical,NYQ,NYSE,24271484928,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+439,UTHR,United Therapeutics Corporation,Healthcare,NMS,NasdaqGS,24168474624,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+440,TPL,Texas Pacific Land Corporation,Energy,NYQ,NYSE,23748671488,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+441,NVT,nVent Electric plc,Industrials,NYQ,NYSE,23652300800,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+442,DLTR,"Dollar Tree, Inc.",Consumer Defensive,NMS,NasdaqGS,23543851008,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+443,ROKU,"Roku, Inc.",Communication Services,NMS,NasdaqGS,23417546752,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+444,AER,AerCap Holdings N.V.,Industrials,NYQ,NYSE,23242807296,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+445,IFF,International Flavors & Fragrances Inc.,Basic Materials,NYQ,NYSE,23240273920,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+446,SMCI,"Super Micro Computer, Inc.",Technology,NMS,NasdaqGS,23009273856,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+447,INCY,Incyte Corporation,Healthcare,NMS,NasdaqGS,22994032640,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+448,OMC,Omnicom Group Inc.,Communication Services,NYQ,NYSE,22943000576,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+449,BNTX,BioNTech SE,Healthcare,NMS,NasdaqGS,22932447232,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+450,FWONK,Formula One Group,Communication Services,NMS,NasdaqGS,22882162688,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+451,TPR,"Tapestry, Inc.",Consumer Cyclical,NYQ,NYSE,22851815424,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+452,RL,Ralph Lauren Corporation,Consumer Cyclical,NYQ,NYSE,22680576000,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+453,ENTG,"Entegris, Inc.",Technology,NMS,NasdaqGS,22493188096,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+454,GH,"Guardant Health, Inc.",Healthcare,NMS,NasdaqGS,22365134848,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+455,STZ,"Constellation Brands, Inc.",Consumer Defensive,NYQ,NYSE,22340982784,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+456,DINO,HF Sinclair Corporation,Energy,NYQ,NYSE,22324318208,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+457,ARXS,"Arxis, Inc.",Industrials,NMS,NasdaqGS,22290956288,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+458,SBS,Companhia de Saneamento Básico do Estado de São Paulo - SABESP,Utilities,NYQ,NYSE,22224869376,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+459,EXE,Expand Energy Corporation,Energy,NMS,NasdaqGS,22207614976,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+460,GPN,Global Payments Inc.,Industrials,NYQ,NYSE,22103572480,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+461,USFD,US Foods Holding Corp.,Consumer Defensive,NYQ,NYSE,22098184192,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+462,XPO,"XPO, Inc.",Industrials,NYQ,NYSE,22066116608,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+463,EIX,Edison International,Utilities,NYQ,NYSE,22007511040,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+464,DOW,Dow Inc.,Basic Materials,NYQ,NYSE,21944711168,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+465,SW,Smurfit Westrock Plc,Consumer Cyclical,NYQ,NYSE,21746718720,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+466,THC,Tenet Healthcare Corporation,Healthcare,NYQ,NYSE,21670078464,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+467,STE,STERIS plc,Healthcare,NYQ,NYSE,21594324992,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+468,TSEM,Tower Semiconductor Ltd.,Technology,NMS,NasdaqGS,21517273088,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+469,PHM,"PulteGroup, Inc.",Consumer Cyclical,NYQ,NYSE,21504004096,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+470,RS,"Reliance, Inc.",Basic Materials,NYQ,NYSE,21496887296,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+471,JBHT,"J.B. Hunt Transport Services, Inc.",Industrials,NMS,NasdaqGS,21464600576,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+472,PKG,Packaging Corporation of America,Consumer Cyclical,NYQ,NYSE,21294493696,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+473,WIT,Wipro Limited,Technology,NYQ,NYSE,21270890496,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+474,AMRZ,Amrize Ltd,Basic Materials,NYQ,NYSE,21220714496,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+475,VTRS,Viatris Inc.,Healthcare,NMS,NasdaqGS,21191501824,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+476,PTC,PTC Inc.,Technology,NMS,NasdaqGS,21115932672,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+477,CMS,CMS Energy Corporation,Utilities,NYQ,NYSE,21046691840,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+478,NRG,"NRG Energy, Inc.",Utilities,NYQ,NYSE,20979007488,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+479,AMCR,Amcor plc,Consumer Cyclical,NYQ,NYSE,20912281600,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+480,MTSI,"MACOM Technology Solutions Holdings, Inc.",Technology,NMS,NasdaqGS,20853080064,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+481,PR,Permian Resources Corporation,Energy,NYQ,NYSE,20804917248,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+482,VIV,Telefônica Brasil S.A.,Communication Services,NYQ,NYSE,20643616768,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+483,EFX,Equifax Inc.,Industrials,NYQ,NYSE,20626823168,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+484,NI,NiSource Inc.,Utilities,NYQ,NYSE,20616290304,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+485,INSM,Insmed Incorporated,Healthcare,NMS,NasdaqGS,20536596480,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+486,RGLD,"Royal Gold, Inc.",Basic Materials,NMS,NasdaqGS,20504141824,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+487,LYB,LyondellBasell Industries N.V.,Basic Materials,NYQ,NYSE,20438611968,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+488,SSNC,"SS&C Technologies Holdings, Inc.",Technology,NMS,NasdaqGS,20436103168,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+489,BR,"Broadridge Financial Solutions, Inc.",Technology,NYQ,NYSE,20130076672,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+490,SNX,TD SYNNEX Corporation,Technology,NYQ,NYSE,20035323904,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+491,CDW,CDW Corporation,Technology,NMS,NasdaqGS,19787757568,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+492,YPF,YPF Sociedad Anónima,Energy,NYQ,NYSE,19748820992,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+493,BBY,"Best Buy Co., Inc.",Consumer Cyclical,NYQ,NYSE,19739572224,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+494,TSN,"Tyson Foods, Inc.",Consumer Defensive,NYQ,NYSE,19665704960,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+495,BG,Bunge Global SA,Consumer Defensive,NYQ,NYSE,19640338432,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+496,LUV,Southwest Airlines Co.,Industrials,NYQ,NYSE,19509622784,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+497,SWKS,"Skyworks Solutions, Inc.",Technology,NMS,NasdaqGS,19335311360,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+498,OVV,Ovintiv Inc.,Energy,NYQ,NYSE,19323275264,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+499,WWD,"Woodward, Inc.",Industrials,NMS,NasdaqGS,19198748672,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+500,EVRG,"Evergy, Inc.",Utilities,NMS,NasdaqGS,19171659776,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+501,SNA,Snap-on Incorporated,Industrials,NYQ,NYSE,19082653696,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+502,BEKE,KE Holdings Inc.,Real Estate,NYQ,NYSE,19057358848,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+503,NTNX,"Nutanix, Inc.",Technology,NMS,NasdaqGS,18969675776,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+504,ESS,"Essex Property Trust, Inc.",Real Estate,NYQ,NYSE,18893357056,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+505,FIS,"Fidelity National Information Services, Inc.",Technology,NYQ,NYSE,18824736768,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+506,TOST,"Toast, Inc.",Technology,NYQ,NYSE,18808121344,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+507,FSLR,"First Solar, Inc.",Technology,NMS,NasdaqGS,18787870720,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+508,DT,"Dynatrace, Inc.",Technology,NYQ,NYSE,18721556480,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+509,BCE,BCE Inc.,Communication Services,NYQ,NYSE,18631866368,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+510,ZBRA,Zebra Technologies Corporation,Technology,NMS,NasdaqGS,18624655360,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+511,CNH,CNH Industrial N.V.,Industrials,NYQ,NYSE,18525988864,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+512,MEDP,"Medpace Holdings, Inc.",Healthcare,NMS,NasdaqGS,18490912768,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+513,LEN,Lennar Corporation,Consumer Cyclical,NYQ,NYSE,18484848640,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+514,NDSN,Nordson Corporation,Industrials,NMS,NasdaqGS,18472728576,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+515,WES,"Western Midstream Partners, LP",Energy,NYQ,NYSE,18419324928,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+516,SBAC,SBA Communications Corporation,Real Estate,NMS,NasdaqGS,18396739584,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+517,PAA,"Plains All American Pipeline, L.P.",Energy,NMS,NasdaqGS,18267115520,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+518,CW,Curtiss-Wright Corporation,Industrials,NYQ,NYSE,18252632064,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+519,CRS,Carpenter Technology Corporation,Industrials,NYQ,NYSE,18245482496,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+520,U,Unity Software Inc.,Technology,NYQ,NYSE,18136064000,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+521,DD,"DuPont de Nemours, Inc.",Basic Materials,NYQ,NYSE,18112851968,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+522,PAAS,Pan American Silver Corp.,Basic Materials,NYQ,NYSE,18098075648,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+523,ZBH,"Zimmer Biomet Holdings, Inc.",Healthcare,NYQ,NYSE,18093377536,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+524,RIVN,"Rivian Automotive, Inc.",Consumer Cyclical,NMS,NasdaqGS,18040342528,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+525,ITT,ITT Inc.,Industrials,NYQ,NYSE,17998510080,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+526,NWS,News Corporation,Communication Services,NMS,NasdaqGS,17926244352,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+527,FTV,Fortive Corporation,Technology,NYQ,NYSE,17877049344,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+528,IP,International Paper Company,Consumer Cyclical,NYQ,NYSE,17809436672,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+529,KSPI,Joint Stock Company Kaspi.kz,Technology,NMS,NasdaqGS,17769449472,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+530,LNT,Alliant Energy Corporation,Utilities,NMS,NasdaqGS,17732481024,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+531,CF,"CF Industries Holdings, Inc.",Basic Materials,NYQ,NYSE,17600624640,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+532,RVTY,"Revvity, Inc.",Healthcare,NYQ,NYSE,17475547136,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+533,HST,"Host Hotels & Resorts, Inc.",Real Estate,NMS,NasdaqGS,17430687744,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+534,GIS,"General Mills, Inc.",Consumer Defensive,NYQ,NYSE,17414760448,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+535,APA,APA Corporation,Energy,NMS,NasdaqGS,17387945984,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+536,APG,APi Group Corporation,Industrials,NYQ,NYSE,17377165312,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+537,IEX,IDEX Corporation,Industrials,NYQ,NYSE,17355874304,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+538,AS,"Amer Sports, Inc.",Consumer Cyclical,NYQ,NYSE,17210294272,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+539,GPC,Genuine Parts Company,Consumer Cyclical,NYQ,NYSE,17202141184,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+540,FICO,Fair Isaac Corporation,Technology,NYQ,NYSE,17174657024,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+541,RCI,Rogers Communications Inc.,Communication Services,NYQ,NYSE,17152152576,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+542,BALL,Ball Corporation,Consumer Cyclical,NYQ,NYSE,17079713792,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+543,MGA,Magna International Inc.,Consumer Cyclical,NYQ,NYSE,17075791872,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+544,TSCO,Tractor Supply Company,Consumer Cyclical,NMS,NasdaqGS,17032801280,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+545,TLN,Talen Energy Corporation,Utilities,NMS,NasdaqGS,17003876352,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+546,WCC,"WESCO International, Inc.",Industrials,NYQ,NYSE,17003869184,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+547,PKX,POSCO Holdings Inc.,Basic Materials,NYQ,NYSE,16893680640,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+548,CLH,"Clean Harbors, Inc.",Industrials,NYQ,NYSE,16852856832,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+549,H,Hyatt Hotels Corporation,Consumer Cyclical,NYQ,NYSE,16831623168,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+550,J,Jacobs Solutions Inc.,Industrials,NYQ,NYSE,16825345024,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+551,FTAI,FTAI Aviation Ltd.,Industrials,NMS,NasdaqGS,16794663936,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+552,SQM,Sociedad Química y Minera de Chile S.A.,Basic Materials,NYQ,NYSE,16692673536,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+553,HSAI,Hesai Group,Consumer Cyclical,NMS,NasdaqGS,16581645312,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+554,GIB,CGI Inc.,Technology,NYQ,NYSE,16476990464,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+555,CRL,"Charles River Laboratories International, Inc.",Healthcare,NYQ,NYSE,16463704064,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+556,WMG,Warner Music Group Corp.,Communication Services,NMS,NasdaqGS,16446571520,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+557,CHRW,"C.H. Robinson Worldwide, Inc.",Industrials,NMS,NasdaqGS,16441597952,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+558,VNOM,"Viper Energy, Inc.",Energy,NMS,NasdaqGS,16408022016,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+559,LDOS,"Leidos Holdings, Inc.",Technology,NYQ,NYSE,16255254528,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+560,FDXF,"FedEx Freight Holding Company, Inc.",Industrials,NYQ,NYSE,16140481536,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+561,ROL,"Rollins, Inc.",Consumer Cyclical,NYQ,NYSE,16094314496,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+562,HAS,"Hasbro, Inc.",Consumer Cyclical,NMS,NasdaqGS,16079069184,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+563,EXEL,"Exelixis, Inc.",Healthcare,NMS,NasdaqGS,16001742848,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+564,RBC,RBC Bearings Incorporated,Industrials,NYQ,NYSE,15971771392,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+565,ASTS,"AST SpaceMobile, Inc.",Technology,NMS,NasdaqGS,15916950528,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+566,INVH,Invitation Homes Inc.,Real Estate,NYQ,NYSE,15834608640,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+567,LOGI,Logitech International S.A.,Technology,NMS,NasdaqGS,15799400448,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+568,LAMR,Lamar Advertising Company,Real Estate,NMS,NasdaqGS,15748324352,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+569,NVR,"NVR, Inc.",Consumer Cyclical,NYQ,NYSE,15722674176,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+570,ASND,Ascendis Pharma A/S,Healthcare,NMS,NasdaqGS,15720488960,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+571,GFL,GFL Environmental Inc.,Industrials,NYQ,NYSE,15691511808,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+572,BURL,"Burlington Stores, Inc.",Consumer Cyclical,NYQ,NYSE,15586334720,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+573,CDE,"Coeur Mining, Inc.",Basic Materials,NYQ,NYSE,15552656384,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+574,TYL,"Tyler Technologies, Inc.",Technology,NYQ,NYSE,15388226560,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+575,LSCC,Lattice Semiconductor Corporation,Technology,NMS,NasdaqGS,15279148032,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+576,RBA,"RB Global, Inc.",Industrials,NYQ,NYSE,15276600320,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+577,JHX,James Hardie Industries plc,Basic Materials,NYQ,NYSE,15267741696,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+578,KIM,Kimco Realty Corporation,Real Estate,NYQ,NYSE,15240334336,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+579,DOCU,"DocuSign, Inc.",Technology,NMS,NasdaqGS,15228812288,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+580,PFGC,Performance Food Group Company,Consumer Defensive,NYQ,NYSE,15226604544,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+581,YUMC,"Yum China Holdings, Inc.",Consumer Cyclical,NYQ,NYSE,15000341504,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+582,CX,"CEMEX, S.A.B. de C.V.",Basic Materials,NYQ,NYSE,14992276480,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+583,ULS,UL Solutions Inc.,Industrials,NYQ,NYSE,14972108800,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+584,W,Wayfair Inc.,Consumer Cyclical,NYQ,NYSE,14956522496,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+585,GWRE,"Guidewire Software, Inc.",Technology,NYQ,NYSE,14914466816,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+586,SUI,"Sun Communities, Inc.",Real Estate,NYQ,NYSE,14890670080,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+587,ZTO,ZTO Express (Cayman) Inc.,Industrials,NYQ,NYSE,14858899456,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+588,SOLV,Solventum Corporation,Healthcare,NYQ,NYSE,14753290240,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+589,MAS,Masco Corporation,Industrials,NYQ,NYSE,14702294016,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+590,ARMK,Aramark,Industrials,NYQ,NYSE,14686551040,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+591,CHKP,Check Point Software Technologies Ltd.,Technology,NMS,NasdaqGS,14644292608,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+592,MKSI,MKS Inc.,Technology,NMS,NasdaqGS,14612155392,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+593,TRMB,Trimble Inc.,Technology,NMS,NasdaqGS,14594725888,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+594,EMA,Emera Incorporated,Utilities,NYQ,NYSE,14549695488,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+595,MTZ,"MasTec, Inc.",Industrials,NYQ,NYSE,14531983360,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+596,SGI,Somnigroup International Inc.,Consumer Cyclical,NYQ,NYSE,14475137024,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+597,GEN,Gen Digital Inc.,Technology,NMS,NasdaqGS,14437918720,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+598,HTHT,H World Group Limited,Consumer Cyclical,NMS,NasdaqGS,14436131840,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+599,SWK,"Stanley Black & Decker, Inc.",Industrials,NYQ,NYSE,14413028352,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+600,NBIX,"Neurocrine Biosciences, Inc.",Healthcare,NMS,NasdaqGS,14364046336,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+601,LECO,"Lincoln Electric Holdings, Inc.",Industrials,NMS,NasdaqGS,14342099968,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+602,ICLR,ICON Public Limited Company,Healthcare,NMS,NasdaqGS,14292816896,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+603,WPC,W. P. Carey Inc.,Real Estate,NYQ,NYSE,14254501888,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+604,BEP,Brookfield Renewable Partners L.P.,Utilities,NYQ,NYSE,14220179456,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+605,HALO,"Halozyme Therapeutics, Inc.",Healthcare,NMS,NasdaqGS,14167955456,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+606,JLL,Jones Lang LaSalle Incorporated,Real Estate,NYQ,NYSE,14080657408,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+607,LTM,LATAM Airlines Group S.A.,Industrials,NYQ,NYSE,14078055424,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+608,MAA,"Mid-America Apartment Communities, Inc.",Real Estate,NYQ,NYSE,14042358784,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+609,OHI,"Omega Healthcare Investors, Inc.",Real Estate,NYQ,NYSE,14019319808,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+610,DKS,"DICK'S Sporting Goods, Inc.",Consumer Cyclical,NYQ,NYSE,13987815424,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+611,COKE,"Coca-Cola Consolidated, Inc.",Consumer Defensive,NMS,NasdaqGS,13957867520,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+612,CHTR,"Charter Communications, Inc.",Communication Services,NMS,NasdaqGS,13939252224,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+613,PAG,"Penske Automotive Group, Inc.",Consumer Cyclical,NYQ,NYSE,13923812352,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+614,IT,"Gartner, Inc.",Technology,NYQ,NYSE,13865621504,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+615,KEP,Korea Electric Power Corporation,Utilities,NYQ,NYSE,13776548864,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+616,CACI,CACI International Inc,Technology,NYQ,NYSE,13776446464,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+617,JAZZ,Jazz Pharmaceuticals plc,Healthcare,NMS,NasdaqGS,13759942656,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+618,TME,Tencent Music Entertainment Group,Communication Services,NYQ,NYSE,13755216896,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+619,MANH,"Manhattan Associates, Inc.",Technology,NMS,NasdaqGS,13750062080,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+620,GDDY,GoDaddy Inc.,Technology,NYQ,NYSE,13705815040,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+621,AVY,Avery Dennison Corporation,Consumer Cyclical,NYQ,NYSE,13694837760,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+622,TIGO,Millicom International Cellular S.A.,Communication Services,NMS,NasdaqGS,13693521920,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+623,WY,Weyerhaeuser Company,Real Estate,NYQ,NYSE,13679568896,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+624,SJM,The J. M. Smucker Company,Consumer Defensive,NYQ,NYSE,13653070848,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+625,FLUT,Flutter Entertainment plc,Consumer Cyclical,NYQ,NYSE,13581170688,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+626,NLY,"Annaly Capital Management, Inc.",Real Estate,NYQ,NYSE,13574396928,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+627,ALLE,Allegion plc,Industrials,NYQ,NYSE,13520848896,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+628,CSL,Carlisle Companies Incorporated,Industrials,NYQ,NYSE,13506776064,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+629,REG,Regency Centers Corporation,Real Estate,NMS,NasdaqGS,13502159872,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+630,TXT,Textron Inc.,Industrials,NYQ,NYSE,13438139392,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+631,CSGP,"CoStar Group, Inc.",Real Estate,NMS,NasdaqGS,13331001344,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+632,AGI,Alamos Gold Inc.,Basic Materials,NYQ,NYSE,13278134272,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+633,GME,GameStop Corp.,Consumer Cyclical,NYQ,NYSE,13263331328,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+634,GGG,Graco Inc.,Industrials,NYQ,NYSE,13249441792,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+635,BBIO,"BridgeBio Pharma, Inc.",Healthcare,NMS,NasdaqGS,13242694656,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+636,BF-A,Brown-Forman Corporation,Consumer Defensive,NYQ,NYSE,13238234112,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+637,SMTC,Semtech Corporation,Technology,NMS,NasdaqGS,13217709056,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+638,TU,TELUS Corporation,Communication Services,NYQ,NYSE,13198500864,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+639,PAC,"Grupo Aeroportuario del Pacífico, S.A.B. de C.V.",Industrials,NYQ,NYSE,13182628864,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+640,DOC,"Healthpeak Properties, Inc.",Real Estate,NYQ,NYSE,13101344768,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+641,IONQ,"IonQ, Inc.",Technology,NYQ,NYSE,13077778432,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+642,UDR,"UDR, Inc.",Real Estate,NYQ,NYSE,12982868992,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+643,AKAM,"Akamai Technologies, Inc.",Technology,NMS,NasdaqGS,12973297664,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+644,EMBJ,Embraer S.A.,Industrials,NYQ,NYSE,12973159424,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+645,BJ,"BJ's Wholesale Club Holdings, Inc.",Consumer Defensive,NYQ,NYSE,12935887872,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+646,PINS,"Pinterest, Inc.",Communication Services,NYQ,NYSE,12855610368,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+647,BAX,Baxter International Inc.,Healthcare,NYQ,NYSE,12769801216,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+648,FN,Fabrinet,Technology,NYQ,NYSE,12759361536,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+649,PEN,"Penumbra, Inc.",Healthcare,NYQ,NYSE,12744842240,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+650,RPM,RPM International Inc.,Basic Materials,NYQ,NYSE,12738064384,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+651,MLI,"Mueller Industries, Inc.",Industrials,NYQ,NYSE,12726777856,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+652,MKC-V,"McCormick & Company, Incorporated",Consumer Defensive,NYQ,NYSE,12710606848,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+653,DTM,"DT Midstream, Inc.",Energy,NYQ,NYSE,12698864640,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+654,AMH,American Homes 4 Rent,Real Estate,NYQ,NYSE,12683915264,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+655,LII,Lennox International Inc.,Industrials,NYQ,NYSE,12661994496,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+656,INIO,Innio N.V.,Industrials,NMS,NasdaqGS,12652500992,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+657,CCK,"Crown Holdings, Inc.",Consumer Cyclical,NYQ,NYSE,12640146432,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+658,STRL,"Sterling Infrastructure, Inc.",Industrials,NMS,NasdaqGS,12631834624,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+659,PNW,Pinnacle West Capital Corporation,Utilities,NYQ,NYSE,12591180800,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+660,WSO,"Watsco, Inc.",Industrials,NYQ,NYSE,12583155712,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+661,NXT,Nextpower Inc.,Technology,NMS,NasdaqGS,12563007488,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+662,HUBS,"HubSpot, Inc.",Technology,NYQ,NYSE,12461562880,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+663,AIT,"Applied Industrial Technologies, Inc.",Industrials,NYQ,NYSE,12448750592,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+664,TOL,"Toll Brothers, Inc.",Consumer Cyclical,NYQ,NYSE,12444452864,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+665,BWXT,"BWX Technologies, Inc.",Industrials,NYQ,NYSE,12379045888,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+666,BTSG,"BrightSpring Health Services, Inc.",Healthcare,NMS,NasdaqGS,12338813952,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+667,FIVE,"Five Below, Inc.",Consumer Cyclical,NMS,NasdaqGS,12337609728,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+668,SKM,"SK Telecom Co., Ltd.",Communication Services,NYQ,NYSE,12307515392,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+669,STLA,Stellantis N.V.,Consumer Cyclical,NYQ,NYSE,12252461056,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+670,FIG,"Figma, Inc.",Technology,NYQ,NYSE,12248565760,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+671,SNN,Smith & Nephew plc,Healthcare,NYQ,NYSE,12233230336,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+672,TEM,"Tempus AI, Inc.",Healthcare,NMS,NasdaqGS,12226258944,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+673,WTS,"Watts Water Technologies, Inc.",Industrials,NYQ,NYSE,12131399680,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+674,GNRC,Generac Holdings Inc.,Industrials,NYQ,NYSE,11998247936,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+675,CART,Maplebear Inc.,Consumer Cyclical,NMS,NasdaqGS,11940244480,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+676,EHC,Encompass Health Corporation,Healthcare,NYQ,NYSE,11884773376,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+677,FROG,JFrog Ltd.,Technology,NMS,NasdaqGS,11873916928,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+678,DOCN,"DigitalOcean Holdings, Inc.",Technology,NYQ,NYSE,11863833600,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+679,ELS,"Equity LifeStyle Properties, Inc.",Real Estate,NYQ,NYSE,11854708736,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+680,AR,Antero Resources Corporation,Energy,NYQ,NYSE,11839475712,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+681,CR,Crane Company,Industrials,NYQ,NYSE,11816126464,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+682,PAYC,"Paycom Software, Inc.",Technology,NYQ,NYSE,11764144128,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+683,BWA,BorgWarner Inc.,Consumer Cyclical,NYQ,NYSE,11700632576,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+684,AVTR,"Avantor, Inc.",Healthcare,NYQ,NYSE,11673954304,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+685,MAIR,Madison Air Solutions Corporation,Industrials,NYQ,NYSE,11649998848,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+686,DECK,Deckers Outdoor Corporation,Consumer Cyclical,NYQ,NYSE,11642186752,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+687,MOG-A,Moog Inc.,Industrials,NYQ,NYSE,11632503808,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+688,TLK,Perusahaan Perseroan (Persero) PT Telekomunikasi Indonesia Tbk,Communication Services,NYQ,NYSE,11612834816,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+689,BSY,"Bentley Systems, Incorporated",Technology,NMS,NasdaqGS,11588283392,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+690,TX,Ternium S.A.,Basic Materials,NYQ,NYSE,11566448640,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+691,WTRG,"Essential Utilities, Inc.",Utilities,NYQ,NYSE,11561140224,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+692,GRAB,Grab Holdings Limited,Technology,NMS,NasdaqGS,11537471488,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+693,AHR,"American Healthcare REIT, Inc.",Real Estate,NYQ,NYSE,11523415040,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+694,CHYM,"Chime Financial, Inc.",Technology,NMS,NasdaqGS,11497630720,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+695,GLPI,"Gaming and Leisure Properties, Inc.",Real Estate,NMS,NasdaqGS,11485843456,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+696,FMS,Fresenius Medical Care AG,Healthcare,NYQ,NYSE,11474649088,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+697,MICC,The Magnum Ice Cream Company N.V.,Consumer Defensive,NYQ,NYSE,11443441664,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+698,ONON,On Holding AG,Consumer Cyclical,NYQ,NYSE,11436826624,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+699,RGEN,Repligen Corporation,Healthcare,NMS,NasdaqGS,11428899840,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+700,FRO,Frontline plc,Energy,NYQ,NYSE,11418328064,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+701,TECH,Bio-Techne Corporation,Healthcare,NMS,NasdaqGS,11391277056,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+702,DVA,DaVita Inc.,Healthcare,NYQ,NYSE,11348549632,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+703,ELAN,Elanco Animal Health Incorporated,Healthcare,NYQ,NYSE,11266471936,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+704,HRL,Hormel Foods Corporation,Consumer Defensive,NYQ,NYSE,11249170432,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+705,LI,Li Auto Inc.,Consumer Cyclical,NMS,NasdaqGS,11238657024,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+706,SAIL,"SailPoint, Inc.",Technology,NMS,NasdaqGS,11235540992,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+707,MOH,"Molina Healthcare, Inc.",Healthcare,NYQ,NYSE,11217779712,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+708,COO,"The Cooper Companies, Inc.",Healthcare,NMS,NasdaqGS,11213458432,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+709,LULU,lululemon athletica inc.,Consumer Cyclical,NMS,NasdaqGS,11180682240,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+710,ARW,"Arrow Electronics, Inc.",Technology,NYQ,NYSE,11154396160,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+711,ALB,Albemarle Corporation,Basic Materials,NYQ,NYSE,11147937792,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+712,NYT,The New York Times Company,Communication Services,NYQ,NYSE,11105987584,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+713,SCI,Service Corporation International,Consumer Cyclical,NYQ,NYSE,11061425152,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+714,TXRH,"Texas Roadhouse, Inc.",Consumer Cyclical,NMS,NasdaqGS,11015861248,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+715,RDY,Dr. Reddy's Laboratories Limited,Healthcare,NYQ,NYSE,10987119616,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+716,EGP,"EastGroup Properties, Inc.",Real Estate,NYQ,NYSE,10932115456,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+717,PSO,Pearson plc,Communication Services,NYQ,NYSE,10909403136,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+718,ONTO,Onto Innovation Inc.,Technology,NYQ,NYSE,10901353472,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+719,AMKR,"Amkor Technology, Inc.",Technology,NMS,NasdaqGS,10839464960,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+720,UHAL,U-Haul Holding Company,Industrials,NYQ,NYSE,10839380992,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+721,GSAT,"Globalstar, Inc.",Communication Services,NMS,NasdaqGS,10808177664,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+722,HII,"Huntington Ingalls Industries, Inc.",Industrials,NYQ,NYSE,10794890240,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+723,UHS,"Universal Health Services, Inc.",Healthcare,NYQ,NYSE,10777720832,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+724,TTMI,"TTM Technologies, Inc.",Technology,NMS,NasdaqGS,10761387008,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+725,JKHY,"Jack Henry & Associates, Inc.",Technology,NMS,NasdaqGS,10755881984,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+726,ALGN,"Align Technology, Inc.",Healthcare,NMS,NasdaqGS,10753302528,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+727,AA,Alcoa Corporation,Basic Materials,NYQ,NYSE,10749031424,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+728,SNAP,Snap Inc.,Communication Services,NYQ,NYSE,10739104768,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+729,WSE,Wise Group plc,Technology,NMS,NasdaqGS,10721020928,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+730,QXO,"QXO, Inc.",Industrials,NYQ,NYSE,10696529920,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+731,BMRN,BioMarin Pharmaceutical Inc.,Healthcare,NMS,NasdaqGS,10687207424,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+732,AES,The AES Corporation,Utilities,NYQ,NYSE,10675971072,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+733,HBM,Hudbay Minerals Inc.,Basic Materials,NYQ,NYSE,10655033344,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+734,MTCH,"Match Group, Inc.",Communication Services,NMS,NasdaqGS,10628210688,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+735,BXP,"BXP, Inc.",Real Estate,NYQ,NYSE,10606652416,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+736,RTO,Rentokil Initial plc,Industrials,NYQ,NYSE,10588338176,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+737,MDGL,"Madrigal Pharmaceuticals, Inc.",Healthcare,NMS,NasdaqGS,10580765696,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+738,RRX,Regal Rexnord Corporation,Industrials,NYQ,NYSE,10573456384,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+739,HMY,Harmony Gold Mining Company Limited,Basic Materials,NYQ,NYSE,10565515264,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+740,GMED,"Globus Medical, Inc.",Healthcare,NYQ,NYSE,10563728384,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+741,NVMI,Nova Ltd.,Technology,NMS,NasdaqGS,10534836224,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+742,GKOS,Glaukos Corporation,Healthcare,NYQ,NYSE,10431309824,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+743,AGNC,AGNC Investment Corp.,Real Estate,NMS,NasdaqGS,10408526848,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+744,SUZ,Suzano S.A.,Basic Materials,NYQ,NYSE,10406687744,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+745,PAYP,PayPay Corporation,Technology,NMS,NasdaqGS,10394146816,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+746,SSL,Sasol Limited,Basic Materials,NYQ,NYSE,10378400768,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+747,ESTC,Elastic N.V.,Technology,NYQ,NYSE,10374188032,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+748,QGEN,Qiagen N.V.,Healthcare,NYQ,NYSE,10324750336,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+749,OSCR,"Oscar Health, Inc.",Healthcare,NYQ,NYSE,10324174848,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+750,SOLS,"Solstice Advanced Materials, Inc.",Basic Materials,NMS,NasdaqGS,10323490816,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+751,KNX,Knight-Swift Transportation Holdings Inc.,Industrials,NYQ,NYSE,10286179328,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+752,GGB,Gerdau S.A.,Basic Materials,NYQ,NYSE,10279504896,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+753,DCI,"Donaldson Company, Inc.",Industrials,NYQ,NYSE,10267490304,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+754,CLX,The Clorox Company,Consumer Defensive,NYQ,NYSE,10251929600,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+755,ELPC,Companhia Paranaense de Energia,Utilities,NYQ,NYSE,10245156864,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+756,DPZ,"Domino's Pizza, Inc.",Consumer Cyclical,NMS,NasdaqGS,10235608064,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+757,DKNG,DraftKings Inc.,Consumer Cyclical,NMS,NasdaqGS,10192201728,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+758,IAG,IAMGOLD Corporation,Basic Materials,NYQ,NYSE,10175219712,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+759,HL,Hecla Mining Company,Basic Materials,NYQ,NYSE,10154586112,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+760,FPS,"Forgent Power Solutions, Inc.",Industrials,NYQ,NYSE,10130957312,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+761,ENSG,"The Ensign Group, Inc.",Healthcare,NMS,NasdaqGS,10103260160,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+762,CPT,Camden Property Trust,Real Estate,NYQ,NYSE,10073037824,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+763,ENLT,Enlight Renewable Energy Ltd,Utilities,NMS,NasdaqGS,10049325056,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+764,AUR,"Aurora Innovation, Inc.",Consumer Cyclical,NMS,NasdaqGS,10040818688,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+765,RMBS,Rambus Inc.,Technology,NMS,NasdaqGS,10035110912,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+766,RRC,Range Resources Corporation,Energy,NYQ,NYSE,10034198528,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+767,CIG-C,Companhia Energética de Minas Gerais - CEMIG,Utilities,NYQ,NYSE,10012387328,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+768,PCVX,"Vaxcyte, Inc.",Healthcare,NMS,NasdaqGS,9951747072,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+769,MSGS,Madison Square Garden Sports Corp.,Communication Services,NYQ,NYSE,9929844736,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+770,AEIS,"Advanced Energy Industries, Inc.",Industrials,NMS,NasdaqGS,9914486784,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+771,LFUS,"Littelfuse, Inc.",Technology,NMS,NasdaqGS,9896622080,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+772,OGE,OGE Energy Corp.,Utilities,NYQ,NYSE,9895649280,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+773,TWST,Twist Bioscience Corporation,Healthcare,NMS,NasdaqGS,9887495168,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+774,MUSA,Murphy USA Inc.,Consumer Cyclical,NYQ,NYSE,9861425152,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+775,AM,Antero Midstream Corporation,Energy,NYQ,NYSE,9849485312,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+776,TXG,"10x Genomics, Inc.",Healthcare,NMS,NasdaqGS,9848709120,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+777,PODD,Insulet Corporation,Healthcare,NMS,NasdaqGS,9841360896,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+778,VICR,Vicor Corporation,Technology,NMS,NasdaqGS,9840098304,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+779,WMS,"Advanced Drainage Systems, Inc.",Industrials,NYQ,NYSE,9802694656,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+780,TTC,The Toro Company,Industrials,NYQ,NYSE,9783459840,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+781,CGNX,Cognex Corporation,Technology,NMS,NasdaqGS,9765393408,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+782,BIO-B,"Bio-Rad Laboratories, Inc.",Healthcare,NYQ,NYSE,9745235968,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+783,HSIC,"Henry Schein, Inc.",Healthcare,NMS,NasdaqGS,9684064256,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+784,PBF,PBF Energy Inc.,Energy,NYQ,NYSE,9665494016,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+785,KRYS,"Krystal Biotech, Inc.",Healthcare,NMS,NasdaqGS,9535857664,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+786,AYI,Acuity Inc.,Industrials,NYQ,NYSE,9482384384,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+787,KNTK,Kinetik Holdings Inc.,Energy,NYQ,NYSE,9422740480,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+788,APTV,Aptiv PLC,Consumer Cyclical,NYQ,NYSE,9383254016,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+789,DAR,Darling Ingredients Inc.,Consumer Defensive,NYQ,NYSE,9324573696,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+790,TFII,TFI International Inc.,Industrials,NYQ,NYSE,9257401344,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+791,PCOR,"Procore Technologies, Inc.",Technology,NYQ,NYSE,9255600128,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+792,LLYVK,"Liberty Live Holdings, Inc.",Communication Services,NMS,NasdaqGS,9246539776,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+793,GTLB,GitLab Inc.,Technology,NMS,NasdaqGS,9238802432,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+794,EDU,New Oriental Education & Technology Group Inc.,Consumer Defensive,NYQ,NYSE,9224260608,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+795,SANM,Sanmina Corporation,Technology,NMS,NasdaqGS,9222497280,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+796,R,"Ryder System, Inc.",Industrials,NYQ,NYSE,9215135744,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+797,FRT,Federal Realty Investment Trust,Real Estate,NYQ,NYSE,9193359360,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+798,SM,SM Energy Company,Energy,NYQ,NYSE,9183545344,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+799,ALSN,"Allison Transmission Holdings, Inc.",Consumer Cyclical,NYQ,NYSE,9161207808,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+800,IBRX,"ImmunityBio, Inc.",Healthcare,NMS,NasdaqGS,9156985856,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+801,FLS,Flowserve Corporation,Industrials,NYQ,NYSE,9149704192,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+802,TIMB,TIM S.A.,Communication Services,NYQ,NYSE,9145832448,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+803,CAI,"Caris Life Sciences, Inc.",Healthcare,NMS,NasdaqGS,9141954560,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+804,EGO,Eldorado Gold Corporation,Basic Materials,NYQ,NYSE,9117929472,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+805,LTH,"Life Time Group Holdings, Inc.",Consumer Cyclical,NYQ,NYSE,9108308992,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+806,SIRI,Sirius XM Holdings Inc.,Communication Services,NMS,NasdaqGS,9087323136,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+807,DRS,"Leonardo DRS, Inc.",Industrials,NMS,NasdaqGS,9058297856,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+808,HNGE,"Hinge Health, Inc.",Healthcare,NYQ,NYSE,9037774848,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+809,BAH,Booz Allen Hamilton Holding Corporation,Industrials,NYQ,NYSE,9026185216,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+810,SAIA,"Saia, Inc.",Industrials,NMS,NasdaqGS,9014875136,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+811,BRKR,Bruker Corporation,Healthcare,NMS,NasdaqGS,9005197312,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+812,RHP,"Ryman Hospitality Properties, Inc.",Real Estate,NYQ,NYSE,8987962368,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+813,PCTY,Paylocity Holding Corporation,Technology,NMS,NasdaqGS,8984135680,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+814,TTEK,"Tetra Tech, Inc.",Industrials,NMS,NasdaqGS,8974357504,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+815,XPEV,XPeng Inc.,Consumer Cyclical,NYQ,NYSE,8966661120,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+816,NTSK,"Netskope, Inc.",Technology,NMS,NasdaqGS,8911298560,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+817,YMM,Full Truck Alliance Co. Ltd.,Technology,NYQ,NYSE,8890100736,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+818,OC,Owens Corning,Industrials,NYQ,NYSE,8871633920,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+819,ESI,Element Solutions Inc,Basic Materials,NYQ,NYSE,8855552000,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+820,CUBE,CubeSmart,Real Estate,NYQ,NYSE,8832870400,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+821,JAN,"Janus Living, Inc.",Real Estate,NYQ,NYSE,8807857152,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+822,FORM,"FormFactor, Inc.",Technology,NMS,NasdaqGS,8744966144,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+823,CYTK,"Cytokinetics, Incorporated",Healthcare,NMS,NasdaqGS,8739012608,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+824,TAP-A,Molson Coors Beverage Company,Consumer Defensive,NYQ,NYSE,8709263360,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+825,VMI,"Valmont Industries, Inc.",Industrials,NYQ,NYSE,8706634752,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+826,VIAV,Viavi Solutions Inc.,Technology,NMS,NasdaqGS,8703183872,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+827,SYRE,"Spyre Therapeutics, Inc.",Healthcare,NMS,NasdaqGS,8686365696,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+828,IDCC,"InterDigital, Inc.",Technology,NMS,NasdaqGS,8636754944,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+829,VSAT,"Viasat, Inc.",Technology,NMS,NasdaqGS,8622136320,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+830,CHWY,"Chewy, Inc.",Consumer Cyclical,NYQ,NYSE,8573108736,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+831,ZETA,Zeta Global Holdings Corp.,Technology,NYQ,NYSE,8562074112,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+832,KT,KT Corporation,Communication Services,NYQ,NYSE,8545796096,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+833,PNR,Pentair plc,Industrials,NYQ,NYSE,8542468608,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+834,LINE,"Lineage, Inc.",Real Estate,NMS,NasdaqGS,8521818624,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+835,UGP,Ultrapar Participações S.A.,Energy,NYQ,NYSE,8492991488,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+836,CTVA,"Corteva, Inc.",Basic Materials,NYQ,NYSE,8486733824,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+837,OSK,Oshkosh Corporation,Industrials,NYQ,NYSE,8450472448,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+838,CTRE,"CareTrust REIT, Inc.",Real Estate,NYQ,NYSE,8423853056,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+839,SPXC,"SPX Technologies, Inc.",Industrials,NYQ,NYSE,8420935680,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+840,NIO,NIO Inc.,Consumer Cyclical,NYQ,NYSE,8419041280,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+841,BRX,Brixmor Property Group Inc.,Real Estate,NYQ,NYSE,8414438912,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+842,REXR,"Rexford Industrial Realty, Inc.",Real Estate,NYQ,NYSE,8413782016,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+843,ALV,"Autoliv, Inc.",Consumer Cyclical,NYQ,NYSE,8348456448,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+844,ARWR,"Arrowhead Pharmaceuticals, Inc.",Healthcare,NMS,NasdaqGS,8288027136,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+845,UGI,UGI Corporation,Utilities,NYQ,NYSE,8270925824,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+846,CHRD,Chord Energy Corporation,Energy,NMS,NasdaqGS,8251174400,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+847,FR,"First Industrial Realty Trust, Inc.",Real Estate,NYQ,NYSE,8138777088,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+848,NEU,NewMarket Corporation,Basic Materials,NYQ,NYSE,8138635264,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+849,AOS,A. O. Smith Corporation,Industrials,NYQ,NYSE,8106946560,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+850,AAL,American Airlines Group Inc.,Industrials,NMS,NasdaqGS,8099201536,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+851,HQY,"HealthEquity, Inc.",Healthcare,NMS,NasdaqGS,8096173056,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+852,ADC,Agree Realty Corporation,Real Estate,NYQ,NYSE,8043762176,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+853,LEVI,Levi Strauss & Co.,Consumer Cyclical,NYQ,NYSE,8026021376,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+854,ZWS,Zurn Elkay Water Solutions Corporation,Industrials,NYQ,NYSE,8024505344,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+855,IDA,"IDACORP, Inc.",Utilities,NYQ,NYSE,8016328704,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+856,ETSY,"Etsy, Inc.",Consumer Cyclical,NYQ,NYSE,8006121984,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+857,CLF,Cleveland-Cliffs Inc.,Basic Materials,NYQ,NYSE,8004676608,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+858,MHK,"Mohawk Industries, Inc.",Consumer Cyclical,NYQ,NYSE,7995810816,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+859,TKR,The Timken Company,Industrials,NYQ,NYSE,7989784064,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+860,ATR,"AptarGroup, Inc.",Healthcare,NYQ,NYSE,7987697152,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+861,GAP,"The Gap, Inc.",Consumer Cyclical,NYQ,NYSE,7970319872,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+862,DBX,"Dropbox, Inc.",Technology,NMS,NasdaqGS,7956225536,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+863,MOD,Modine Manufacturing Company,Consumer Cyclical,NYQ,NYSE,7955221504,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+864,TTAN,"ServiceTitan, Inc.",Technology,NMS,NasdaqGS,7941237760,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+865,AG,First Majestic Silver Corp.,Basic Materials,NYQ,NYSE,7933671936,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+866,S,"SentinelOne, Inc.",Technology,NYQ,NYSE,7925078528,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+867,DSGX,The Descartes Systems Group Inc.,Technology,NMS,NasdaqGS,7903830528,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+868,VIST,"Vista Energy, S.A.B. de C.V.",Energy,NYQ,NYSE,7902508032,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+869,STN,Stantec Inc.,Industrials,NYQ,NYSE,7892707328,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+870,CAE,CAE Inc.,Industrials,NMS,NasdaqGS,7888521216,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+871,EAT,"Brinker International, Inc.",Consumer Cyclical,NYQ,NYSE,7876189696,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+872,NNN,"NNN REIT, Inc.",Real Estate,NYQ,NYSE,7815446528,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+873,WYNN,"Wynn Resorts, Limited",Consumer Cyclical,NMS,NasdaqGS,7801302016,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+874,CWEN,"Clearway Energy, Inc.",Utilities,NYQ,NYSE,7796164096,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+875,WLK,Westlake Corporation,Basic Materials,NYQ,NYSE,7775141888,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+876,BVN,Compañía de Minas Buenaventura S.A.A.,Basic Materials,NYQ,NYSE,7731360256,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+877,RAL,Ralliant Corporation,Technology,NYQ,NYSE,7666246144,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+878,AVT,"Avnet, Inc.",Technology,NMS,NasdaqGS,7658345472,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+879,ACM,AECOM,Industrials,NYQ,NYSE,7656150528,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+880,CNM,"Core & Main, Inc.",Industrials,NYQ,NYSE,7641494528,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+881,ASR,"Grupo Aeroportuario del Sureste, S. A. B. de C. V.",Industrials,NYQ,NYSE,7592107008,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+882,NFG,National Fuel Gas Company,Energy,NYQ,NYSE,7538026496,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+883,SIMO,Silicon Motion Technology Corporation,Technology,NMS,NasdaqGS,7537801216,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+884,AXTA,Axalta Coating Systems Ltd.,Basic Materials,NYQ,NYSE,7486419456,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+885,GIL,Gildan Activewear Inc.,Consumer Cyclical,NYQ,NYSE,7465083392,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+886,COMP,"Compass, Inc.",Real Estate,NYQ,NYSE,7461506048,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+887,URBN,"Urban Outfitters, Inc.",Consumer Cyclical,NMS,NasdaqGS,7449009664,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+888,MSM,"MSC Industrial Direct Co., Inc.",Industrials,NYQ,NYSE,7417505280,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+889,BROS,Dutch Bros Inc.,Consumer Cyclical,NYQ,NYSE,7412252672,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+890,PACS,"PACS Group, Inc.",Healthcare,NYQ,NYSE,7400816640,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+891,SLAB,Silicon Laboratories Inc.,Technology,NMS,NasdaqGS,7397744640,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+892,SSD,"Simpson Manufacturing Co., Inc.",Basic Materials,NYQ,NYSE,7381750784,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+893,AGCO,AGCO Corporation,Industrials,NYQ,NYSE,7368738304,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+894,IONS,"Ionis Pharmaceuticals, Inc.",Healthcare,NMS,NasdaqGS,7356979712,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+895,ACA,"Arcosa, Inc.",Industrials,NYQ,NYSE,7318387712,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+896,LW,"Lamb Weston Holdings, Inc.",Consumer Defensive,NYQ,NYSE,7317519872,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+897,KMX,"CarMax, Inc.",Consumer Cyclical,NYQ,NYSE,7308635136,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+898,ALKS,Alkermes plc,Healthcare,NMS,NasdaqGS,7294346752,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+899,ZG,"Zillow Group, Inc.",Communication Services,NMS,NasdaqGS,7288197632,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+900,ARE,"Alexandria Real Estate Equities, Inc.",Real Estate,NYQ,NYSE,7272746496,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+901,KTOS,"Kratos Defense & Security Solutions, Inc.",Industrials,NMS,NasdaqGS,7264524288,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+902,MGM,MGM Resorts International,Consumer Cyclical,NYQ,NYSE,7263482880,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+903,EMN,Eastman Chemical Company,Basic Materials,NYQ,NYSE,7259740672,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+904,PRMB,Primo Brands Corporation,Consumer Defensive,NYQ,NYSE,7249732608,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+905,SOBO,South Bow Corporation,Energy,NYQ,NYSE,7248437248,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+906,KEX,Kirby Corporation,Industrials,NYQ,NYSE,7246272512,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+907,SFD,"Smithfield Foods, Inc.",Consumer Defensive,NMS,NasdaqGS,7205943808,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+908,STAG,"STAG Industrial, Inc.",Real Estate,NYQ,NYSE,7175423488,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+909,DY,"Dycom Industries, Inc.",Industrials,NYQ,NYSE,7161718784,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+910,PRAX,"Praxis Precision Medicines, Inc.",Healthcare,NMS,NasdaqGS,7160639488,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+911,NCLH,Norwegian Cruise Line Holdings Ltd.,Consumer Cyclical,NYQ,NYSE,7158738432,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+912,AUGO,Aura Minerals Inc.,Basic Materials,NMS,NasdaqGS,7152958976,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+913,MTDR,Matador Resources Company,Energy,NYQ,NYSE,7146805760,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+914,PATH,"UiPath, Inc.",Technology,NYQ,NYSE,7145040896,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+915,TRNO,Terreno Realty Corporation,Real Estate,NYQ,NYSE,7144093184,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+916,AWI,"Armstrong World Industries, Inc.",Industrials,NYQ,NYSE,7131429376,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+917,FSS,Federal Signal Corporation,Industrials,NYQ,NYSE,7122946048,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+918,BZ,Kanzhun Limited,Communication Services,NMS,NasdaqGS,7113842688,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+919,VSXY,Victorias Secret & Co.,Consumer Cyclical,NYQ,NYSE,7110964224,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+920,CMC,Commercial Metals Company,Industrials,NYQ,NYSE,7107613696,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+921,SARO,"StandardAero, Inc.",Industrials,NYQ,NYSE,7098222080,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+922,MSA,MSA Safety Incorporated,Industrials,NYQ,NYSE,7072943104,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+923,SBSW,Sibanye Stillwater Limited,Basic Materials,NYQ,NYSE,7067328000,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+924,TBBB,BBB Foods Inc.,Consumer Defensive,NYQ,NYSE,7045688320,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+925,AMRX,"Amneal Pharmaceuticals, Inc.",Healthcare,NMS,NasdaqGS,7035579904,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+926,MP,MP Materials Corp.,Basic Materials,NYQ,NYSE,7035012608,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+927,MATX,"Matson, Inc.",Industrials,NYQ,NYSE,7029406208,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+928,NE,Noble Corporation plc,Energy,NYQ,NYSE,7025853952,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+929,VFS,VinFast Auto Ltd.,Consumer Cyclical,NMS,NasdaqGS,6995212800,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+930,MGY,Magnolia Oil & Gas Corporation,Energy,NYQ,NYSE,6985495552,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+931,SEI,"Solaris Energy Infrastructure, Inc.",Energy,NYQ,NYSE,6980450816,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+932,NAVN,"Navan, Inc.",Technology,NMS,NasdaqGS,6932127744,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+933,QLYS,"Qualys, Inc.",Technology,NMS,NasdaqGS,6927185408,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+934,EPAM,"EPAM Systems, Inc.",Technology,NYQ,NYSE,6912655360,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+935,GLBE,Global-E Online Ltd.,Consumer Cyclical,NMS,NasdaqGS,6910178304,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+936,RNG,"RingCentral, Inc.",Technology,NYQ,NYSE,6882577408,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+937,MXL,"MaxLinear, Inc.",Technology,NMS,NasdaqGS,6873636864,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+938,NOV,NOV Inc.,Energy,NYQ,NYSE,6869333504,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+939,MAC,The Macerich Company,Real Estate,NYQ,NYSE,6853555200,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+940,RUSHB,"Rush Enterprises, Inc.",Consumer Cyclical,NMS,NasdaqGS,6835733504,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+941,LGN,Legence Corp.,Industrials,NMS,NasdaqGS,6826039296,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+942,HIMS,"Hims & Hers Health, Inc.",Healthcare,NYQ,NYSE,6815084544,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+943,HXL,Hexcel Corporation,Industrials,NYQ,NYSE,6794011136,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+944,CVLT,"Commvault Systems, Inc.",Technology,NMS,NasdaqGS,6778051072,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+945,ANF,Abercrombie & Fitch Co.,Consumer Cyclical,NYQ,NYSE,6774223872,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+946,GTES,Gates Industrial Corporation Ltd.,Industrials,NYQ,NYSE,6761667584,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+947,RIG,Transocean Ltd.,Energy,NYQ,NYSE,6745955840,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+948,VFC,V.F. Corporation,Consumer Cyclical,NYQ,NYSE,6742257664,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+949,VNO,Vornado Realty Trust,Real Estate,NYQ,NYSE,6735609344,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+950,NICE,NICE Ltd.,Technology,NMS,NasdaqGS,6718021120,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+951,ELF,"e.l.f. Beauty, Inc.",Consumer Defensive,NYQ,NYSE,6713929728,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+952,CAG,"Conagra Brands, Inc.",Consumer Defensive,NYQ,NYSE,6702857728,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+953,CHE,Chemed Corporation,Healthcare,NYQ,NYSE,6683586048,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+954,PPC,Pilgrim's Pride Corporation,Consumer Defensive,NMS,NasdaqGS,6607511552,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+955,G,Genpact Limited,Technology,NYQ,NYSE,6577038336,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+956,ACI,"Albertsons Companies, Inc.",Consumer Defensive,NYQ,NYSE,6543439872,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+957,SSRM,SSR Mining Inc.,Basic Materials,NMS,NasdaqGS,6527668736,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+958,OR,OR Royalties Inc.,Basic Materials,NYQ,NYSE,6520040448,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+959,PAGP,"Plains GP Holdings, L.P.",Energy,NMS,NasdaqGS,6505372160,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+960,OTEX,Open Text Corporation,Technology,NMS,NasdaqGS,6476890112,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+961,TXNM,"TXNM Energy, Inc.",Utilities,NYQ,NYSE,6441255936,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+962,ALGM,"Allegro MicroSystems, Inc.",Technology,NMS,NasdaqGS,6432734208,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+963,DOX,Amdocs Limited,Technology,NMS,NasdaqGS,6431963648,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+964,DUOL,"Duolingo, Inc.",Technology,NMS,NasdaqGS,6424690688,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+965,CAVA,"CAVA Group, Inc.",Consumer Cyclical,NYQ,NYSE,6424340992,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+966,ESE,ESCO Technologies Inc.,Technology,NYQ,NYSE,6412900352,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+967,HESM,Hess Midstream LP,Energy,NYQ,NYSE,6405961728,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+968,SWX,"Southwest Gas Holdings, Inc.",Utilities,NYQ,NYSE,6405662208,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+969,WEX,WEX Inc.,Technology,NYQ,NYSE,6391665152,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+970,ENS,EnerSys,Industrials,NYQ,NYSE,6379937792,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+971,VAL,Valaris Limited,Energy,NYQ,NYSE,6368652288,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+972,PLXS,Plexus Corp.,Technology,NMS,NasdaqGS,6362122752,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+973,INGM,Ingram Micro Holding Corporation,Technology,NYQ,NYSE,6355919360,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+974,LYFT,"Lyft, Inc.",Technology,NMS,NasdaqGS,6355691008,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+975,APLD,Applied Digital Corporation,Technology,NMS,NasdaqGS,6344081920,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+976,TFPM,Triple Flag Precious Metals Corp.,Basic Materials,NYQ,NYSE,6336653312,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+977,LB,LandBridge Corporation,Energy,NYQ,NYSE,6316183552,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+978,EXLS,"ExlService Holdings, Inc.",Technology,NMS,NasdaqGS,6267155968,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+979,POOL,Pool Corporation,Industrials,NMS,NasdaqGS,6266598912,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+980,NPO,Enpro Inc.,Industrials,NYQ,NYSE,6226261504,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+981,FLR,Fluor Corporation,Industrials,NYQ,NYSE,6206922752,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+982,POWL,"Powell Industries, Inc.",Industrials,NMS,NasdaqGS,6205038592,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+983,AAON,"AAON, Inc.",Industrials,NMS,NasdaqGS,6202987520,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+984,MUR,Murphy Oil Corporation,Energy,NYQ,NYSE,6159652864,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+985,ICL,ICL Group Ltd,Basic Materials,NYQ,NYSE,6156726272,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+986,ST,Sensata Technologies Holding plc,Technology,NYQ,NYSE,6153255936,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+987,BLCO,Bausch + Lomb Corporation,Healthcare,NYQ,NYSE,6136098816,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+988,KNSA,"Kiniksa Pharmaceuticals International, plc",Healthcare,NMS,NasdaqGS,6131959808,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+989,M,"Macy's, Inc.",Consumer Cyclical,NYQ,NYSE,6119368704,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+990,ENIC,Enel Chile S.A.,Utilities,NYQ,NYSE,6114323968,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+991,WFRD,Weatherford International plc,Energy,NMS,NasdaqGS,6113569792,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+992,SFM,"Sprouts Farmers Market, Inc.",Consumer Defensive,NMS,NasdaqGS,6108652032,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+993,CVI,"CVR Energy, Inc.",Energy,NYQ,NYSE,6105223168,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+994,TEX,Terex Corporation,Industrials,NYQ,NYSE,6065901056,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+995,HR,Healthcare Realty Trust Incorporated,Real Estate,NYQ,NYSE,6046964224,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+996,INGR,Ingredion Incorporated,Consumer Defensive,NYQ,NYSE,6033961472,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+997,BKH,Black Hills Corporation,Utilities,NYQ,NYSE,5989684736,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+998,VIPS,Vipshop Holdings Limited,Consumer Cyclical,NYQ,NYSE,5986545152,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+999,DOCS,"Doximity, Inc.",Healthcare,NYQ,NYSE,5985500672,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
+1000,AVAV,"AeroVironment, Inc.",Industrials,NMS,NasdaqGS,5971940864,USD,US,2026-10-22T02:25:53+00:00,Yahoo Finance EquityQuery
