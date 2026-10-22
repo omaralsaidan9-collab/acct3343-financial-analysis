@@ -63,16 +63,16 @@ with news_col:
     st.markdown("""
 <div class="card">
 <b>Today’s market news</b><br>
-Asian shares slipped and U.S. futures were down about 0.4% as investors weighed Gulf tensions and technology earnings. The prior U.S. session had closed higher, led by technology, after strong AI-related earnings helped ease concerns about the payoff from heavy AI investment.<br>
-<a href="https://www.reuters.com/world/china/global-markets-global-markets-2026-10-22/" target="_blank">Read Reuters’ October 22 market report</a>
+U.S. stock futures moved lower as investors assessed Tesla and Meta earnings, with technology leading the declines.<br>
+<a href="https://ca.finance.yahoo.com/news/live/stock-market-today-thursday-october-21-dow-sp-500-nasdaq-tesla-meta-094500493.html" target="_blank">Read Yahoo Finance’s market coverage</a>
 </div>
 """, unsafe_allow_html=True)
 with leader_col:
     st.markdown("""
 <div class="card">
 <b>Leading S&amp;P 500 sector recently</b><br>
-Energy led year-to-date through October 12, rising about 42%; technology was next at about 32%. Reuters attributed energy’s gain largely to higher oil prices amid the Iran conflict. These are year-to-date figures, not a live daily ranking.<br>
-<a href="https://www.reuters.com/business/wall-streets-big-narrow-rally-4-in-10-sp-stocks-are-down-this-year-2026-10-12/" target="_blank">Read Reuters’ October 12 sector comparison</a>
+Yahoo Finance’s sector tracker currently ranks Energy first year to date (+43.52%), followed by Industrials (+40.83%). Higher oil prices amid the Iran conflict have supported energy shares. Returns are year to date, not today’s single-session performance.<br>
+<a href="https://finance.yahoo.com/sectors/energy/" target="_blank">View Yahoo Finance’s Energy sector performance</a> · <a href="https://finance.yahoo.com/energy/articles/oil-prices-back-above-100-102500097.html" target="_blank">Read why oil prices matter for energy stocks</a>
 </div>
 """, unsafe_allow_html=True)
 
