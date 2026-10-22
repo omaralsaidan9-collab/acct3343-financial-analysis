@@ -11,13 +11,23 @@ DATA_PATH = ROOT / "universe.csv"
 
 st.markdown("""
 <style>
-:root { color-scheme: light; }
-.stApp { background: #f7f5ef; color: #202831; }
-[data-testid="stSidebar"] { background: #f0eee6; border-right: 1px solid #dedbd1; }
-[data-testid="stMetric"] { background: #fffefa; border: 1px solid #e4e0d6; padding: 14px 16px; border-radius: 12px; }
-.card { background: #fffefa; border: 1px solid #e4e0d6; border-radius: 12px; padding: 18px 20px; margin: 8px 0 16px; }
-.small-note { color: #5c6872; font-size: .9rem; }
-h1, h2, h3 { color: #142d4e; }
+:root { color-scheme: dark; }
+.stApp { background: #0d1117; color: #e6edf3; }
+[data-testid="stSidebar"] { background: #111821; border-right: 1px solid #263241; }
+[data-testid="stMetric"] { background: #151e29; border: 1px solid #2a394a; padding: 14px 16px; border-radius: 12px; }
+.card { background: #151e29; border: 1px solid #2a394a; border-radius: 12px; padding: 18px 20px; margin: 8px 0 16px; }
+.buy-card { border-left: 5px solid #36c77b; }
+.sell-card { border-left: 5px solid #f06464; }
+.buy-title { color: #4bd18c !important; }
+.sell-title { color: #ff7373 !important; }
+.small-note { color: #a6b2bf; font-size: .9rem; }
+h1, h2, h3 { color: #e8eef5; }
+[data-testid="stTabs"] button[role="tab"] { color: #c3ced9; }
+[data-testid="stTabs"] button[role="tab"]:nth-of-type(1) { color: #4bd18c; }
+[data-testid="stTabs"] button[role="tab"]:nth-of-type(2) { color: #ff7373; }
+[data-testid="stTabs"] button[role="tab"][aria-selected="true"] { border-bottom-color: #6ea6d9; }
+[data-testid="stDataFrame"], [data-testid="stTable"] { border: 1px solid #2a394a; border-radius: 10px; }
+[data-testid="stExpander"] { background: #121a23; border: 1px solid #2a394a; border-radius: 10px; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -129,25 +139,25 @@ st.warning("The uploaded export does not retain annual statement period-end date
 buy_tab, sell_tab, company_tab, method_tab = st.tabs(["BUY screen", "SELL screen", "Company analysis", "Methodology"])
 
 with buy_tab:
-    st.subheader("BUY candidates")
+    st.markdown('<h2 class="buy-title">BUY candidates</h2>', unsafe_allow_html=True)
     st.caption("Higher GPA, higher Book-to-Market, and higher F_SCORE contribute to the BUY composite. These are not SELL signals in reverse.")
     bcols = [c for c in ["ticker", "company_name", "sector", "market_cap_usd", "GPA", "Book_to_Market", "F_SCORE", "BUY_score_live"] if c in buy]
     st.dataframe(buy[bcols].rename(columns={"BUY_score_live":"BUY composite"}), width="stretch", hide_index=True)
     if not buy.empty:
         top = buy.iloc[0]
-        st.markdown(f"<div class='card'><b>Top BUY screen result: {top['company_name']} ({top['ticker']})</b><br>GPA {top['GPA']:.3f}, Book-to-Market {top['Book_to_Market']:.3f}, F_SCORE {top['F_SCORE']:.0f}/9. This is the strongest result under the selected filters, not a price target or guarantee of undervaluation.</div>", unsafe_allow_html=True)
+        st.markdown(f"<div class='card buy-card'><b>Top BUY screen result: {top['company_name']} ({top['ticker']})</b><br>GPA {top['GPA']:.3f}, Book-to-Market {top['Book_to_Market']:.3f}, F_SCORE {top['F_SCORE']:.0f}/9. This is the strongest result under the selected filters, not a price target or guarantee of undervaluation.</div>", unsafe_allow_html=True)
     else:
         st.write("No companies meet the current BUY filters.")
 
 with sell_tab:
-    st.subheader("SELL risk candidates")
+    st.markdown('<h2 class="sell-title">SELL risk candidates</h2>', unsafe_allow_html=True)
     st.caption("SELL ranks earnings accruals, accumulated operating assets, and Altman distress risk. A high risk rank does not by itself mean a stock is overvalued.")
     scols = [c for c in ["ticker", "company_name", "sector", "market_cap_usd", "STA", "SNOA", "Altman_Z", "SELL_red_flags", "SELL_score_live"] if c in sell]
     st.dataframe(sell[scols].rename(columns={"SELL_score_live":"SELL risk score"}), width="stretch", hide_index=True)
     if not sell.empty:
         top = sell.iloc[0]
         flags = ", ".join(name for name, col in [("STA", "STA_flag"), ("SNOA", "SNOA_flag"), ("Altman Z", "Altman_flag")] if bool(top[col]))
-        st.markdown(f"<div class='card'><b>Top SELL risk result: {top['company_name']} ({top['ticker']})</b><br>Flagged measures: {flags}. STA {top['STA']:.3f}, SNOA {top['SNOA']:.3f}, Altman Z {top['Altman_Z']:.3f}. This indicates accounting or distress risk under the selected screen, not a valuation conclusion.</div>", unsafe_allow_html=True)
+        st.markdown(f"<div class='card sell-card'><b>Top SELL risk result: {top['company_name']} ({top['ticker']})</b><br>Flagged measures: {flags}. STA {top['STA']:.3f}, SNOA {top['SNOA']:.3f}, Altman Z {top['Altman_Z']:.3f}. This indicates accounting or distress risk under the selected screen, not a valuation conclusion.</div>", unsafe_allow_html=True)
     else:
         st.write("No companies meet the current SELL filters.")
 
@@ -196,12 +206,26 @@ st.subheader("Filtered universe overview")
 plot_df = base.dropna(subset=["GPA", "Book_to_Market", "F_SCORE"]).copy()
 if not plot_df.empty:
     fig = px.scatter(plot_df, x="Book_to_Market", y="GPA", color="F_SCORE", hover_name="ticker", hover_data=["company_name","sector"], color_continuous_scale=["#8eb9b5","#173b60"], title="Profitability and book-to-market")
-    fig.update_layout(paper_bgcolor="#f7f5ef", plot_bgcolor="#fffefa", font_color="#202831", height=430)
+    fig.update_layout(paper_bgcolor="#0d1117", plot_bgcolor="#111821", font_color="#e6edf3", height=430)
+    fig.update_xaxes(gridcolor="#273444", zerolinecolor="#3a4a5d")
+    fig.update_yaxes(gridcolor="#273444", zerolinecolor="#3a4a5d")
     st.plotly_chart(fig, width="stretch")
 else:
     st.write("No rows have all three BUY inputs under the current sector and size filters.")
 
-with st.expander("Data coverage and source notes"):
-    coverage = pd.DataFrame({"Metric":["GPA","Book-to-Market","STA","SNOA","Altman Z","Complete F_SCORE","BUY composite","SELL composite"],"Available companies":[int(recommendation_universe[c].notna().sum()) for c in ["GPA","Book_to_Market","STA","SNOA","Altman_Z","F_SCORE","BUY_score","SELL_score"]]})
-    st.dataframe(coverage, hide_index=True, width="stretch")
-    st.write("Source: Yahoo Finance. Market capitalization was captured with the US-listed universe screen. Financial statement fields are annual Yahoo Finance values. Missing items were not filled with zero except preferred stock when absent as directed in the course slide.")
+st.subheader("Data coverage and source notes")
+coverage = pd.DataFrame({"Measure":["GPA","Book-to-Market","STA","SNOA","Altman Z","Complete F_SCORE","BUY composite","SELL composite"],"Available companies":[int(recommendation_universe[c].notna().sum()) for c in ["GPA","Book_to_Market","STA","SNOA","Altman_Z","F_SCORE","BUY_score","SELL_score"]]})
+st.dataframe(coverage, hide_index=True, width="stretch")
+st.write("Source: Yahoo Finance. Market capitalization was captured with the US-listed universe screen. Financial statement fields are annual Yahoo Finance values. Missing items were not filled with zero except preferred stock when absent as directed in the course slide.")
+
+measure_descriptions = [
+    ("Gross Profitability (GPA)", "**Formula:** (Revenue − Cost of Goods Sold) ÷ Total Assets. It measures gross profit generated per dollar of assets; higher values score better in the BUY screen."),
+    ("Book-to-Market (B/M)", "**Formula:** Book Value of Common Equity ÷ Market Capitalization. It compares accounting equity with the market value of the company; higher values can indicate a value stock, but do not prove undervaluation."),
+    ("F_SCORE", "**Formula:** A sum of nine binary signals covering profitability, cash flow, improving returns, leverage, liquidity, equity issuance, gross margin, and asset turnover. Scores range from 0 to 9; higher scores indicate stronger financial performance."),
+    ("Scaled Total Accruals (STA)", "**Formula:** (Net Income − Operating Cash Flow) ÷ Total Assets. Higher values mean a larger share of reported earnings is not supported by operating cash flow, which can flag earnings-quality risk."),
+    ("Scaled Net Operating Assets (SNOA)", "**Formula:** (Operating Assets − Operating Liabilities) ÷ Total Assets. Higher values indicate more net operating assets accumulated relative to the asset base; this is used as an accounting-quality warning signal."),
+    ("Altman Z-Score", "**Formula:** 0.012X1 + 0.014X2 + 0.033X3 + 0.006X4 + 0.999X5. It combines working capital, retained earnings, EBIT, market equity, liabilities, sales, and assets to screen for distress risk. The course materials use 1.81 as the distress cutoff; interpret it cautiously across industries."),
+]
+for title, description in measure_descriptions:
+    with st.expander(title):
+        st.markdown(description)
