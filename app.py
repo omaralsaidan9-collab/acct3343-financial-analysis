@@ -216,7 +216,6 @@ else:
 st.subheader("Data coverage and source notes")
 coverage = pd.DataFrame({"Measure":["GPA","Book-to-Market","STA","SNOA","Altman Z","Complete F_SCORE","BUY composite","SELL composite"],"Available companies":[int(recommendation_universe[c].notna().sum()) for c in ["GPA","Book_to_Market","STA","SNOA","Altman_Z","F_SCORE","BUY_score","SELL_score"]]})
 st.dataframe(coverage, hide_index=True, width="stretch")
-st.write("Source: Yahoo Finance. Market capitalization was captured with the US-listed universe screen. Financial statement fields are annual Yahoo Finance values. Missing items were not filled with zero except preferred stock when absent as directed in the course slide.")
 
 measure_descriptions = [
     ("Gross Profitability (GPA)", "**Formula:** (Revenue − Cost of Goods Sold) ÷ Total Assets. It measures gross profit generated per dollar of assets; higher values score better in the BUY screen."),
