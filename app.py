@@ -8,6 +8,7 @@ st.set_page_config(page_title="ACCT 3343 Financial Screen", page_icon="◈", lay
 
 ROOT = Path(__file__).resolve().parent
 DATA_PATH = ROOT / "universe.csv"
+PERIOD_DATES_PATH = ROOT / "period_dates.csv"
 
 st.markdown("""
 <style>
@@ -36,6 +37,11 @@ h1, h2, h3 { color: #e8eef5; }
 def load_data(path):
     d = pd.read_csv(path)
     d["ticker"] = d["ticker"].astype(str).str.upper().str.strip()
+    dates_path = Path(path).with_name("period_dates.csv")
+    if dates_path.exists():
+        dates = pd.read_csv(dates_path, usecols=["ticker", "y0_period_end", "y1_period_end", "y2_period_end"])
+        dates["ticker"] = dates["ticker"].astype(str).str.upper().str.strip()
+        d = d.merge(dates, on="ticker", how="left", validate="one_to_one")
     numeric = ["market_cap_usd", "GPA", "Book_to_Market", "STA", "SNOA", "Altman_Z", "F_SCORE", "BUY_score", "SELL_score"]
     for c in numeric:
         if c in d:
@@ -211,6 +217,14 @@ with company_tab:
         k6.metric("SNOA", "—" if pd.isna(row.SNOA) else f"{row.SNOA:.3f}")
         k7.metric("Market cap", "—" if pd.isna(row.market_cap_usd) else f"${row.market_cap_usd/1e9:,.1f}B")
         k8.metric("Statement currency", str(row.get("financial_currency", "Unknown")) if pd.notna(row.get("financial_currency")) else "Unknown")
+        st.markdown("#### Annual statement period ends")
+        st.caption("y0 is the latest annual period in the export; y1 and y2 are the two preceding annual periods. Fiscal year-end dates vary by company.")
+        period_dates = pd.DataFrame({
+            "Period": ["Latest annual period (y0)", "Prior annual period (y1)", "Two years prior (y2)"],
+            "Fiscal period end": [row.get("y0_period_end"), row.get("y1_period_end"), row.get("y2_period_end")],
+        })
+        period_dates["Fiscal period end"] = period_dates["Fiscal period end"].fillna("Not verified")
+        st.dataframe(period_dates, width="stretch", hide_index=True)
         raw = [c for c in row.index if c.endswith("_y0") or c.startswith("F_")]
         st.dataframe(row[raw].rename("Value").to_frame(), width="stretch")
 
@@ -286,7 +300,7 @@ with method_tab:
 - **Altman Z:** 0.012X1 + 0.014X2 + 0.033X3 + 0.006X4 + 0.999X5. X1 = Working Capital/Assets; X2 = Retained Earnings/Assets; X3 = EBIT/Assets; X4 = Market Equity/Book Total Liabilities; X5 = Sales/Assets. The course materials give 1.81 as the distress cutoff.
 - **SELL red flags:** STA above its threshold, SNOA above its threshold, and Altman Z below its cutoff. The SELL composite separately ranks high STA, high SNOA, and low Altman Z risk percentiles. Companies need all three indicators to receive a composite rank.
 
-**Limitations:** The source is a Yahoo Finance screen of US-listed securities, which can include foreign issuers. Some companies have incomplete statements, and exact annual fiscal period-end dates were not retained in the uploaded export. Altman Z was developed for specific firm populations, so interpret it cautiously across industries. This educational screen is not investment advice.
+**Data dates and limitations:** The source is a Yahoo Finance screen of US-listed securities, which can include foreign issuers. Annual period-end dates were checked by matching each exported annual total-assets value to Yahoo Finance annual balance sheets. y0 is the latest annual period in the export; y1 and y2 are the two preceding annual periods. All three dates were verified for 990 of 1,000 companies. For the other 10, at least one required total-assets value was absent from the export, so the affected date is left unverified rather than inferred. Fiscal year-end dates differ by company. Some companies also have incomplete statements. Altman Z was developed for specific firm populations, so interpret it cautiously across industries. This educational screen is not investment advice.
     """)
 
 # Full-sample sector mix is independent of the interactive recommendation filters.
@@ -332,6 +346,20 @@ st.subheader("Data coverage and source notes")
 st.caption("Counts show how many companies have the reported inputs needed to calculate each measure. Availability varies by measure because company statements do not always include every required item; missing values are left blank.")
 coverage = pd.DataFrame({"Measure":["GPA","Book-to-Market","STA","SNOA","Altman Z","Complete F_SCORE","BUY composite","SELL composite"],"Available companies":[int(recommendation_universe[c].notna().sum()) for c in ["GPA","Book_to_Market","STA","SNOA","Altman_Z","F_SCORE","BUY_score","SELL_score"]]})
 st.dataframe(coverage, hide_index=True, width="stretch")
+
+st.markdown("**Verified annual statement period-end dates**")
+st.caption("y0 is the latest annual period in the export; y1 and y2 are the two preceding annual periods. Each date was verified by matching the company’s exported total assets to Yahoo Finance’s annual balance sheet. Fiscal year ends vary by company.")
+period_coverage = pd.DataFrame({
+    "Annual period": ["Latest (y0)", "Prior (y1)", "Two years prior (y2)"],
+    "Companies with a verified date": [
+        int(recommendation_universe.get("y0_period_end", pd.Series(index=recommendation_universe.index, dtype=object)).notna().sum()),
+        int(recommendation_universe.get("y1_period_end", pd.Series(index=recommendation_universe.index, dtype=object)).notna().sum()),
+        int(recommendation_universe.get("y2_period_end", pd.Series(index=recommendation_universe.index, dtype=object)).notna().sum()),
+    ],
+})
+period_coverage["Coverage"] = period_coverage["Companies with a verified date"].map(lambda n: f"{n:,}/1,000")
+st.dataframe(period_coverage, hide_index=True, width="stretch")
+st.caption("All three dates were verified for 990 companies. For the remaining 10, one or more dates could not be verified because the corresponding total-assets value was missing from the uploaded export; those dates remain blank.")
 
 measure_descriptions = [
     ("Gross Profitability (GPA)", "**Formula:** (Revenue − Cost of Goods Sold) ÷ Total Assets. It measures gross profit generated per dollar of assets; higher values score better in the BUY screen."),
