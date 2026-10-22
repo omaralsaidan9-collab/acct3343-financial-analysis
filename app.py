@@ -238,8 +238,9 @@ with conclusion_tab:
                 f"and F_SCORE is {top_buy['F_SCORE']:.0f}/9 ({buy_percentiles['F_SCORE']:.0%} percentile) among companies with complete BUY inputs in the filtered peer set."
             )
             st.write(
-                "**Conclusion:** Together, these results show strong gross profitability, relatively high book value versus market value, and positive financial signals. "
-                "That combination supports further research under this course screen. Book-to-Market alone does not establish that the shares are undervalued, and the score does not capture every company-specific risk or current event."
+                "**Conclusion:** Together, these results suggest strong gross profitability, relatively high book value compared with market value, and positive financial signals. "
+                f"Based on this screen, I would consider {top_buy['ticker']} a candidate for further research as a potential investment. "
+                "This ranking does not prove that its shares are undervalued or account for factors outside the measures used."
             )
 
     with conclusion_sell:
@@ -265,7 +266,7 @@ with conclusion_tab:
             st.write(
                 f"**Conclusion:** {', '.join(flagged_measures)} trigger the selected risk thresholds"
                 + (f", while {', '.join(unflagged_measures)} do not." if unflagged_measures else ".")
-                + " The combined result warrants closer review of earnings quality and financial distress risk; it does not show that the shares are overvalued or automatically mean they should be sold. Altman Z should be interpreted cautiously for companies whose industry differs from the model’s original population."
+                + f" The flagged measures point to possible earnings-quality or financial-distress concerns. Based on this screen, I would review {top_sell['ticker']} more closely before making an investment decision. This result does not establish that its shares are overvalued or, by itself, mean that investors should sell them."
             )
 
 with method_tab:
