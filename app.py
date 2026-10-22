@@ -34,7 +34,7 @@ h1, h2, h3 { color: #e8eef5; }
 
 @st.cache_data
 
-def load_data(path):
+def load_data(path, period_dates_file_stamp=None):
     d = pd.read_csv(path)
     d["ticker"] = d["ticker"].astype(str).str.upper().str.strip()
     dates_path = Path(path).with_name("period_dates.csv")
@@ -52,7 +52,8 @@ if not DATA_PATH.exists():
     st.error("universe.csv is missing. Put it in the same folder as app.py.")
     st.stop()
 
-df = load_data(str(DATA_PATH))
+date_file_stamp = PERIOD_DATES_PATH.stat().st_mtime_ns if PERIOD_DATES_PATH.exists() else None
+df = load_data(str(DATA_PATH), date_file_stamp)
 # WDC is retained in the raw source for auditability but never appears in recommendations.
 recommendation_universe = df[df["ticker"] != "WDC"].copy()
 
