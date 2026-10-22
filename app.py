@@ -461,10 +461,11 @@ def sell_table(frame):
     return view.rename(columns={"company_name":"Company", "ticker":"Ticker", "sector":"Sector", "Altman_Z":"Altman Z"})
 
 with top_tab:
-    st.caption("Rankings update with the filters. Composite (%) is the average of three peer-relative percentile ranks, not a probability of return or a forecast. BUY and SELL use separate methods; SELL risk does not mean overvaluation.")
+    st.caption("Composite (%) is the average of three peer-relative ranks, not a return forecast. Rankings update with your filters.")
     buy_col, sell_col = st.columns(2)
     with buy_col:
         st.markdown('<h2 class="buy-title">Top 5 BUY candidates</h2>', unsafe_allow_html=True)
+        st.caption("BUY candidates meet your filters and rank well on GPA (profitability), B/M (relative value), and F_SCORE (financial strength).")
         if buy.empty:
             st.write("No companies meet the current BUY filters.")
         else:
@@ -472,6 +473,7 @@ with top_tab:
             st.dataframe(buy_view.style.map(lambda _: "color: #4bd18c; font-weight: 700;", subset=["Rating", "Composite (%)"]), width="stretch", hide_index=True)
     with sell_col:
         st.markdown('<h2 class="sell-title">Top 5 SELL risk candidates</h2>', unsafe_allow_html=True)
+        st.caption("SELL risk candidates meet your chosen number of risk criteria: high STA, high SNOA, and/or low Altman Z. This is not a valuation judgment.")
         if sell.empty:
             st.write("No companies meet the current SELL filters.")
         else:
